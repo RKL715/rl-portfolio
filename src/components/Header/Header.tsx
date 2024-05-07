@@ -1,6 +1,20 @@
 import { Link } from 'react-router-dom';
+import { useState} from "react";
+import ContactModal from "../Contact/Contact.tsx";
+
 
 function Header () {
+
+    const [showContactModal, setShowContactModal] = useState(false);
+
+    const openContactModal = () => {
+        setShowContactModal(true);
+    }
+
+    const closeContactModal = () => {
+        setShowContactModal(false);
+    }
+
     return (
         <header>
             <a className="header-logo" href="/">
@@ -26,8 +40,8 @@ function Header () {
             </div>
 
             <div className="header_bottom_block">
-                <button>Contact</button>
-                {/*This button will open a contact modal*/}
+                <button className="button-contact-modal" onClick={openContactModal}> Contact</button>
+                {showContactModal && <ContactModal closeContactModal={closeContactModal} />}
             </div>
         </header>
     )
