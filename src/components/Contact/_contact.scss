@@ -1,3 +1,5 @@
+@use "../../styles/variables";
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -7,14 +9,16 @@
     padding: 2rem;
     width: 100%;
     max-width: 600px;
-    background-color: var(--color-primary);
+    background-color: variables.$secondary-color;
     border-radius: 10px;
+    border: aqua 1px solid;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 
   .contact-form-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: variables.$title-color;
     margin-bottom: 1rem;
   }
 
@@ -24,5 +28,3 @@
       justify-content: flex-end;
     }
 }
-
-
