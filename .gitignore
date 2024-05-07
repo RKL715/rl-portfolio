@@ -11,7 +11,6 @@ node_modules
 dist
 vite.config.ts
 vite
-
 dist-ssr
 *.local
 
@@ -25,3 +24,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+._metadata.json
+*.js
+*.js.map
+
+react.js
+react.js.map
+react-dom_client.js
+react-dom_client.js.map
+react_jsx-dev-runtime.js
+react_jsx-dev-runtime.js.map
