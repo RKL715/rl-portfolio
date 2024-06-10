@@ -1,21 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef,} from "react";
 import Project from "../Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
-
-interface ImageType {
-id: number;
-title : string
-url : string; //replace with src
-}
-
-interface  ProjectType {
-    id: number;
-    name: string;
-    description: string;
-    technologies: string[];
-    link : string;
-    img : ImageType[];
-} // for TScript
+import {ProjectType} from "../Project/Project.tsx";
 
 // TS for modal
 interface ProjectsModalProps {
@@ -59,36 +45,20 @@ function ProjectsModal ({ closeProjectsModal, isVisible, setIsVisible }: Project
     }, [closeProjectsModal]);
 
 
-
-// TO open a Project
-    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
-
-    const openProject = (project: ProjectType) => {
-        setSelectedProject(project);
-    }
-    const closeProject = () => {
-        setSelectedProject(null);
-    }
-
     return (
         <div className={`projects-modal ${isVisible ? "fade-in" : "fade-out"}`} ref={modalRef}>
             {projectsData.projects.map((project: ProjectType) => (
-                <button
-                    key={project.id}
-                    onClick={() => openProject(project)}
-                >
-                    {project.name}
-                </button>
-            ))}
-            {selectedProject && (
                 <Project
-                    onClose={closeProject}
-                    title={selectedProject.name}
-                    img={selectedProject.img[0].url}
-                    description={selectedProject.description}
-                >
-                </Project>
-            )}
+                    key={project.id}
+                    id={project.id}
+                    name={project.name}
+                    description={project.description}
+                    technologies={project.technologies}
+                    link={project.link}
+                    img={project.img}
+
+                />
+            ))}
         </div>
     )
 }
