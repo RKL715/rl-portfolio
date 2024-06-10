@@ -18,9 +18,11 @@ const [isVisible, setIsVisible] = useState(true);
     // Modal for project list
     const [showProjectsModal, setShowProjectsModal] = useState(false);
     const openProjectsModal = () => {
+        setIsVisible(true);
         setShowProjectsModal(true);
     }
     const closeProjectsModal = () => {
+        setIsVisible(false);
         setShowProjectsModal(false);
     }
 
@@ -61,7 +63,7 @@ const [isVisible, setIsVisible] = useState(true);
                 </button>
                 {showContactModal && <ContactModal closeContactModal={closeContactModal} isVisible={isVisible} setIsVisible={setIsVisible} />}
             </div>
-            {showProjectsModal && <ProjectsModal closeProjectsModal={closeProjectsModal} />}
+            {showProjectsModal && <ProjectsModal closeProjectsModal={closeProjectsModal} isVisible={isVisible} setIsVisible={setIsVisible}/>}
         </header>
     )
 }

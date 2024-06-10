@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Project from "../Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
 
@@ -20,10 +20,12 @@ interface  ProjectType {
 // TS for modal
 interface ProjectsModalProps {
     closeProjectsModal : () => void;
+    isVisible: boolean;
+    setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 
-function ProjectsModal ({ closeProjectsModal }: ProjectsModalProps) {
+function ProjectsModal ({ closeProjectsModal, isVisible, setIsVisible }: ProjectsModalProps) {
 
     // TO Create a reference to the modal
     const modalRef = useRef<HTMLDivElement>(null);
@@ -32,16 +34,21 @@ function ProjectsModal ({ closeProjectsModal }: ProjectsModalProps) {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-                closeProjectsModal();
+                setIsVisible(false);
+                setTimeout(() => {
+                    closeProjectsModal();
+                }, 500);
             }
         }
         // TO Close modal when pressing escape key
         const handleEscapePress = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
-                closeProjectsModal();
+                setIsVisible(false);
+                setTimeout(() => {
+                    closeProjectsModal();
+                }, 500);
             }
         }
-
         // Event listeners for click outside and escape key
         document.addEventListener('mousedown', handleClickOutside);
         document.addEventListener('keydown', handleEscapePress);
@@ -64,8 +71,8 @@ function ProjectsModal ({ closeProjectsModal }: ProjectsModalProps) {
     }
 
     return (
-        <div>
-            {projectsData.projects.map((project:  ProjectType) => (
+        <div className={`projects-modal ${isVisible ? "fade-in" : "fade-out"}`} ref={modalRef}>
+            {projectsData.projects.map((project: ProjectType) => (
                 <button
                     key={project.id}
                     onClick={() => openProject(project)}
@@ -79,13 +86,12 @@ function ProjectsModal ({ closeProjectsModal }: ProjectsModalProps) {
                     title={selectedProject.name}
                     img={selectedProject.img[0].url}
                     description={selectedProject.description}
-                    >
+                >
                 </Project>
             )}
         </div>
     )
 }
-
 
 
 export default ProjectsModal
