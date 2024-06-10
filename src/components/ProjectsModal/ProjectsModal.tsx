@@ -3,6 +3,7 @@ import Project from "../Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
 import {ProjectType} from "../Project/Project.tsx";
 
+
 // TS for modal
 interface ProjectsModalProps {
     closeProjectsModal : () => void;

@@ -1,19 +1,15 @@
-interface CarouselType {
-    images : ImageType [];
-}
+import type { ImageType } from "./Project.tsx";
 
-export interface ImageType {
-    id: number;
-    title : string
-    url : string; //replace with src
+// TS interfaces
+interface CarouselType {
+    images : ImageType ;
 }
 
 function ProjectCarousel({images} : CarouselType) {
+
   return (
     <div className="carousel">
-        {images.map((img, index) => (
-            <img key={index} src={img.url} alt={img.title} />
-        ))}
+ <img src={images.url} alt={images.title} />
     </div>
   );
 }
