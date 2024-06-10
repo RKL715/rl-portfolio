@@ -1,0 +1,48 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/animation";
+
+.inner-modal {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+
+  .inner-modal-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      position: absolute;
+      opacity: 0.35;
+      outline: 0;
+      height: 30px;
+      width: 30px;
+      &:hover {
+        opacity: 1;
+      }
+
+      &.prev {
+        left: 10px;
+      }
+      &.next {
+        right: 10px;
+      }
+    }
+}
+
+  .inner-modal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5%;
+  }
+
+}
+

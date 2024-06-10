@@ -4,3 +4,9 @@
 
 @use "../components/Header/header";
 @use "../components/Contact/contact";
+@use "../components/ProjectsModal/projectsmodal";
+
+
+* {
+  box-sizing: border-box;
+}
