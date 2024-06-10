@@ -1,19 +1,27 @@
-import { Link } from 'react-router-dom';
 import { useState} from "react";
 import ContactModal from "../Contact/Contact.tsx";
+import ProjectsModal from "../ProjectsModal/ProjectsModal.tsx";
 
 
 function Header () {
 
+    // Modal for contact form
     const [showContactModal, setShowContactModal] = useState(false);
-
     const openContactModal = () => {
         setShowContactModal(true);
     }
-
     const closeContactModal = () => {
         setShowContactModal(false);
     }
+    // Modal for project list
+    const [showProjectsModal, setShowProjectsModal] = useState(false);
+    const openProjectsModal = () => {
+        setShowProjectsModal(true);
+    }
+    const closeProjectsModal = () => {
+        setShowProjectsModal(false);
+    }
+
 
     return (
         <header>
@@ -22,7 +30,7 @@ function Header () {
             </a>
 
             <div className="header-top-block">
-                <h1>Rémy LAFAYE</h1>
+                <h1>Rémy LAFAYE.</h1>
                 <p>Développeur intégrateur web</p>
             </div>
 
@@ -30,7 +38,11 @@ function Header () {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Projets</Link> {/* replace to="/projets"  when it's done*/}
+                          <button
+                              className="button-project-modal"
+                              onClick={openProjectsModal}>
+                              Projets
+                          </button>
                         </li>
                         <li>
                             <a href="https://github.com/RKL715" target="_blank" rel="noopener noreferrer">Github</a>
@@ -40,9 +52,14 @@ function Header () {
             </div>
 
             <div className="header_bottom_block">
-                <button className="button-contact-modal" onClick={openContactModal}> Contact</button>
+                <button
+                    className="button-contact-modal"
+                    onClick={openContactModal}>
+                    Contact
+                </button>
                 {showContactModal && <ContactModal closeContactModal={closeContactModal} />}
             </div>
+            {showProjectsModal && <ProjectsModal closeProjectsModal={closeProjectsModal} />}
         </header>
     )
 }

@@ -1,0 +1,22 @@
+@use "variables";
+
+@mixin title {
+    font-family: 'Lato', sans-serif;
+  color : variables.$title-color;
+  letter-spacing: 7px;
+    font-size: 2rem;
+}
+
+@mixin text {
+  font-family: 'Lato', sans-serif;
+  color: variables.$font-text;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+@mixin text-hover {
+  font-family: 'Lato', sans-serif;
+  color: variables.$font-text-hover;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}

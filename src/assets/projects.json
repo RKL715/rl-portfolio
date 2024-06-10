@@ -1,0 +1,85 @@
+{
+  "projects" : [
+    {
+      "id": 1,
+      "name": "Kasa",
+      "description": "tructurc",
+      "technologies": [
+        "React",
+        "SCSS"
+      ],
+      "link": "github.com",
+      "img": [
+        {
+          "id" : 1,
+          "title": "image1",
+          "url": "https://imageplaceholder.net/600x400/eeeeee/131513?text=Project+Title"
+        },
+        {
+          "id" : 2,
+          "title": "image2",
+          "url": "https://imageplaceholder.net/600x400/eeeeee/131413?text=Project+Title"
+        },
+        {
+          "id" : 3,
+          "title": "image3",
+          "url": "https://imageplaceholder.net/600x400/eeeeee/131313?text=Project+Title"
+        }
+      ]
+    },
+    {
+  "id": 2,
+  "name": "Argent Bank",
+  "description": "machin",
+  "technologies": [
+    "React",
+    "Redux Toolkit"
+  ],
+  "link": "github.com",
+  "img": [
+    {
+      "id" : 1,
+      "title": "image1",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131513?text=Project+Title"
+    },
+    {
+      "id" : 2,
+      "title": "image2",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131413?text=Project+Title"
+    },
+    {
+      "id" : 3,
+      "title": "image3",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131313?text=Project+Title"
+    }
+  ]
+},
+    {
+  "id": 3,
+  "name": "Sophie Bluel",
+  "description": "Portofolio Design",
+  "technologies": [
+    "JavaScript",
+    "API REST"
+  ],
+  "link": "github.com",
+  "img": [
+    {
+      "id" : 1,
+      "title": "image1",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131513?text=Project+Title"
+    },
+    {
+      "id" : 2,
+      "title": "image2",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131413?text=Project+Title"
+    },
+    {
+      "id" : 3,
+      "title": "image3",
+      "url": "https://imageplaceholder.net/600x400/eeeeee/131313?text=Project+Title"
+    }
+  ]
+}
+  ]
+}

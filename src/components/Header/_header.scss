@@ -1,4 +1,6 @@
+@use "../../styles/variables";
+
 * {
-  background-color: pink;
+  background-color: variables.$main-color;
 }
 
