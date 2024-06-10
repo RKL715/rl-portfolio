@@ -4,13 +4,15 @@ import ProjectsModal from "../ProjectsModal/ProjectsModal.tsx";
 
 
 function Header () {
-
+const [isVisible, setIsVisible] = useState(true);
     // Modal for contact form
     const [showContactModal, setShowContactModal] = useState(false);
     const openContactModal = () => {
+        setIsVisible(true);
         setShowContactModal(true);
     }
     const closeContactModal = () => {
+        setIsVisible(false);
         setShowContactModal(false);
     }
     // Modal for project list
@@ -57,7 +59,7 @@ function Header () {
                     onClick={openContactModal}>
                     Contact
                 </button>
-                {showContactModal && <ContactModal closeContactModal={closeContactModal} />}
+                {showContactModal && <ContactModal closeContactModal={closeContactModal} isVisible={isVisible} setIsVisible={setIsVisible} />}
             </div>
             {showProjectsModal && <ProjectsModal closeProjectsModal={closeProjectsModal} />}
         </header>

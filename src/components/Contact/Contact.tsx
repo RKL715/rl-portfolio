@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 
 interface ContactModalProps {
     closeContactModal: () => void;
+    isVisible: boolean;
+    setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 
-function ContactModal ( {closeContactModal} : ContactModalProps) {
+function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactModalProps) {
 
     // TO Create a reference to the modal
     const modalRef = useRef<HTMLDivElement>(null);
@@ -14,13 +16,19 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-                closeContactModal();
+                setIsVisible(false);
+                setTimeout(() => {
+                    closeContactModal();
+                }, 500);
             }
         }
     // TO Close modal when pressing escape key
         const handleEscapePress = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
-                closeContactModal();
+                setIsVisible(false);
+                setTimeout(() => {
+                    closeContactModal();
+                }, 500);
             }
         }
 
@@ -36,12 +44,15 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
     // TO Handle form submission
     const handleSubmit = (event : React.FormEvent) => {
         event.preventDefault();
-        closeContactModal();
+        setIsVisible(false);
+        setTimeout(() => {
+            closeContactModal();
+        }, 500);
     }
 
     // TO Render the contact form
     return (
-    <div className="contact-form" ref={modalRef}>
+    <div className={`contact-form ${isVisible ? "fade-in" : "fade-out"}`} ref={modalRef}>
         <div className="contact-form-top">
         <h2 className="contact-form-title">CONTACT</h2>
         </div>
