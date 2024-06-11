@@ -1,24 +1,42 @@
 @use "variables";
 
-@mixin title {
-    font-family: 'Lato', sans-serif;
+@mixin title-h1 {
+  font-family: 'Trirong', sans-serif;
   color : variables.$title-color;
-  letter-spacing: 7px;
-    font-size: 2rem;
+  letter-spacing: 2px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+@mixin title-h2 {
+    font-family: 'Lato', sans-serif;
+    color : variables.$title-color;
+    letter-spacing: 7px;
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
 @mixin text {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Martel Sans', sans-serif;
   color: variables.$font-text;
   letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 3vw, 1rem);
 }
 
 @mixin text-hover {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Martel Sans', sans-serif;
   color: variables.$font-text-hover;
   letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+
+@mixin link {
+  font-family: "Trirong", serif;
+  color: variables.$link-color;
+  text-decoration: none;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  letter-spacing: 2px;
+  &:hover {
+    color: variables.$link-color-hover;
+  }
 }
 
 @mixin  max-min-contact {
@@ -41,3 +59,5 @@
   border: black 1px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+// Trirong font

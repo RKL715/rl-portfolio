@@ -9,7 +9,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-  float: right;
+    float: right;
+    overflow: hidden;
+    z-index: 500;
+
 
 .project-block {
   justify-content:  flex-end;

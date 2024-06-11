@@ -1,5 +1,40 @@
 @use "../../styles/variables";
+@use "../../styles/mixins";
 
 header {
-position: fixed;
+  position: fixed;
+  z-index: 1000;
+  width: clamp(50%, 70%, 100%);
+
+  .header-top-block {
+    h1 {
+      @include mixins.title-h1;
+    }
+    p {
+      @include mixins.text;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+  }
+
+
+  ul {
+    padding-top: 15px;
+  }
+
+  li {
+    list-style: none;
+    padding : 5px 0;
+  }
+
+}
+
+.header-bottom-block {
+  position: fixed;
+  bottom : 2px;
+  left: 25px;
+  p {
+    background: transparent;
+    @include mixins.text;
+    font-size: 10px;
+  }
 }

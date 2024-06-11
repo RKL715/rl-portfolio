@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: row;
   gap: 15%;
+  padding: 5%;
 
   .project-block-carousel {
     position: relative;
@@ -41,6 +42,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    h2 {
+      @include mixins.title-h2;
+        }
+    p, ul {
+      @include mixins.text;
+    }
+    a {
+      @include mixins.link;
+    }
   }
 
 }

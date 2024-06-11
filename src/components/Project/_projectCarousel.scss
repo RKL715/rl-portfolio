@@ -3,6 +3,8 @@
 @use "../../styles/animation";
 
 .carousel {
+  border : 5px solid variables.$secondary-color;
+  border-radius: 10px;
  img {
    width: 100%;
    height: auto;

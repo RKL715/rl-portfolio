@@ -37,7 +37,7 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                     <li key={index}>{tech}</li>
                 ))}
             </ul>
-            <a href={link} target="_blank" rel="noreferrer">Visit the project</a>
+            <a href={link} target="_blank" rel="noreferrer"><img src="/github-mark.png" width={20} alt="Link to github project"/></a>
                 </span>
             <span className="project-block-carousel"><ProjectCarousel images={img[current]}/>
             <button className="prev" onClick={prevSlide}>
@@ -56,6 +56,7 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                 </svg>
             </button>
             </span>
+            <hr/>
         </div>
     )
 }

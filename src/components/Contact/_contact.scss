@@ -49,9 +49,8 @@
     @include mixins.max-min-contact;
 
     .contact-form-title {
-      @include mixins.title;
+      @include mixins.title-h2;
       @include mixins.max-min-contact;
-      font-size: clamp(1rem, 3vw, 2rem);
     }
   }
   }
