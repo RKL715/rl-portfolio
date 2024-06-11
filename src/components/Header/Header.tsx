@@ -19,10 +19,6 @@ const [isVisible, setIsVisible] = useState(true);
 
     return (
         <header>
-            <a className="header-logo" href="/">
-                <img src="https://via.placeholder.com/150" alt="Logo du site de Rémy LAFAYE"/>
-            </a>
-
             <div className="header-top-block">
                 <h1>Rémy LAFAYE</h1>
                 <p>Développeur intégrateur web</p>
