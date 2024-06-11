@@ -28,7 +28,7 @@ const [isVisible, setIsVisible] = useState(true);
                 <p>Développeur intégrateur web</p>
             </div>
 
-            <div className="header_middle_block">
+            <div className="header-middle-block">
                 <nav>
                     <ul>
                         <li>

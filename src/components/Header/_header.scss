@@ -5,6 +5,10 @@ header {
   position: fixed;
   z-index: 1000;
   width: clamp(50%, 70%, 100%);
+  background: transparent;
+  * {
+    background: inherit;
+  }
 
   .header-top-block {
     h1 {
@@ -16,18 +20,21 @@ header {
     }
   }
 
+  .header-middle-block {
+      ul {
+        padding-top: 15px;
+        li {
+          list-style: none;
+          padding : 5px 0;
+          a, button {
+            @include mixins.button;
+          }
+        }
+      }
+  } // End of middle block
+} // End of header
 
-  ul {
-    padding-top: 15px;
-  }
-
-  li {
-    list-style: none;
-    padding : 5px 0;
-  }
-
-}
-
+// Outside of the header because it is fixed on bottom of the page, not really part of the header
 .header-bottom-block {
   position: fixed;
   bottom : 2px;

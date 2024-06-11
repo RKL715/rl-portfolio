@@ -44,7 +44,6 @@
   min-width: 50%;
 }
 
-
 @mixin modal {
   display: flex;
   flex-direction: column;
@@ -58,6 +57,24 @@
   border-radius: 10px;
   border: black 1px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@mixin button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.35;
+  outline: 0;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+    background: #b3aca7;
+    color : #f7f7f7;
+  }
 }
 
 // Trirong font
