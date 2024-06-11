@@ -2,7 +2,10 @@
 @use "../../styles/mixins";
 
 .contact-form {
-    @include mixins.modal;
+  @include mixins.modal;
+  position: fixed;
+  left: 1vw;
+  width: clamp(90%, 2vw, 100%);
 
   .contact-form-fields, form{
     @include mixins.max-min-contact;

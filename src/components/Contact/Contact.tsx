@@ -69,7 +69,7 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
             <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
 
             <button type="submit" className="submit">
-                <img src="public/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
+                <img src="/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
             </button>
         </div>
         </form>

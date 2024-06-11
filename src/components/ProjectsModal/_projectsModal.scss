@@ -1,9 +1,0 @@
-@use "../../styles/variables";
-@use "../../styles/mixins";
-@use "../../styles/animation";
-@use "../Project/project";
-@use "../Project/projectCarousel";
-
-.projects-modal {
-@include mixins.modal;
-}

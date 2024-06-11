@@ -2,12 +2,12 @@
 @use "../../styles/mixins";
 @use "../../styles/animation";
 
-.inner-modal {
+.project-block {
   display: flex;
   flex-direction: row;
   gap: 15%;
 
-  .inner-modal-carousel {
+  .project-block-carousel {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -37,11 +37,10 @@
     }
 }
 
-  .inner-modal-text {
+  .project-block-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 5%;
   }
 
 }
