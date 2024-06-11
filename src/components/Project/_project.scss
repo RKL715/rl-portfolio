@@ -1,0 +1,58 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/animation";
+
+.project-block {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  padding: 5%;
+
+  .project-block-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      display: block;
+      position: absolute;
+      opacity: 0.35;
+      outline: 0;
+      height: 30px;
+      width: 30px;
+      &:hover {
+        opacity: 1;
+      }
+
+      &.prev {
+        left: 10px;
+      }
+      &.next {
+        right: 10px;
+      }
+    }
+}
+
+  .project-block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      @include mixins.title-h2;
+        }
+    p, ul {
+      @include mixins.text;
+    }
+    a {
+      @include mixins.link;
+    }
+  }
+
+}
+

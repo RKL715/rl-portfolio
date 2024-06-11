@@ -2,18 +2,10 @@
 @use "../../styles/mixins";
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  max-width: 500px;
-  min-width: 80px;
-  margin: 0 auto;
-  background-color: variables.$main-color;
-  border-radius: 10px;
-  border: black 1px solid;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  @include mixins.modal;
+  position: fixed;
+  left: 1vw;
+  width: clamp(90%, 2vw, 100%);
 
   .contact-form-fields, form{
     @include mixins.max-min-contact;
@@ -57,9 +49,8 @@
     @include mixins.max-min-contact;
 
     .contact-form-title {
-      @include mixins.title;
+      @include mixins.title-h2;
       @include mixins.max-min-contact;
-      font-size: clamp(1rem, 3vw, 2rem);
     }
   }
   }

@@ -1,0 +1,21 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/animation";
+@use "../../components/Project/project";
+@use "../../components/Project/projectCarousel";
+
+.projects-pages {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    float: right;
+    overflow: hidden;
+    z-index: 500;
+
+
+.project-block {
+  justify-content:  flex-end;
+
+}
+}

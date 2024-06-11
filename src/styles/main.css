@@ -22,8 +22,44 @@
     opacity: 0;
   }
 }
-* {
-  background-color: #e2dedb;
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 70%;
+}
+header .header-top-block h1 {
+  font-family: "Trirong", sans-serif;
+  color: #b3aca7;
+  letter-spacing: 2px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+header .header-top-block p {
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+header ul {
+  padding-top: 15px;
+}
+header li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.header-bottom-block {
+  position: fixed;
+  bottom: 2px;
+  left: 25px;
+}
+.header-bottom-block p {
+  background: transparent;
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: 10px;
 }
 
 .contact-form {
@@ -39,6 +75,9 @@
   border-radius: 10px;
   border: black 1px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 1vw;
+  width: clamp(90%, 2vw, 100%);
 }
 .contact-form .contact-form-fields, .contact-form form {
   max-width: 80%;
@@ -51,10 +90,10 @@
 .contact-form input, .contact-form textarea {
   max-width: 80%;
   min-width: 50%;
-  font-family: "Lato", sans-serif;
+  font-family: "Martel Sans", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 3vw, 1rem);
   margin: 0 0 10% 0;
   height: 50px;
   padding: 0 15px 0 15px;
@@ -87,10 +126,111 @@
   font-family: "Lato", sans-serif;
   color: #b3aca7;
   letter-spacing: 7px;
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   max-width: 80%;
   min-width: 50%;
+}
+
+.project-block {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  padding: 5%;
+}
+.project-block .project-block-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.project-block .project-block-carousel button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  position: absolute;
+  opacity: 0.35;
+  outline: 0;
+  height: 30px;
+  width: 30px;
+}
+.project-block .project-block-carousel button:hover {
+  opacity: 1;
+}
+.project-block .project-block-carousel button.prev {
+  left: 10px;
+}
+.project-block .project-block-carousel button.next {
+  right: 10px;
+}
+.project-block .project-block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-block .project-block-text h2 {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7;
+  letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
+}
+.project-block .project-block-text p, .project-block .project-block-text ul {
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+.project-block .project-block-text a {
+  font-family: "Trirong", serif;
+  color: #84593e;
+  text-decoration: none;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  letter-spacing: 2px;
+}
+.project-block .project-block-text a:hover {
+  color: #f7f7f7;
+}
+
+.carousel {
+  border: 5px solid #b3aca7;
+  border-radius: 10px;
+}
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.projects-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  float: right;
+  overflow: hidden;
+  z-index: 500;
+}
+.projects-pages .project-block {
+  justify-content: flex-end;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #e2dedb;
+}
+
+.frame {
+  border: groove #e2dedb;
+  border-width: 10px 5px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  overflow: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

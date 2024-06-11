@@ -1,9 +1,10 @@
 import { useState} from "react";
 import ContactModal from "../Contact/Contact.tsx";
-import ProjectsModal from "../ProjectsModal/ProjectsModal.tsx";
+import {useNavigate} from "react-router-dom";
 
 
 function Header () {
+const navigate = useNavigate();
 const [isVisible, setIsVisible] = useState(true);
     // Modal for contact form
     const [showContactModal, setShowContactModal] = useState(false);
@@ -15,17 +16,6 @@ const [isVisible, setIsVisible] = useState(true);
         setIsVisible(false);
         setShowContactModal(false);
     }
-    // Modal for project list
-    const [showProjectsModal, setShowProjectsModal] = useState(false);
-    const openProjectsModal = () => {
-        setIsVisible(true);
-        setShowProjectsModal(true);
-    }
-    const closeProjectsModal = () => {
-        setIsVisible(false);
-        setShowProjectsModal(false);
-    }
-
 
     return (
         <header>
@@ -34,7 +24,7 @@ const [isVisible, setIsVisible] = useState(true);
             </a>
 
             <div className="header-top-block">
-                <h1>Rémy LAFAYE.</h1>
+                <h1>Rémy LAFAYE</h1>
                 <p>Développeur intégrateur web</p>
             </div>
 
@@ -42,28 +32,35 @@ const [isVisible, setIsVisible] = useState(true);
                 <nav>
                     <ul>
                         <li>
-                          <button
-                              className="button-project-modal"
-                              onClick={openProjectsModal}>
-                              Projets
-                          </button>
+                            <button
+                                className="button-project-page" onClick={() => navigate("/infos")}>
+                                Infos
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="button-project-page" onClick={() => navigate("/projects")}>
+                                Projets
+                            </button>
                         </li>
                         <li>
                             <a href="https://github.com/RKL715" target="_blank" rel="noopener noreferrer">Github</a>
                         </li>
+                        <li>
+                            <button
+                                className="button-contact-modal"
+                                onClick={openContactModal}>
+                                Contact
+                            </button>
+                        </li>
                     </ul>
                 </nav>
+                {showContactModal && <ContactModal closeContactModal={closeContactModal} isVisible={isVisible}
+                                                   setIsVisible={setIsVisible}/>}
             </div>
-
-            <div className="header_bottom_block">
-                <button
-                    className="button-contact-modal"
-                    onClick={openContactModal}>
-                    Contact
-                </button>
-                {showContactModal && <ContactModal closeContactModal={closeContactModal} isVisible={isVisible} setIsVisible={setIsVisible} />}
+            <div className="header-bottom-block">
+            <p>GPL-3.0 License 2024 - Rémy LAFAYE</p>
             </div>
-            {showProjectsModal && <ProjectsModal closeProjectsModal={closeProjectsModal} isVisible={isVisible} setIsVisible={setIsVisible}/>}
         </header>
     )
 }
