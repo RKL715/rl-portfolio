@@ -24,7 +24,7 @@
 }
 header {
   position: fixed;
-  z-index: 1000;
+  z-index: 500;
   width: 70%;
   background: transparent;
 }
@@ -169,7 +169,14 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: row;
   gap: 15%;
-  padding: 5% 1% 0 5%;
+  padding: 5% 1% 0 10%;
+}
+@media (max-width: 768px) {
+  .project-block {
+    flex-direction: column-reverse;
+    gap: 5%;
+    padding: 5% 1% 10% 1%;
+  }
 }
 .project-block .project-block-carousel {
   display: flex;
@@ -190,12 +197,15 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   color: #b3aca7;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
+  padding-bottom: 5%;
 }
 .project-block .project-block-text p, .project-block .project-block-text ul {
   font-family: "Martel Sans", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
+  padding-bottom: 5%;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
 .project-block .project-block-text a {
   font-family: "Trirong", serif;
@@ -252,8 +262,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   align-items: center;
   justify-content: flex-end;
   float: right;
-  overflow: hidden;
-  z-index: 500;
+  z-index: 1000;
 }
 .projects-pages .project-block {
   justify-content: flex-end;
