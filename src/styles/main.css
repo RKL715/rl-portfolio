@@ -34,8 +34,15 @@ header * {
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
   color: #b3aca7;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-size: clamp(2rem, 3vw, 3rem);
+}
+header .header-top-block h1 .header-link {
+  text-decoration: none;
+  color: inherit;
+}
+header .header-top-block h1 .header-link:hover {
+  font-weight: bolder;
 }
 header .header-top-block p {
   font-family: "Martel Sans", sans-serif;
@@ -56,15 +63,21 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
   border: none;
   cursor: pointer;
   outline: none;
-  opacity: 0.35;
+  opacity: 0.5;
   outline: 0;
   height: 30px;
-  width: 30px;
+  width: auto;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
 }
-header .header-middle-block ul li a:hover, header .header-middle-block ul li button:hover {
-  opacity: 1;
-  background: #b3aca7;
+header .header-middle-block ul li a:hover, header .header-middle-block ul li a:active, header .header-middle-block ul li a:focus, header .header-middle-block ul li button:hover, header .header-middle-block ul li button:active, header .header-middle-block ul li button:focus {
+  opacity: 0.75;
+  background: #91887f;
   color: #f7f7f7;
 }
 
@@ -196,13 +209,14 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li but
 
 .carousel {
   position: relative;
-  border: 5px solid #b3aca7;
-  border-radius: 10px;
   width: min(max(15vw, 150px), 30rem);
-  height: auto;
+  height: fit-content;
 }
 .carousel img {
+  border: 1px solid #b3aca7;
   width: 100%;
+  height: fit-content;
+  border-radius: 10px;
 }
 .carousel button {
   border: none;
@@ -217,7 +231,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li but
   background: transparent;
   transition: all 0.3s ease-in-out;
 }
-.carousel button:hover, .carousel button:active {
+.carousel button:hover, .carousel button:active, .carousel button:focus {
   transform: scale(1.2);
   opacity: 1;
 }

@@ -3,7 +3,7 @@
 @mixin title-h1 {
   font-family: 'Trirong', sans-serif;
   color : variables.$title-color;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
@@ -64,15 +64,16 @@
   border: none;
   cursor: pointer;
   outline: none;
-  opacity: 0.35;
+  opacity: 0.50;
   outline: 0;
   height: 30px;
-  width: 30px;
+  width: auto;
   text-decoration: none;
+    transition: all 0.3s ease-in-out;
 
-  &:hover {
-    opacity: 1;
-    background: #b3aca7;
+  &:hover, &:active, &:focus {
+    opacity: 0.75;
+    background: #91887f;
     color : #f7f7f7;
   }
 }

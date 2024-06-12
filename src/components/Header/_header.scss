@@ -13,6 +13,13 @@ header {
   .header-top-block {
     h1 {
       @include mixins.title-h1;
+      .header-link {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+         font-weight: bolder;
+        }
+      }
     }
     p {
       @include mixins.text;
@@ -28,6 +35,8 @@ header {
           padding : 5px 0;
           a, button {
             @include mixins.button;
+            color : inherit;
+            @include mixins.text;
           }
         }
       }

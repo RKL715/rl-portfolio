@@ -4,12 +4,13 @@
 
 .carousel {
   position: relative;
-  border : 5px solid variables.$secondary-color;
-  border-radius: 10px;
   width: min(max(15vw, 150px), 30rem);
-  height: auto;
+  height: fit-content;
  img {
+   border : 1px solid variables.$secondary-color;
    width: 100%;
+   height: fit-content;
+   border-radius: 10px;
  }
   button {
     border: none;
@@ -23,7 +24,7 @@
     width: 20px;
     background : transparent;
     transition: all 0.3s ease-in-out;
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
     transform: scale(1.2);
     opacity: 1;
     }

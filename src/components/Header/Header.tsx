@@ -1,6 +1,6 @@
 import { useState} from "react";
 import ContactModal from "../Contact/Contact.tsx";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 function Header () {
@@ -20,7 +20,10 @@ const [isVisible, setIsVisible] = useState(true);
     return (
         <header>
             <div className="header-top-block">
-                <h1>Rémy LAFAYE</h1>
+                <h1>
+                    <Link to="/" className="header-link">
+                    RÉMY LAFAYE
+                    </Link></h1>
                 <p>Développeur intégrateur web</p>
             </div>
 
@@ -29,23 +32,25 @@ const [isVisible, setIsVisible] = useState(true);
                     <ul>
                         <li>
                             <button
-                                className="button-project-page" onClick={() => navigate("/infos")}>
+                                className="button-project-page"
+                                onClick={() => navigate("/infos")} tabIndex={0}>
                                 Infos
                             </button>
                         </li>
                         <li>
                             <button
-                                className="button-project-page" onClick={() => navigate("/projects")}>
+                                className="button-project-page"
+                                onClick={() => navigate("/projects")} tabIndex={0}>
                                 Projets
                             </button>
                         </li>
                         <li>
-                            <a href="https://github.com/RKL715" target="_blank" rel="noopener noreferrer">Github</a>
+                            <a href="https://github.com/RKL715" target="_blank" rel="noopener noreferrer" tabIndex={0}>Github</a>
                         </li>
                         <li>
                             <button
                                 className="button-contact-modal"
-                                onClick={openContactModal}>
+                                onClick={openContactModal} tabIndex={0}>
                                 Contact
                             </button>
                         </li>
