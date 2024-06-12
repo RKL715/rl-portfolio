@@ -77,8 +77,9 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
 }
 header .header-middle-block ul li a:hover, header .header-middle-block ul li a:active, header .header-middle-block ul li a:focus, header .header-middle-block ul li button:hover, header .header-middle-block ul li button:active, header .header-middle-block ul li button:focus {
   opacity: 0.75;
-  background: #91887f;
+  background: #647d83;
   color: #f7f7f7;
+  transform: scale(1.1);
 }
 
 .header-bottom-block {
@@ -198,7 +199,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .project-block .project-block-text a {
   font-family: "Trirong", serif;
-  color: #84593e;
+  color: #b3aca7 bold;
   text-decoration: none;
   font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 2px;

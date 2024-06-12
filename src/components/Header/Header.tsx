@@ -45,7 +45,12 @@ const [isVisible, setIsVisible] = useState(true);
                             </button>
                         </li>
                         <li>
-                            <a href="https://github.com/RKL715" target="_blank" rel="noopener noreferrer" tabIndex={0}>Github</a>
+                            <button
+                                className={"button-project-page"}
+                                onClick={() => window.open("https://github.com/RKL715", "_blank", "noopener noreferrer")}
+                                tabIndex={0}>
+                                Github
+                            </button>
                         </li>
                         <li>
                             <button

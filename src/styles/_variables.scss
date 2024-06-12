@@ -1,13 +1,9 @@
 $main-color : #e2dedb;
 $secondary-color : #b3aca7;
 $third-color : #131515;
+$accent-color : #647d83;
 
-$title-color : #b3aca7;
-$font-text : #b3aca7 bold;
-$font-text-hover : #f7f7f7 bold;
+$title-color : $secondary-color;
+$font-text : $secondary-color bold;
+$font-text-hover : #f7f7f7;
 
-$link-color : #84593e;
-$link-color-hover : #f7f7f7;
-
-//$main-color : #647d83;
-//$secondary-color : #f7f7f7;

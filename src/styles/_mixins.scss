@@ -30,12 +30,12 @@
 
 @mixin link {
   font-family: "Trirong", serif;
-  color: variables.$link-color;
+  color: variables.$font-text;
   text-decoration: none;
   font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 2px;
   &:hover {
-    color: variables.$link-color-hover;
+    color: variables.$font-text-hover
   }
 }
 
@@ -73,9 +73,8 @@
 
   &:hover, &:active, &:focus {
     opacity: 0.75;
-    background: #91887f;
-    color : #f7f7f7;
+    background: variables.$accent-color;
+    color : variables.$font-text-hover;
+    transform: scale(1.1);
   }
 }
-
-// Trirong font
