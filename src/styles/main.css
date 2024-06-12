@@ -155,34 +155,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li but
   display: flex;
   flex-direction: row;
   gap: 15%;
-  padding: 5%;
+  padding: 5% 1% 0 5%;
 }
 .project-block .project-block-carousel {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-.project-block .project-block-carousel button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  display: block;
-  position: absolute;
-  opacity: 0.35;
-  outline: 0;
-  height: 30px;
-  width: 30px;
-}
-.project-block .project-block-carousel button:hover {
-  opacity: 1;
-}
-.project-block .project-block-carousel button.prev {
-  left: 10px;
-}
-.project-block .project-block-carousel button.next {
-  right: 10px;
+  height: 100%;
+  border-right: solid 5px #b3aca7;
+  padding-right: 3%;
+  justify-content: space-between;
+  align-items: center;
 }
 .project-block .project-block-text {
   display: flex;
@@ -213,12 +195,40 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li but
 }
 
 .carousel {
+  position: relative;
   border: 5px solid #b3aca7;
   border-radius: 10px;
+  width: min(max(15vw, 150px), 30rem);
+  height: auto;
 }
 .carousel img {
   width: 100%;
-  height: auto;
+}
+.carousel button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  position: absolute;
+  top: 6%;
+  opacity: 0.5;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.carousel button:hover, .carousel button:active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.carousel button svg {
+  background: none;
+}
+.carousel .prev {
+  left: 0;
+}
+.carousel .next {
+  right: 0;
 }
 
 .projects-pages {
