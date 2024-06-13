@@ -3,10 +3,13 @@
     {
       "id": 1,
       "name": "Kasa",
-      "description": "tructurc",
+      "description": "Projet 8 de formation OpenClassroom. Création d'un site de location de logements. Intégration d'une maquette responsive. Création de composants, React Router pour la navigation. Création d'animations CSS. Ajout de pages dynamiques pour chaque logement depuis JSON.",
       "technologies": [
         "React",
-        "SCSS"
+        "React Router",
+        "SCSS",
+        "Animation CSS",
+        "Responsive Design"
       ],
       "link": "github.com",
       "img": [
@@ -30,10 +33,13 @@
     {
   "id": 2,
   "name": "Argent Bank",
-  "description": "machin",
+  "description": "Projet 11 de formation OpenClassroom. Intégration de Redux Toolkit pour la gestion de l'état de l'application. Création de composants et de routes pour la navigation. Utilisation de l'API REST pour la récupération des données. Création de nouvelles routes API pour la gestion des transactions. Utilisation de Swagger pour la documentation de l'API.",
   "technologies": [
     "React",
-    "Redux Toolkit"
+    "React Router",
+    "Redux Toolkit",
+    "API REST",
+    "Swagger"
   ],
   "link": "github.com",
   "img": [
@@ -57,12 +63,14 @@
     {
   "id": 3,
   "name": "Sophie Bluel",
-  "description": "Portofolio Design",
+  "description": "Projet 6 de formation OpenClassroom. Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus. Ajout de fonctionnalités de filtrages et de récupération/suppression de travaux depuis l'API.",
   "technologies": [
     "JavaScript",
-    "API REST"
+    "API REST",
+    "SCSS",
+    "Responsive Design"
   ],
-  "link": "github.com",
+  "link": "https://github.com/RKL715/P6-Sophiebluel",
   "img": [
     {
       "id" : 1,

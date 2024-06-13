@@ -24,14 +24,25 @@
 }
 header {
   position: fixed;
-  z-index: 1000;
+  z-index: 500;
   width: 70%;
+  background: transparent;
+}
+header * {
+  background: inherit;
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
   color: #b3aca7;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   font-size: clamp(2rem, 3vw, 3rem);
+}
+header .header-top-block h1 .header-link {
+  text-decoration: none;
+  color: inherit;
+}
+header .header-top-block h1 .header-link:hover {
+  font-weight: bolder;
 }
 header .header-top-block p {
   font-family: "Martel Sans", sans-serif;
@@ -40,12 +51,35 @@ header .header-top-block p {
   font-size: clamp(0.5rem, 3vw, 1rem);
   font-size: clamp(0.8rem, 1vw, 1rem);
 }
-header ul {
+header .header-middle-block ul {
   padding-top: 15px;
 }
-header li {
+header .header-middle-block ul li {
   list-style: none;
   padding: 5px 0;
+}
+header .header-middle-block ul li a, header .header-middle-block ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  outline: 0;
+  height: 30px;
+  width: auto;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: inherit;
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+header .header-middle-block ul li a:hover, header .header-middle-block ul li a:active, header .header-middle-block ul li a:focus, header .header-middle-block ul li button:hover, header .header-middle-block ul li button:active, header .header-middle-block ul li button:focus {
+  opacity: 0.75;
+  background: #647d83;
+  color: #f7f7f7;
+  transform: scale(1.1);
 }
 
 .header-bottom-block {
@@ -135,34 +169,23 @@ header li {
   display: flex;
   flex-direction: row;
   gap: 15%;
-  padding: 5%;
+  padding: 5% 1% 0 10%;
+}
+@media (max-width: 768px) {
+  .project-block {
+    flex-direction: column-reverse;
+    gap: 5%;
+    padding: 5% 1% 10% 1%;
+  }
 }
 .project-block .project-block-carousel {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-.project-block .project-block-carousel button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  display: block;
-  position: absolute;
-  opacity: 0.35;
-  outline: 0;
-  height: 30px;
-  width: 30px;
-}
-.project-block .project-block-carousel button:hover {
-  opacity: 1;
-}
-.project-block .project-block-carousel button.prev {
-  left: 10px;
-}
-.project-block .project-block-carousel button.next {
-  right: 10px;
+  height: 100%;
+  border-right: solid 5px #b3aca7;
+  padding-right: 3%;
+  justify-content: space-between;
+  align-items: center;
 }
 .project-block .project-block-text {
   display: flex;
@@ -174,16 +197,19 @@ header li {
   color: #b3aca7;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
+  padding-bottom: 5%;
 }
 .project-block .project-block-text p, .project-block .project-block-text ul {
   font-family: "Martel Sans", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
+  padding-bottom: 5%;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
 .project-block .project-block-text a {
   font-family: "Trirong", serif;
-  color: #84593e;
+  color: #b3aca7 bold;
   text-decoration: none;
   font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 2px;
@@ -193,12 +219,41 @@ header li {
 }
 
 .carousel {
-  border: 5px solid #b3aca7;
-  border-radius: 10px;
+  position: relative;
+  width: min(max(15vw, 150px), 30rem);
+  height: fit-content;
 }
 .carousel img {
+  border: 1px solid #b3aca7;
   width: 100%;
-  height: auto;
+  height: fit-content;
+  border-radius: 10px;
+}
+.carousel button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  position: absolute;
+  top: 6%;
+  opacity: 0.5;
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.carousel button:hover, .carousel button:active, .carousel button:focus {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.carousel button svg {
+  background: none;
+}
+.carousel .prev {
+  left: 0;
+}
+.carousel .next {
+  right: 0;
 }
 
 .projects-pages {
@@ -207,11 +262,43 @@ header li {
   align-items: center;
   justify-content: flex-end;
   float: right;
-  overflow: hidden;
-  z-index: 500;
+  z-index: 1000;
 }
 .projects-pages .project-block {
   justify-content: flex-end;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .home {
+    overflow: scroll;
+  }
+}
+.home .home-text {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  background: none;
+  margin-right: 1vw;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 35px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: clamp(300px, 50vw, 800px);
+}
+@media (max-width: 768px) {
+  .home .home-text {
+    margin-top: 80vh;
+  }
 }
 
 * {

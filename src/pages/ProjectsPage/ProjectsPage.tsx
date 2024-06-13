@@ -13,7 +13,7 @@ function ProjectsPage () {
         const handleResize = () => {
             const width = window.innerWidth;
 
-            if (width < 1000) {
+            if (width < 600) {
                 setMarginTop("20rem"); // 20rem to avoid the header, more = less near the header
             } else {
                 setMarginTop("5rem"); // default value
