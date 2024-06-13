@@ -1,0 +1,46 @@
+{
+  "skills" : [
+    {
+      "id" : 1,
+        "name" : "JavaScript",
+        "img" : "/public/JS.svg",
+        "alt" : "Logo de JavaScript"
+    },
+    {
+      "id" : 2,
+        "name" : "React",
+        "img" : "/public/react.svg",
+        "alt" : "Logo de React"
+    },
+    {
+      "id"  : 3,
+        "name" : "Redux Toolkit",
+        "img" : "/public/redux.svg",
+        "alt" : "Logo de Redux Toolkit"
+    },
+    {
+      "id" : 4,
+        "name" : "SCSS",
+        "img" : "/public/sass.svg",
+        "alt" : "Logo de SCSS"
+    },
+    {
+      "id" : 5,
+        "name" : "TypeScript",
+        "img" : "/public/typescript.svg",
+        "alt" : "Logo de TypeScript"
+    },
+    {
+        "id" : 6,
+        "name" : "GitHub",
+        "img" : "/public/github.svg",
+        "alt" : "Logo de GitHub"
+    },
+    {
+      "id": 7,
+        "name" : "GIT",
+        "img" : "/public/git.svg",
+        "alt" : "Logo de GIT"
+    }
+  ]
+}

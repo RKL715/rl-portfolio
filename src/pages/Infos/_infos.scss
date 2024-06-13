@@ -1,0 +1,59 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/animation";
+
+.infos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: flex-end;
+  overflow: hidden;
+  @media  (max-width: 768px) {
+    overflow: scroll;
+    margin-top: 5%;
+  }
+
+.skills-title {
+  @include mixins.title-h3;
+  margin-bottom: 5px;
+}
+
+.skills-list {
+  margin-right: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .skills-item {
+      @include mixins.text;
+      text-align: center;
+    }
+  }
+}
+
+  .infos-text {
+    @include mixins.text-bio;
+    background: none;
+    margin-right : 1vw;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 35px;
+    box-sizing: border-box;
+    padding : 0 20px;
+    width: clamp(300px, 50vw, 800px);
+    @media  (max-width: 768px) {
+      margin-top: 80vh;
+    }
+  }
+}
