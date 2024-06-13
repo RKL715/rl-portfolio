@@ -268,6 +268,39 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   justify-content: flex-end;
 }
 
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .home {
+    overflow: scroll;
+  }
+}
+.home .home-text {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  background: none;
+  margin-right: 1vw;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 35px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: clamp(300px, 50vw, 800px);
+}
+@media (max-width: 768px) {
+  .home .home-text {
+    margin-top: 80vh;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

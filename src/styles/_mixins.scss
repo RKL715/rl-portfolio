@@ -21,6 +21,13 @@
   font-size: clamp(0.5rem, 3vw, 1rem);
 }
 
+@mixin text-bio {
+  font-family: 'Lato', sans-serif;
+  color: variables.$font-text;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+}
+
 @mixin text-hover {
   font-family: 'Martel Sans', sans-serif;
   color: variables.$font-text-hover;
