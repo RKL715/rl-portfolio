@@ -4,10 +4,8 @@
 header {
   position: fixed;
   z-index: 500;
-  width: clamp(50%, 70%, 100%);
-  background: transparent;
-  * {
-    background: inherit;
+  @media (max-width: 768px) {
+  width: calc(100% - 100px);
   }
 
   .header-top-block {

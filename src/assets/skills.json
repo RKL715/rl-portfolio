@@ -42,5 +42,43 @@
         "img" : "/public/git.svg",
         "alt" : "Logo de GIT"
     }
+  ],
+  "othersSkills" : [
+    {
+      "id" : 1,
+        "name" : "Affinity Photo",
+        "img" : "/public/affinity-photo.png",
+        "alt" : "Logo de Affinity Photo"
+    },
+    {
+      "id" : 2,
+        "name" : "Adobe Premiere Pro",
+        "img" : "/public/premiere.png",
+        "alt" : "Logo de Adobe Premiere Pro"
+    },
+    {
+      "id" : 3,
+        "name" : "Photography",
+        "img" : "/public/camera.png",
+        "alt" : "Illustration d'un appareil photo"
+    },
+    {
+      "id" : 4,
+        "name" : "Cinema",
+        "img" : "/public/cinema.png",
+        "alt" : "Illustration de bobine de film"
+    },
+    {
+      "id" : 5,
+        "name" : "Music",
+        "img" : "/public/music.png",
+        "alt" : "Illustration de note de musique"
+    },
+    {
+      "id" : 6,
+        "name" : "Theatre",
+        "img" : "/public/theater.png",
+        "alt" : "Illustration d'une scène de théâtre"
+    }
   ]
 }

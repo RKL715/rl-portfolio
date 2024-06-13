@@ -4,7 +4,7 @@
   font-family: 'Trirong', sans-serif;
   color : variables.$title-color;
   letter-spacing: 4px;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 @mixin title-h2 {

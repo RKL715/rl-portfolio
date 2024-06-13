@@ -25,17 +25,17 @@
 header {
   position: fixed;
   z-index: 500;
-  width: 70%;
-  background: transparent;
 }
-header * {
-  background: inherit;
+@media (max-width: 768px) {
+  header {
+    width: calc(100% - 100px);
+  }
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
   color: #b3aca7;
   letter-spacing: 4px;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 header .header-top-block h1 .header-link {
   text-decoration: none;
@@ -297,33 +297,34 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 @media (max-width: 768px) {
   .home .home-text {
-    margin-top: 80vh;
+    height: 25vh;
   }
 }
 
-.infos {
+.infos-page {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .infos {
+  .infos-page {
     overflow: scroll;
     margin-top: 5%;
   }
 }
-.infos .skills-title {
+.infos-page .infos-titles {
   font-family: "Martel Sans", sans-serif;
   color: #b3aca7;
   letter-spacing: 3px;
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 5px;
 }
-.infos .skills-list {
+
+.skills-list {
   margin-right: 10px;
   list-style: none;
   display: flex;
@@ -332,37 +333,24 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   flex-wrap: wrap;
   gap: 5%;
 }
-.infos .skills-list .centered-content {
+.skills-list .centered-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.infos .skills-list .centered-content .skills-item {
+.skills-list .centered-content .skills-item {
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
   text-align: center;
 }
-.infos .infos-text {
-  font-family: "Lato", sans-serif;
-  color: #b3aca7 bold;
-  letter-spacing: 2px;
-  font-size: clamp(0.5rem, 2.5vw, 1rem);
-  background: none;
-  margin-right: 1vw;
-  text-align: justify;
-  letter-spacing: 2px;
-  line-height: 35px;
-  box-sizing: border-box;
-  padding: 0 20px;
-  width: clamp(300px, 50vw, 800px);
-}
-@media (max-width: 768px) {
-  .infos .infos-text {
-    margin-top: 80vh;
-  }
+
+.infos-content-skills, .infos-content-others {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 * {

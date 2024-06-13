@@ -15,7 +15,7 @@ function SkillsList({ skills }: SkillsListProps) {
                     {skills.map((skill, index) => (
                         <li key={index} className="skills-item">
                             <div className="centered-content">
-                                <img src={skill.img} alt={skill.alt} width={30} />
+                                <img src={skill.img} alt={skill.alt} width={40} />
                                 <span>{skill.name}</span>
                             </div>
                         </li>
