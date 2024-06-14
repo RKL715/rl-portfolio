@@ -36,7 +36,7 @@ header {
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 4px;
   font-size: clamp(1.5rem, 3vw, 3rem);
 }
@@ -161,7 +161,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .contact-form-top .contact-form-title {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   max-width: 80%;
@@ -210,7 +210,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .project-block .project-block-text h2 {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   padding-bottom: 5%;
@@ -344,7 +344,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .infos-page .infos-titles {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 3px;
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 5px;
