@@ -175,9 +175,13 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding: 5% 1% 0 10%;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .project-block {
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 768px) {
+  .project-block {
     gap: 5%;
     padding: 5% 1% 10% 1%;
     margin-top: 20%;
@@ -196,6 +200,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: justify;
 }
 .project-block .project-block-text h2 {
   font-family: "Martel Sans", sans-serif;
@@ -271,6 +276,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   justify-content: flex-end;
   float: right;
   z-index: 1000;
+  width: 75%;
+}
+@media (max-width: 1400px) {
+  .projects-pages {
+    width: 100%;
+  }
 }
 
 .home {

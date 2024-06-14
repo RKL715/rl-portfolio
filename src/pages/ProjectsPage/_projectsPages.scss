@@ -11,4 +11,8 @@
     justify-content: flex-end;
     float: right;
     z-index: 1000;
+    width: 75%;
+    @media  (max-width: 1400px) {
+    width: 100%
+    }
 }
