@@ -11,7 +11,7 @@
         "Animation CSS",
         "Responsive Design"
       ],
-      "link": "github.com",
+      "link": "https://github.com/RKL715/P8---Kasa",
       "img": [
         {
           "id" : 1,
@@ -41,7 +41,7 @@
     "API REST",
     "Swagger"
   ],
-  "link": "github.com",
+  "link": "https://github.com/RKL715/P11-ArgentBank",
   "img": [
     {
       "id" : 1,
@@ -75,17 +75,17 @@
     {
       "id" : 1,
       "title": "image1",
-      "src": "../public/projects/sophiebluel1.webp"
+      "src": "../public/projects/bluel1.webp"
     },
     {
       "id" : 2,
       "title": "image2",
-      "src": "../public/projects/sophiebluel2.webp"
+      "src": "../public/projects/bluel2.webp"
     },
     {
       "id" : 3,
       "title": "image3",
-      "src": "../public/projects/sophiebluel3.webp"
+      "src": "../public/projects/bluel3.webp"
     }
   ]
 }
