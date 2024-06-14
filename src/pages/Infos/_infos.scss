@@ -3,16 +3,18 @@
 @use "../../styles/animation";
 
 .infos-page {
-  width: 100%;
-  height: 100%;
+  width: clamp(300px, 100%, 100vw);
+  height: clamp(300px, 100%, 100vh);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  padding-right: 5%;
+  gap: 10%;
+  align-items: flex-start;
   overflow: hidden;
   @media (max-width: 768px) {
     overflow: scroll;
-    margin-top: 5%;
+    align-items: flex-end;
   }
   .infos-titles {
     @include mixins.title-h3;
@@ -38,6 +40,11 @@
       .skills-item {
         @include mixins.text;
         text-align: center;
+
+        img {
+          width: clamp(20px, 50%, 40px);
+          height: clamp(20px, 50%, 40px);
+        }
       }
     }
   }
@@ -47,5 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+
 }
 

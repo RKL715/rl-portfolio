@@ -1,6 +1,5 @@
 import Project, {ProjectType} from "../../components/Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
-import { useNavigate } from "react-router-dom";
 import {useEffect, useState} from "react";
 
 
@@ -27,13 +26,6 @@ function ProjectsPage () {
         }
     }, []);
 
-
-    // TO close the projects page
-    const Navigate = useNavigate();
-    const handleClose = () => {
-        Navigate('/');
-    }
-
     return (
         <div className={"projects-pages"} style={{ marginTop }}>
             {projectsData.projects.map((project: ProjectType) => (
@@ -47,7 +39,6 @@ function ProjectsPage () {
                     img={project.img}
                 />
             ))}
-            <button className='close-page-project' onClick={handleClose}>CLOSE</button>
         </div>
     )
 }

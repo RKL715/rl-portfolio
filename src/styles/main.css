@@ -26,10 +26,8 @@ header {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: none;
-}
-header * {
-  background: inherit;
+  z-index: 1;
+  border-top: 20px solid #e2dedb;
 }
 @media (max-width: 768px) {
   header {
@@ -38,7 +36,7 @@ header * {
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 4px;
   font-size: clamp(1.5rem, 3vw, 3rem);
 }
@@ -115,7 +113,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border: black 1px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: fixed;
-  left: 1vw;
+  left: 4vw;
   width: clamp(90%, 2vw, 100%);
 }
 .contact-form .contact-form-fields, .contact-form form {
@@ -163,7 +161,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .contact-form-top .contact-form-title {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   max-width: 80%;
@@ -173,14 +171,26 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   gap: 15%;
   padding: 5% 1% 0 10%;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .project-block {
+    flex-direction: column-reverse;
+    margin-top: 40%;
+  }
 }
 @media (max-width: 768px) {
   .project-block {
-    flex-direction: column-reverse;
     gap: 5%;
     padding: 5% 1% 10% 1%;
+  }
+}
+@media (max-width: 600px) {
+  .project-block {
+    margin-top: 0;
   }
 }
 .project-block .project-block-carousel {
@@ -196,10 +206,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: justify;
 }
 .project-block .project-block-text h2 {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   padding-bottom: 5%;
@@ -225,8 +236,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 .carousel {
   position: relative;
-  width: min(max(15vw, 150px), 30rem);
-  height: min(max(50vh, 150px), 30rem);
+  width: min(max(50vw, 200px), 60rem);
+  max-width: 500px;
+  height: min(max(50vh, 200px), 60rem);
+  max-height: 400px;
+  z-index: 0;
 }
 .carousel img {
   width: 100%;
@@ -266,11 +280,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  padding-left: 5%;
+  padding-right: 5%;
   float: right;
-  z-index: 1000;
+  z-index: 0;
+  width: 75%;
 }
-.projects-pages .project-block {
-  justify-content: flex-end;
+@media (max-width: 1400px) {
+  .projects-pages {
+    width: 100%;
+  }
 }
 
 .home {
@@ -307,23 +326,25 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .infos-page {
-  width: 100%;
-  height: 100%;
+  width: clamp(300px, 100%, 100vw);
+  height: clamp(300px, 100%, 100vh);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  padding-right: 5%;
+  gap: 10%;
+  align-items: flex-start;
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .infos-page {
     overflow: scroll;
-    margin-top: 5%;
+    align-items: flex-end;
   }
 }
 .infos-page .infos-titles {
   font-family: "Martel Sans", sans-serif;
-  color: #b3aca7;
+  color: #647d83;
   letter-spacing: 3px;
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 5px;
@@ -351,11 +372,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   font-size: clamp(0.5rem, 3vw, 1rem);
   text-align: center;
 }
+.skills-list .centered-content .skills-item img {
+  width: clamp(20px, 50%, 40px);
+  height: clamp(20px, 50%, 40px);
+}
 
 .infos-content-skills, .infos-content-others {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
 * {
@@ -369,12 +395,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border: groove #e2dedb;
   border-width: 10px 5px;
   border-radius: 10px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   margin: 20px;
   box-sizing: border-box;
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
   overflow: auto;
+  position: sticky;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

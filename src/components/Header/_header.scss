@@ -5,10 +5,8 @@ header {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: none;
-  *{
-    background: inherit;
-  }
+  z-index: 1;
+  border-top : 20px solid variables.$main-color;
   @media (max-width: 768px) {
   width: calc(100% - 100px);
   }
