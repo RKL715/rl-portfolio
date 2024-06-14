@@ -24,18 +24,23 @@
 }
 header {
   position: fixed;
-  z-index: 500;
-  width: 70%;
-  background: transparent;
+  display: flex;
+  flex-direction: column;
+  background: none;
 }
 header * {
   background: inherit;
+}
+@media (max-width: 768px) {
+  header {
+    width: calc(100% - 100px);
+  }
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
   color: #b3aca7;
   letter-spacing: 4px;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 header .header-top-block h1 .header-link {
   text-decoration: none;
@@ -45,7 +50,7 @@ header .header-top-block h1 .header-link:hover {
   font-weight: bolder;
 }
 header .header-top-block p {
-  font-family: "Martel Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -70,7 +75,7 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   color: inherit;
-  font-family: "Martel Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -89,7 +94,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .header-bottom-block p {
   background: transparent;
-  font-family: "Martel Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -124,7 +129,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .contact-form input, .contact-form textarea {
   max-width: 80%;
   min-width: 50%;
-  font-family: "Martel Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -157,7 +162,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   min-width: 50%;
 }
 .contact-form .contact-form-top .contact-form-title {
-  font-family: "Lato", sans-serif;
+  font-family: "Martel Sans", sans-serif;
   color: #b3aca7;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
@@ -193,14 +198,14 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   align-items: flex-start;
 }
 .project-block .project-block-text h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Martel Sans", sans-serif;
   color: #b3aca7;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   padding-bottom: 5%;
 }
 .project-block .project-block-text p, .project-block .project-block-text ul {
-  font-family: "Martel Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -221,13 +226,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .carousel {
   position: relative;
   width: min(max(15vw, 150px), 30rem);
-  height: fit-content;
+  height: min(max(50vh, 150px), 30rem);
 }
 .carousel img {
-  border: 1px solid #b3aca7;
   width: 100%;
-  height: fit-content;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: contain;
 }
 .carousel button {
   border: none;
@@ -235,11 +239,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   outline: none;
   display: block;
   position: absolute;
-  top: 6%;
+  top: 50%;
   opacity: 0.5;
-  height: 20px;
-  width: 20px;
-  background: transparent;
+  height: 30px;
+  width: 30px;
+  background: white;
+  border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 .carousel button:hover, .carousel button:active, .carousel button:focus {
@@ -297,8 +302,60 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 @media (max-width: 768px) {
   .home .home-text {
-    margin-top: 80vh;
+    height: 25vh;
   }
+}
+
+.infos-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .infos-page {
+    overflow: scroll;
+    margin-top: 5%;
+  }
+}
+.infos-page .infos-titles {
+  font-family: "Martel Sans", sans-serif;
+  color: #b3aca7;
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-bottom: 5px;
+}
+
+.skills-list {
+  margin-right: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.skills-list .centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills-list .centered-content .skills-item {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  text-align: center;
+}
+
+.infos-content-skills, .infos-content-others {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 * {

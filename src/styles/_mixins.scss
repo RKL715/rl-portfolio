@@ -4,18 +4,25 @@
   font-family: 'Trirong', sans-serif;
   color : variables.$title-color;
   letter-spacing: 4px;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 @mixin title-h2 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Martel Sans', sans-serif;
     color : variables.$title-color;
     letter-spacing: 7px;
     font-size: clamp(1rem, 3vw, 2rem);
 }
 
-@mixin text {
+@mixin title-h3 {
   font-family: 'Martel Sans', sans-serif;
+  color : variables.$title-color;
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+@mixin text {
+  font-family: 'Lato', sans-serif;
   color: variables.$font-text;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);

@@ -1,0 +1,84 @@
+{
+  "skills" : [
+    {
+      "id" : 1,
+        "name" : "JavaScript",
+        "img" : "/public/skills/JS.svg",
+        "alt" : "Logo de JavaScript"
+    },
+    {
+      "id" : 2,
+        "name" : "React",
+        "img" : "/public/skills/react.svg",
+        "alt" : "Logo de React"
+    },
+    {
+      "id"  : 3,
+        "name" : "Redux Toolkit",
+        "img" : "/public/skills/redux.svg",
+        "alt" : "Logo de Redux Toolkit"
+    },
+    {
+      "id" : 4,
+        "name" : "SCSS",
+        "img" : "/public/skills/sass.svg",
+        "alt" : "Logo de SCSS"
+    },
+    {
+      "id" : 5,
+        "name" : "TypeScript",
+        "img" : "/public/skills/typescript.svg",
+        "alt" : "Logo de TypeScript"
+    },
+    {
+        "id" : 6,
+        "name" : "GitHub",
+        "img" : "/public/skills/github.svg",
+        "alt" : "Logo de GitHub"
+    },
+    {
+      "id": 7,
+        "name" : "GIT",
+        "img" : "/public/skills/git.svg",
+        "alt" : "Logo de GIT"
+    }
+  ],
+  "othersSkills" : [
+    {
+      "id" : 1,
+        "name" : "Affinity Photo",
+        "img" : "/public/skills/affinity-photo.png",
+        "alt" : "Logo de Affinity Photo"
+    },
+    {
+      "id" : 2,
+        "name" : "Adobe Premiere Pro",
+        "img" : "/public/skills/premiere.png",
+        "alt" : "Logo de Adobe Premiere Pro"
+    },
+    {
+      "id" : 3,
+        "name" : "Photography",
+        "img" : "/public/skills/camera.png",
+        "alt" : "Illustration d'un appareil photo"
+    },
+    {
+      "id" : 4,
+        "name" : "Cinema",
+        "img" : "/public/skills/cinema.svg",
+        "alt" : "Illustration de bobine de film"
+    },
+    {
+      "id" : 5,
+        "name" : "Music",
+        "img" : "/public/skills/music.png",
+        "alt" : "Illustration de note de musique"
+    },
+    {
+      "id" : 6,
+        "name" : "Theatre",
+        "img" : "/public/skills/theater.png",
+        "alt" : "Illustration d'une scène de théâtre"
+    }
+  ]
+}
