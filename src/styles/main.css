@@ -306,18 +306,20 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .infos-page {
-  width: 100%;
-  height: 100%;
+  width: clamp(300px, 100%, 100vw);
+  height: clamp(300px, 100%, 100vh);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
+  padding-right: 5%;
+  gap: 10%;
+  align-items: flex-start;
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .infos-page {
     overflow: scroll;
-    margin-top: 5%;
+    align-items: flex-end;
   }
 }
 .infos-page .infos-titles {
@@ -350,11 +352,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   font-size: clamp(0.5rem, 3vw, 1rem);
   text-align: center;
 }
+.skills-list .centered-content .skills-item img {
+  width: clamp(20px, 50%, 40px);
+  height: clamp(20px, 50%, 40px);
+}
 
 .infos-content-skills, .infos-content-others {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
 * {
