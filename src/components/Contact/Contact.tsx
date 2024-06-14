@@ -52,29 +52,30 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
 
     // TO Render the contact form
     return (
-    <div className={`contact-form ${isVisible ? "fade-in" : "fade-out"}`} ref={modalRef}>
-        <div className="contact-form-top">
-        <h2 className="contact-form-title">CONTACT</h2>
-        </div>
+        <div className={`contact-form ${isVisible ? "fade-in" : "fade-out"}`} ref={modalRef}>
+            <div className="contact-form-top">
+                <h2 className="contact-form-title">CONTACT</h2>
+            </div>
 
-        <form onSubmit={handleSubmit}>
-        <div className="contact-form-fields">
-            <label htmlFor="name"></label>
-            <input type="text" id="name" name="name" placeholder="NAME" required />
+            <form onSubmit={handleSubmit}
+                  action="https://formsubmit.co/ray.fameley@pm.me" method="POST">
+            <div className="contact-form-fields">
+                <label htmlFor="name"></label>
+                <input type="text" id="name" name="name" placeholder="NAME" required/>
 
-            <label htmlFor="email"></label>
-            <input type="email" id="email" name="email" placeholder="E-MAIL" required />
+                <label htmlFor="email"></label>
+                <input type="email" id="email" name="email" placeholder="E-MAIL" required/>
 
-            <label htmlFor="message"></label>
-            <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
+                <label htmlFor="message"></label>
+                <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
 
-            <button type="submit" className="submit">
-                <img src="/icons/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
-            </button>
-        </div>
+                <button type="submit" className="submit">
+                    <img src="/icons/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
+                </button>
+            </div>
         </form>
-    </div>
-    )
+</div>
+)
 }
 
 export default ContactModal
