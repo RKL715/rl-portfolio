@@ -13,7 +13,7 @@ export interface  ProjectType {
 export interface ImageType {
     id: number;
     title : string
-    url : string; //replace with src
+    src : string;
 }
 
 
