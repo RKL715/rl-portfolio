@@ -4,7 +4,7 @@
 .contact-form {
   @include mixins.modal;
   position: fixed;
-  left: 1vw;
+  left: 4vw;
   width: clamp(90%, 2vw, 100%);
 
   .contact-form-fields, form{

@@ -113,7 +113,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border: black 1px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: fixed;
-  left: 1vw;
+  left: 4vw;
   width: clamp(90%, 2vw, 100%);
 }
 .contact-form .contact-form-fields, .contact-form form {
