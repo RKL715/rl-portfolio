@@ -26,10 +26,7 @@ header {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: none;
-}
-header * {
-  background: inherit;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   header {
@@ -183,6 +180,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
     flex-direction: column-reverse;
     gap: 5%;
     padding: 5% 1% 10% 1%;
+    margin-top: 20%;
   }
 }
 .project-block .project-block-carousel {
@@ -227,8 +225,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 .carousel {
   position: relative;
-  width: min(max(15vw, 150px), 30rem);
-  height: min(max(50vh, 150px), 30rem);
+  width: min(max(50vw, 200px), 60rem);
+  max-width: 500px;
+  height: min(max(50vh, 200px), 60rem);
+  max-height: 400px;
+  z-index: 0;
 }
 .carousel img {
   width: 100%;
