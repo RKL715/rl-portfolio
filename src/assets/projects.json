@@ -16,17 +16,17 @@
         {
           "id" : 1,
           "title": "image1",
-          "src": "./public/projects/kasa1.webp"
+          "src": "/projects/kasa1.webp"
         },
         {
           "id" : 2,
           "title": "image2",
-          "src": "./public/projects/kasa2.webp"
+          "src": "/projects/kasa2.webp"
         },
         {
           "id" : 3,
           "title": "image3",
-          "src": "./public/projects/kasa3.webp"
+          "src": "/projects/kasa3.webp"
         }
       ]
     },
@@ -46,17 +46,17 @@
     {
       "id" : 1,
       "title": "Formulaire de connexion, format desktop",
-      "src": "./public/projects/argentbank1.webp"
+      "src": "/projects/argentbank1.webp"
     },
     {
       "id" : 2,
       "title": "Formulaire de changement d'username, format tablette",
-      "src": "./public/projects/argentbank2.webp"
+      "src": "/projects/argentbank2.webp"
     },
     {
       "id" : 3,
       "title": "Home page, format mobile",
-      "src": "./public/projects/argentbank3.webp"
+      "src": "/projects/argentbank3.webp"
     }
   ]
 },
@@ -75,17 +75,17 @@
     {
       "id" : 1,
       "title": "image1",
-      "src": "./public/projects/bluel1.webp"
+      "src": "/projects/bluel1.webp"
     },
     {
       "id" : 2,
       "title": "image2",
-      "src": "./public/projects/bluel2.webp"
+      "src": "/projects/bluel2.webp"
     },
     {
       "id" : 3,
       "title": "image3",
-      "src": "./public/projects/bluel3.webp"
+      "src": "/projects/bluel3.webp"
     }
   ]
 }
