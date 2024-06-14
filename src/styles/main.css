@@ -173,8 +173,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   gap: 15%;
   padding: 5% 1% 0 10%;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .project-block {
@@ -190,7 +192,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border-right: solid 5px #b3aca7;
   padding-right: 3%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .project-block .project-block-text {
   display: flex;
@@ -268,9 +270,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   justify-content: flex-end;
   float: right;
   z-index: 1000;
-}
-.projects-pages .project-block {
-  justify-content: flex-end;
 }
 
 .home {

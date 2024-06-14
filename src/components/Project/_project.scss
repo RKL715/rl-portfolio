@@ -5,8 +5,10 @@
 .project-block {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   gap: 15%;
   padding: 5% 1% 0 10%;
+  width: 100%;
   @media  (max-width: 768px) {
     flex-direction: column-reverse;
     gap: 5%;
@@ -20,7 +22,7 @@
     border-right : solid 5px variables.$secondary-color;
     padding-right: 3%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     }
 
 
