@@ -192,7 +192,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border-right: solid 5px #b3aca7;
   padding-right: 3%;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .project-block .project-block-text {
   display: flex;
