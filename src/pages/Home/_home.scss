@@ -39,6 +39,9 @@
     height: 30px;
     opacity: 1!important;
     color: #647d83!important;
+    &:hover &:active &:focus {
+      background: none;
+    }
   }
 
   .bullet {

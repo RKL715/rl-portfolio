@@ -351,6 +351,9 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   color: #f7f7f7;
   transform: scale(1.1);
 }
+.home .home-button:hover .home .home-button:active .home .home-button:focus {
+  background: none;
+}
 .home .bullet {
   display: flex;
   justify-content: center;
