@@ -33,13 +33,6 @@ const [isVisible, setIsVisible] = useState(true);
                         <li>
                             <button
                                 className="button-project-page"
-                                onClick={() => navigate("/infos")} tabIndex={0}>
-                                Infos
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className="button-project-page"
                                 onClick={() => navigate("/projects")} tabIndex={0}>
                                 Projets
                             </button>
