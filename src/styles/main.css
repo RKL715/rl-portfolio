@@ -324,64 +324,50 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
     height: 25vh;
   }
 }
-
-.infos-page {
-  width: clamp(300px, 100%, 100vw);
-  height: clamp(300px, 100%, 100vh);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 5%;
-  gap: 10%;
-  align-items: flex-start;
-  overflow: hidden;
+.home .home-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  outline: 0;
+  height: 30px;
+  width: auto;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  background: #647d83;
+  border-radius: 100%;
+  background: none;
+  margin-right: 1vw;
+  margin-top: 1vh;
+  width: 30px;
+  height: 30px;
+  opacity: 1 !important;
+  color: #647d83 !important;
 }
-@media (max-width: 768px) {
-  .infos-page {
-    overflow: scroll;
-    align-items: flex-end;
-  }
+.home .home-button:hover, .home .home-button:active, .home .home-button:focus {
+  opacity: 0.75;
+  background: #647d83;
+  color: #f7f7f7;
+  transform: scale(1.1);
 }
-.infos-page .infos-titles {
-  font-family: "Martel Sans", sans-serif;
-  color: #647d83;
-  letter-spacing: 3px;
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin-bottom: 5px;
+.home .home-button:hover .home .home-button:active .home .home-button:focus {
+  background: none;
 }
-
-.skills-list {
-  margin-right: 10px;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5%;
-}
-.skills-list .centered-content {
+.home .bullet {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-.skills-list .centered-content .skills-item {
-  font-family: "Lato", sans-serif;
-  color: #b3aca7 bold;
-  letter-spacing: 2px;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  text-align: center;
+.home .bullet span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
 }
-.skills-list .centered-content .skills-item img {
-  width: clamp(20px, 50%, 40px);
-  height: clamp(20px, 50%, 40px);
-}
-
-.infos-content-skills, .infos-content-others {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  font-size: clamp(0.75rem, 2vw, 1rem);
+.home .bullet span.active {
+  background-color: #647d83;
 }
 
 * {
