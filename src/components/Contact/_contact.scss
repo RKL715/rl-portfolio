@@ -39,7 +39,7 @@
       background: #b3aca7;
       color: #e2dedb;
     }
-  }
+    }
 
   .contact-form-top {
     display : flex;
@@ -53,6 +53,20 @@
       @include mixins.max-min-contact;
     }
   }
+  .loader {
+    border: #647d83 2px solid;
+    border-top: #f7f7f7 2px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
   }
+
+  }
+}
 
 
