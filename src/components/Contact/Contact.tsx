@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 interface ContactModalProps {
     closeContactModal: () => void;
@@ -11,6 +11,8 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
 
     // TO Create a reference to the modal
     const modalRef = useRef<HTMLDivElement>(null);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     // TO Close modal when clicking outside
     useEffect(() => {
@@ -44,10 +46,13 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
     // TO Handle form submission
     const handleSubmit = (event : React.FormEvent) => {
         event.preventDefault();
-        setIsVisible(false);
+        setIsLoading(true);
+        setIsSubmitted(true)
         setTimeout(() => {
+            setIsVisible(false);
             closeContactModal();
-        }, 500);
+            setIsLoading(false);
+        }, 2000);
     }
 
     // TO Render the contact form
@@ -58,7 +63,7 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
             </div>
 
             <form onSubmit={handleSubmit}
-                  action="https://formsubmit.co/ray.fameley@pm.me" method="POST">
+                  action="https://formsubmit.co/rkl-tech@protonmail.com" method="POST">
             <div className="contact-form-fields">
                 <label htmlFor="name"></label>
                 <input type="text" id="name" name="name" placeholder="NAME" required/>
@@ -70,12 +75,17 @@ function ContactModal ( {closeContactModal, isVisible, setIsVisible} : ContactMo
                 <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
 
                 <button type="submit" className="submit">
-                    <img src="/icons/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
+                    {isLoading ?
+                    <div className="loader"></div> :
+                    isSubmitted ?
+                        <img src="/icons/checked.png" alt="Succès d'envoi d'email" className="contact-form-success" width="30"/> :
+                        <img src="/icons/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>
+                    }
                 </button>
             </div>
-        </form>
-</div>
-)
+            </form>
+        </div>
+    )
 }
 
 export default ContactModal
