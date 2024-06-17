@@ -269,9 +269,26 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   z-index: 0;
 }
 .carousel img {
+  pointer-events: auto;
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.carousel img:hover {
+  cursor: pointer;
+}
+.carousel img:hover::after {
+  content: "Click to enlarge";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7f7f7;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
 }
 .carousel button {
   border: none;
@@ -299,6 +316,32 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .carousel .next {
   right: 0;
+}
+
+.modal-container {
+  position: fixed;
+  background: none;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+.modal-container .modal {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 102;
+}
+.modal-container .modal img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .projects-pages {
@@ -429,7 +472,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
   overflow: auto;
-  position: sticky;
+  position: fixed;
   z-index: 2;
 }
 
