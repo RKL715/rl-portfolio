@@ -53,7 +53,7 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
         setResult('sending');
 
         const formData = new FormData(event.currentTarget);
-        formData.append("access_key", " 5fe833ef-4663-4411-a3f9-c1e1c9ad4e48");
+        formData.append("access_key", "5fe833ef-4663-4411-a3f9-c1e1c9ad4e48");
 
         const response = await fetch ("https://api.web3forms.com/submit",{
             method: 'POST',
