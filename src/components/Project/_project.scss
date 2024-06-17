@@ -9,12 +9,13 @@
   gap: 15%;
   padding: 5% 1% 0 10%;
   width: 100%;
+  border-left: solid 5px variables.$secondary-color;
+  border-right : solid 5px variables.$secondary-color;
   @media  (max-width: 1400px) {
   flex-direction: column-reverse;
     margin-top: 40%;
   }
   @media  (max-width: 768px) {
-    //flex-direction: column-reverse;
     gap: 5%;
     padding: 5% 1% 10% 1%;
   }
@@ -26,7 +27,6 @@ margin-top: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
-    border-right : solid 5px variables.$secondary-color;
     padding-right: 3%;
     justify-content: space-between;
     align-items: center;
@@ -36,21 +36,28 @@ margin-top: 0;
   .project-block-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     text-align: justify;
-
-
+    @media (max-width: 768px) {
+    align-items: center;
+    }
     h2 {
       @include mixins.title-h2;
       padding-bottom: 5%;
         }
-    p, ul {
+    p {
       @include mixins.text;
       padding-bottom: 5%;
       font-size: clamp(0.75rem, 1.5vw, 1rem);
     }
-    a {
-      @include mixins.link;
+    ul {
+      @include mixins.text;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      font-weight: bold;
+      list-style: none;
+      padding-bottom: 5%;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
   }
 

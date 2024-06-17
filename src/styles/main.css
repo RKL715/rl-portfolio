@@ -191,6 +191,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   gap: 15%;
   padding: 5% 1% 0 10%;
   width: 100%;
+  border-left: solid 5px #b3aca7;
+  border-right: solid 5px #b3aca7;
 }
 @media (max-width: 1400px) {
   .project-block {
@@ -213,7 +215,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: solid 5px #b3aca7;
   padding-right: 3%;
   justify-content: space-between;
   align-items: center;
@@ -221,8 +222,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block .project-block-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-align: justify;
+}
+@media (max-width: 768px) {
+  .project-block .project-block-text {
+    align-items: center;
+  }
 }
 .project-block .project-block-text h2 {
   font-family: "Martel Sans", sans-serif;
@@ -231,7 +236,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   font-size: clamp(1rem, 3vw, 2rem);
   padding-bottom: 5%;
 }
-.project-block .project-block-text p, .project-block .project-block-text ul {
+.project-block .project-block-text p {
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
@@ -239,15 +244,20 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-bottom: 5%;
   font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
-.project-block .project-block-text a {
-  font-family: "Trirong", serif;
+.project-block .project-block-text ul {
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
-  text-decoration: none;
-  font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  font-weight: bold;
+  list-style: none;
+  padding-bottom: 5%;
 }
-.project-block .project-block-text a:hover {
-  color: #f7f7f7;
+@media (max-width: 768px) {
+  .project-block .project-block-text ul {
+    text-align: center;
+  }
 }
 
 .carousel {
@@ -259,9 +269,26 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   z-index: 0;
 }
 .carousel img {
+  pointer-events: auto;
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.carousel img:hover {
+  cursor: pointer;
+}
+.carousel img:hover::after {
+  content: "Click to enlarge";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7f7f7;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
 }
 .carousel button {
   border: none;
@@ -270,16 +297,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: block;
   position: absolute;
   top: 50%;
-  opacity: 0.5;
+  opacity: 1;
   height: 30px;
   width: 30px;
-  background: white;
+  background: #f7f7f7;
+  color: #647d83;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 .carousel button:hover, .carousel button:active, .carousel button:focus {
-  transform: scale(1.2);
-  opacity: 1;
+  transform: scale(1.5);
 }
 .carousel button svg {
   background: none;
@@ -289,6 +316,32 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .carousel .next {
   right: 0;
+}
+
+.modal-container {
+  position: fixed;
+  background: none;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+.modal-container .modal {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 102;
+}
+.modal-container .modal img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .projects-pages {
@@ -419,7 +472,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
   overflow: auto;
-  position: sticky;
+  position: fixed;
   z-index: 2;
 }
 
