@@ -191,6 +191,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   gap: 15%;
   padding: 5% 1% 0 10%;
   width: 100%;
+  border-left: solid 5px #b3aca7;
+  border-right: solid 5px #b3aca7;
 }
 @media (max-width: 1400px) {
   .project-block {
@@ -213,7 +215,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: solid 5px #b3aca7;
   padding-right: 3%;
   justify-content: space-between;
   align-items: center;
@@ -221,8 +222,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block .project-block-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-align: justify;
+}
+@media (max-width: 768px) {
+  .project-block .project-block-text {
+    align-items: center;
+  }
 }
 .project-block .project-block-text h2 {
   font-family: "Martel Sans", sans-serif;
@@ -231,7 +236,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   font-size: clamp(1rem, 3vw, 2rem);
   padding-bottom: 5%;
 }
-.project-block .project-block-text p, .project-block .project-block-text ul {
+.project-block .project-block-text p {
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
@@ -239,15 +244,20 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-bottom: 5%;
   font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
-.project-block .project-block-text a {
-  font-family: "Trirong", serif;
+.project-block .project-block-text ul {
+  font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
-  text-decoration: none;
-  font-size: clamp(0.5rem, 3vw, 1rem);
   letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  font-weight: bold;
+  list-style: none;
+  padding-bottom: 5%;
 }
-.project-block .project-block-text a:hover {
-  color: #f7f7f7;
+@media (max-width: 768px) {
+  .project-block .project-block-text ul {
+    text-align: center;
+  }
 }
 
 .carousel {
