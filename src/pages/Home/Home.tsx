@@ -34,6 +34,7 @@ function Home () {
                     J'ai donc suivi une <b>formation</b> <b>Développeur Intégrateur Web</b> (RNCP 5) auprès d'<b>OpenClassrooms</b>.
                 </p>
             )}
+            <div className="home-navigation">
             <button className="home-button" onClick={handleButtonClick}>
                 {currentPage === 1 || currentPage ===2 ?
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
@@ -48,10 +49,17 @@ function Home () {
                 }
                     </button>
                     <div className="bullet">
-                    <span className={currentPage === 1 ? "active" : ""}></span>
-            <span className={currentPage === 2 ? "active" : ""}></span>
-            <span className={currentPage === 3 ? "active" : ""}></span>
-        </div>
+                        <button onClick={() => setCurrentPage(1)}>
+                            <span className={currentPage === 1 ? "active" : ""}></span>
+                        </button>
+                        <button onClick={() => setCurrentPage(2)}>
+                            <span className={currentPage === 2 ? "active" : ""}></span>
+                        </button>
+                        <button onClick={() => setCurrentPage(3)}>
+                            <span className={currentPage === 3 ? "active" : ""}></span>
+                        </button>
+                    </div>
+            </div>
         </div>
     )
 }
