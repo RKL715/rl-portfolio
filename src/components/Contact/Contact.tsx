@@ -96,7 +96,7 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
                     <label htmlFor="message"></label>
                     <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
 
-                    <button type="submit" className="submit">
+                    <button type="submit" className="submit"> SEND
                         {/*{isLoading ?*/}
                         {/*<div className="loader"></div> :*/}
                         {/*isSubmitted ?*/}
