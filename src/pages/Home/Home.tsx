@@ -2,16 +2,16 @@ import {useState} from "react";
 
 function Home () {
 
-    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState(1);
 
     const handleButtonClick = () => {
-        setCurrentPage(currentPage % 2 + 1)
+        setCurrentPage(currentPage % 3 + 1)
     };
 
     return (
         <div className="home">
             {currentPage === 1 && (
-            <p className="home-text">
+            <p className="home-text" aria-label ="Compétences">
                 Amateur de <b>React</b> et <b>SASS</b>, j'ai également travaillé avec <b>Redux Toolkit</b>,
                 évidemment <b>Git</b> et <b>GitHub</b>.
                 <br/>Actuellement, j'apprends <b>TypeScript</b> pour enrichir mes
@@ -20,38 +20,40 @@ function Home () {
             </p>
             )}
             {currentPage === 2 && (
-            <p className="home-text bio">
-                Animateur Socioculturel pendant 10 ans, j'ai conclu ma carrière avec des projets d'inclusion numérique
-                pour des personnes en situation d'illectronisme, des projets multimédia pour l'inclusion d'adultes en
-                situation de handicap par le cinéma et le numérique.
-                <br/>
-                Confronté aux difficultés des publics rencontrés pour manipuler le web et les outils numériques et
-                poussé par une restructuration drastique de mon association, j'ai décidé de quitter ma carrière afin de
-                suivre une formation de développeur web pour comprendre l'autre côté du web, en espérant le rendre plus
-                accessible et plus inclusif.
-                <br/>
-                J'ai donc suivi une formation Développeur Intégrateur Web auprès d'OpenClassrooms.
+            <p className="home-text bio" aria-label="Parcours profesionnel">
+                <b>Animateur Socioculturel</b> pendant <b>10 ans</b>, j'ai conclu ma carrière en menant des <b>formations</b>
+                pour des personnes en situation <b>d'illectronisme</b> et des <b>projets multimédia</b> pour <b>l'inclusion
+                    d'adultes</b> en situation de <b>handicap</b> par le <b>cinéma</b> et le <b>numérique</b>.
             </p>
             )}
+            {currentPage === 3 && (
+                <p className="home-text bio" aria-label="Parcours professionel deuxième partie">
+                    Suite à la <b>restructuration</b> de mon <b>association</b>, j'ai <b>quitté</b> ma <b>carrière</b> pour me <b>reconvertir</b>
+                    dans le <b>développement</b>, dans le but de rendre le <b>web</b> plus <b>accessible</b> et <b>inclusif</b>.
+                        <br/>
+                    J'ai donc suivi une <b>formation</b> <b>Développeur Intégrateur Web</b> (RNCP 5) auprès d'<b>OpenClassrooms</b>.
+                </p>
+            )}
             <button className="home-button" onClick={handleButtonClick}>
-                {currentPage === 1 ?
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                         stroke="currentColor" className="size-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
-                    </svg>
-                    :
+                {currentPage === 1 || currentPage ===2 ?
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                          stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
                     </svg>
+                    :
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                         stroke="currentColor" className="size-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+                    </svg>
                 }
                     </button>
-            <div className="bullet">
-                <span className={currentPage === 1 ? "active" : ""}></span>
-                <span className={currentPage === 2 ? "active" : ""}></span>
-             </div>
-                    </div>
-                    )
-                }
+                    <div className="bullet">
+                    <span className={currentPage === 1 ? "active" : ""}></span>
+            <span className={currentPage === 2 ? "active" : ""}></span>
+            <span className={currentPage === 3 ? "active" : ""}></span>
+        </div>
+        </div>
+    )
+}
 
 export default Home

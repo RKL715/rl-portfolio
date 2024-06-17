@@ -8,23 +8,26 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
   @media (max-width: 768px) {
-    overflow: scroll;
+    margin-top: 15rem;
+    height: 75%;
+    align-items: unset;
   }
 
   .home-text {
     @include mixins.text-bio;
     background: none;
+    border-left: #647d83 2px solid ;
+    border-bottom: #647d83 2px solid ;
+    border-bottom-left-radius: 10px;
     margin-right: 1vw;
-    text-align: justify;
     letter-spacing: 2px;
     line-height: 35px;
     box-sizing: border-box;
     padding: 0 20px;
     width: clamp(300px, 50vw, 800px);
     @media (max-width: 768px) {
-      height: clamp(20vh, 25vh, 40vh);
+      height: fit-content;
     }
   }
 
@@ -32,15 +35,15 @@
     @include mixins.button;
     background: variables.$accent-color;
     border-radius: 100%;
-    background: none;
     margin-right: 1vw;
     margin-top: 1vh;
     width: 30px;
     height: 30px;
     opacity: 1!important;
     color: #647d83!important;
+    background : none !important;
     &:hover &:active &:focus {
-      background: none;
+        background: none;
     }
   }
 
