@@ -1,21 +1,19 @@
 import React, {useEffect, useRef, useState} from 'react';
+import mail_sending from '/icons/mail_sending.webp';
 
 interface ContactModalProps {
     closeContactModal: () => void;
     isVisible: boolean;
     setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
-
 }
 
 
 function ContactModal ( {closeContactModal} : ContactModalProps) {
 
-    // TO Create a reference to the modal
-    const modalRef = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(true);
-    // const [isSubmitted, setIsSubmitted] = useState(false);
-    // const [isLoading, setIsLoading] = useState(false);
-    const [result, setResult] = useState('');
+
+    const modalRef = useRef<HTMLDivElement>(null); // TO Create a reference to the modal
+    const [isVisible, setIsVisible] = useState(true); // TO Create a state to manage the visibility of the modal
+    const [result, setResult] = useState(''); // TO Create a state to manage the result of the form submission
 
     // TO Close modal when clicking outside
     useEffect(() => {
@@ -49,7 +47,6 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
     // TO Handle form submission
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // setIsLoading(true);
         setResult('sending');
 
         const formData = new FormData(event.currentTarget);
@@ -65,18 +62,11 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
         if (data.success) {
             setResult('success');
             event.currentTarget.reset ();
+            closeContactModal();
         } else {
             setResult(data.message);
         }
     };
-
-        // setIsSubmitted(true)
-        // setTimeout(() => {
-        //     setIsVisible(false);
-        //     closeContactModal();
-        //     setIsLoading(false);
-        // }, 2000);
-
 
     // TO Render the contact form
     return (
@@ -96,17 +86,13 @@ function ContactModal ( {closeContactModal} : ContactModalProps) {
                     <label htmlFor="message"></label>
                     <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
 
-                    <button type="submit" className="submit"> SEND
-                        {/*{isLoading ?*/}
-                        {/*<div className="loader"></div> :*/}
-                        {/*isSubmitted ?*/}
-                        {/*    <img src="/icons/checked.png" alt="Succès d'envoi d'email" className="contact-form-success" width="30"/> :*/}
-                        {/*    <img src="/icons/Paper_send.png" alt="Bouton envoyer le mail" width="30"/>*/}
-                        {/*}*/}
+                    <button type="submit" className="submit">
+                        {result !== 'sending' && result !=='success' && <img src="/icons/send_mail.webp" alt="Bouton envoyer le mail" width="30"/>}
+                        {result === 'sending' &&  <img src={mail_sending} alt="Mail en cours d'envoi" className="sending" width="30"/>}
+                        {result === 'success' ? <img src="/icons/checked.webp" alt="Mail envoyé" width="30"/> : null}
                     </button>
                 </div>
             </form>
-            <span>{result}</span>
         </div>
     )
 }

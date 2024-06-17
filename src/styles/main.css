@@ -133,6 +133,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   font-size: clamp(0.5rem, 3vw, 1rem);
   margin: 0 0 10% 0;
   height: 50px;
+  width: 500px;
   padding: 0 15px 0 15px;
   outline: none;
   background: transparent;
@@ -146,6 +147,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .submit {
   border: none;
+  cursor: pointer;
 }
 .contact-form .submit:hover {
   background: #b3aca7;
@@ -167,20 +169,18 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   max-width: 80%;
   min-width: 50%;
 }
-.contact-form .loader {
-  border: #647d83 2px solid;
-  border-top: #f7f7f7 2px solid;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation: spin 1s linear infinite;
+.contact-form .sending {
+  animation: fly 1s ease-in-out infinite;
 }
-@keyframes spin {
+@keyframes fly {
   0% {
-    transform: rotate(0deg);
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateY(0);
   }
 }
 
