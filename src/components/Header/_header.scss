@@ -56,9 +56,21 @@ header {
   position: fixed;
   bottom : 2px;
   left: 25px;
-  p {
-    background: transparent;
-    @include mixins.text;
-    font-size: 10px;
+  background: none;
+
+  button  {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.50;
+    outline: 0;
+    height: 30px;
+    width: auto;
+    text-decoration: none;
+    font-size: 65%;
+    &:hover, &:active, &:focus-visible {
+      opacity: 0.75;
+    }
   }
 }

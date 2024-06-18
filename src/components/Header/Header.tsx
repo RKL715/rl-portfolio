@@ -66,7 +66,11 @@ const [isVisible, setIsVisible] = useState(true);
                                                    setIsVisible={setIsVisible}/>}
             </div>
             <div className="header-bottom-block">
-                <p>GPL-3.0 License 2024 - Rémy LAFAYE</p>
+                    <button
+                        className="button-privacy-policy"
+                        onClick={() => navigate("/privacypolicy")} tabIndex={0}>
+                        Politique de confidentialité
+                    </button>
             </div>
         </header>
     )
