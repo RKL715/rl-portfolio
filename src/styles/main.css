@@ -457,6 +457,27 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   background-color: #647d83;
 }
 
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.not-found-container h2 {
+  font-family: "Martel Sans", sans-serif;
+  color: #647d83;
+  letter-spacing: 7px;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.not-found-container p {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
