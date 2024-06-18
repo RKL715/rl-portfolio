@@ -36,7 +36,9 @@ header {
           padding : 5px 0;
           a, button {
             @include mixins.button;
-            color : inherit;
+            color : variables.$accent-color;
+            opacity: 1;
+            font-weight : bold;
             @include mixins.text;
           }
         }

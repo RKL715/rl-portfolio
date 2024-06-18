@@ -12,27 +12,30 @@ function Home () {
         <div className="home">
             {currentPage === 1 && (
                 <p className="home-text" aria-label="Compétences">
-                    Amateur de <b>React</b> et <b>SASS</b>, j'ai également travaillé avec <b>Redux Toolkit</b>.
-                    <br/>Actuellement, j'apprends <b>TypeScript</b> pour enrichir mes
-                    compétences en <b>JavaScript</b>.
-                    <br/><span> Je préfère <b>WebStorm</b> à <b>VSCode</b>.</span>
+                    Bonjour, je suis <strong>Rémy</strong>, <strong>développeur web front-end</strong>.
+                    <br/>
+                    Amateur de <strong>React</strong> et <strong>SASS</strong>, j'ai également travaillé avec <strong>Redux Toolkit</strong>.
+                    <br/>
+                    Actuellement, j'apprends <strong>TypeScript</strong> pour enrichir mes compétences en <strong>JavaScript</strong>.
+                    <br/>
+                    J'utilise <strong>WebStorm</strong> pour coder avec <strong>efficacité </strong> et j'intègre l'<strong>IA générative</strong> dans mon flux de travail pour <strong>optimiser </strong> mes projets.
+                    <br/>
+                    Amateur de <strong>photographie</strong> et de <strong>cinéma</strong>  j'utilise également <strong>Affinity Photo</strong>, <strong>Affinity Designer</strong> et <strong>Premiere Pro</strong>.
                 </p>
             )}
             {currentPage === 2 && (
                 <p className="home-text bio" aria-label="Parcours profesionnel">
-                <b>Animateur Socioculturel</b> pendant <b>10 ans</b>, j'ai conclu ma carrière en menant des <b>formations </b>
-                pour des personnes en situation <b>d'illectronisme</b>.
+                <strong>Animateur Socioculturel</strong> pendant <strong>10 ans</strong>, j'ai conclu ma carrière en menant des <strong>formations </strong> pour des personnes en situation <strong>d'illectronisme</strong>.
                     <br/>
-                    J'ai également animé des <b>projets multimédia</b> pour <b>l'inclusion
-                    d'adultes</b> en situation de <b>handicap</b> par le <b>cinéma</b> et le <b>numérique</b>.
+                    J'ai également animé des <strong>projets multimédia</strong> pour <strong>l'inclusion d'adultes</strong> en situation de <strong>handicap</strong> par le <strong>cinéma</strong> et le <strong>numérique</strong>.
             </p>
             )}
             {currentPage === 3 && (
                 <p className="home-text bio" aria-label="Parcours professionel deuxième partie">
-                    Suite à la <b>restructuration</b> de mon <b>association</b>, j'ai <b>quitté</b> ma <b>carrière</b> pour me <b>reconvertir </b>
-                    dans le <b>développement</b>, dans le but de rendre le <b>web</b> plus <b>accessible</b> et <b>inclusif</b>.
+                    Suite à la <strong>restructuration</strong> de mon <strong>association</strong>, j'ai <strong>quitté</strong> ma <strong>carrière</strong> pour me <strong>reconvertir </strong>
+                    dans le <strong>développement</strong>, dans le but de rendre le <strong>web</strong> plus <strong>accessible</strong> et <strong>inclusif</strong>.
                         <br/>
-                    J'ai donc suivi une <b>formation</b> <b>Développeur Intégrateur Web</b> (RNCP-5) auprès d'<b>OpenClassrooms</b>.
+                    J'ai donc suivi une formation <strong>Développeur Intégrateur Web</strong> (RNCP-5) auprès d'<strong>OpenClassrooms</strong>.
                 </p>
             )}
             <div className="home-navigation">
@@ -49,17 +52,17 @@ function Home () {
                     </svg>
                 }
                     </button>
-                    <div className="bullet">
-                        <button onClick={() => setCurrentPage(1)}>
-                            <span className={currentPage === 1 ? "active" : ""}></span>
-                        </button>
-                        <button onClick={() => setCurrentPage(2)}>
-                            <span className={currentPage === 2 ? "active" : ""}></span>
-                        </button>
-                        <button onClick={() => setCurrentPage(3)}>
-                            <span className={currentPage === 3 ? "active" : ""}></span>
-                        </button>
-                    </div>
+                <div className="bullet">
+                    <button onClick={() => setCurrentPage(1)}>
+                        <span className={currentPage === 1 ? "active" : ""}></span>
+                    </button>
+                    <button onClick={() => setCurrentPage(2)}>
+                        <span className={currentPage === 2 ? "active" : ""}></span>
+                    </button>
+                    <button onClick={() => setCurrentPage(3)}>
+                        <span className={currentPage === 3 ? "active" : ""}></span>
+                    </button>
+                </div>
             </div>
         </div>
     )

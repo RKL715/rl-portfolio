@@ -33,7 +33,7 @@
     {
   "id": 2,
   "name": "Argent Bank",
-  "description": "Projet 11 de formation OpenClassroom. Intégration de Redux Toolkit pour la gestion de l'état de l'application. Création de composants et de routes pour la navigation. Utilisation de l'API REST pour la récupération des données. Création de nouvelles routes API pour la gestion des transactions. Utilisation de Swagger pour la documentation de l'API.",
+  "description": "Projet 11 de formation OpenClassroom. Intégration de Redux Toolkit pour la gestion de l'état de l'application. Création de composants et de routes pour la navigation. Utilisation de l'API REST pour la récupération des données et de Swagger. Écriture de nouvelles routes API pour la gestion des transactions.",
   "technologies": [
     "React",
     "React Router",
@@ -63,7 +63,7 @@
     {
   "id": 3,
   "name": "Sophie Bluel",
-  "description": "Projet 6 de formation OpenClassroom. Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus. Ajout de fonctionnalités de filtrages et de récupération/suppression de travaux depuis l'API.",
+  "description": "Projet 6 de formation OpenClassroom. Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus. Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API.",
   "technologies": [
     "JavaScript",
     "API REST",
