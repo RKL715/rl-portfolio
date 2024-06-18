@@ -39,25 +39,25 @@ const [isVisible, setIsVisible] = useState(true);
                         </li>
                         <li>
                             <button
-                                className={"button-project-page"}
-                                onClick={() => window.open("https://github.com/RKL715", "_blank", "noopener noreferrer")}
-                                tabIndex={0}>
-                                Github
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className={"button-project-page"}
-                                onClick={() => window.open("https://www.linkedin.com/in/remylafaye/", "_blank", "noopener noreferrer")}
-                                tabIndex={0}>
-                                Linkedin
-                            </button>
-                        </li>
-                        <li>
-                            <button
                                 className="button-contact-modal"
                                 onClick={openContactModal} tabIndex={0}>
                                 Contact
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="button-project-page"
+                                onClick={() => window.open("https://github.com/RKL715", "_blank", "noopener noreferrer")}
+                                tabIndex={0}>
+                                <img src="/icons/github-mark.png" alt="Bouton Page Github" width={30}/>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="button-project-page"
+                                onClick={() => window.open("https://www.linkedin.com/in/remylafaye/", "_blank", "noopener noreferrer")}
+                                tabIndex={0}>
+                                <img src="/icons/linkedin.png" alt="Bouton Page Linkedin" width={30}/>
                             </button>
                         </li>
                     </ul>
@@ -66,7 +66,11 @@ const [isVisible, setIsVisible] = useState(true);
                                                    setIsVisible={setIsVisible}/>}
             </div>
             <div className="header-bottom-block">
-                <p>GPL-3.0 License 2024 - Rémy LAFAYE</p>
+                <button
+                        className="button-privacy-policy"
+                        onClick={() => navigate("/privacypolicy")} tabIndex={0}>
+                        Politique de confidentialité
+                    </button>
             </div>
         </header>
     )

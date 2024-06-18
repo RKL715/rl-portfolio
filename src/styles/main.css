@@ -98,14 +98,22 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   position: fixed;
   bottom: 2px;
   left: 25px;
+  background: none;
 }
-.header-bottom-block p {
-  background: transparent;
-  font-family: "Lato", sans-serif;
-  color: #b3aca7 bold;
-  letter-spacing: 2px;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  font-size: 10px;
+.header-bottom-block button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  outline: 0;
+  height: 30px;
+  width: auto;
+  text-decoration: none;
+  font-size: 65%;
+}
+.header-bottom-block button:hover, .header-bottom-block button:active, .header-bottom-block button:focus-visible {
+  opacity: 0.75;
 }
 
 .contact-form {
@@ -455,6 +463,60 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .home .home-navigation .bullet span.active {
   background-color: #647d83;
+}
+
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.not-found-container h2 {
+  font-family: "Martel Sans", sans-serif;
+  color: #647d83;
+  letter-spacing: 7px;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.not-found-container p {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+}
+
+.privacy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  float: right;
+}
+@media (max-width: 768px) {
+  .privacy-container {
+    float: unset;
+    width: 75%;
+  }
+}
+.privacy-container h2 {
+  font-family: "Martel Sans", sans-serif;
+  color: #647d83;
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.privacy-container p {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  text-align: justify;
+}
+.privacy-container .licence {
+  margin-top: 15%;
 }
 
 * {

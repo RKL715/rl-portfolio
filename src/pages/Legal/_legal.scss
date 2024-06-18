@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.privacy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  float: right;
+  @media (max-width: 768px) {
+    float: unset;
+    width: 75%;
+  }
+  h2 {
+    @include mixins.title-h3;
+  }
+  p {
+    @include mixins.text;
+    text-align: justify;
+  }
+  .licence {
+    margin-top: 15%;
+  }
+}
