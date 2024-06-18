@@ -26,11 +26,9 @@
     line-height: 35px;
     box-sizing: border-box;
     padding: 0 20px;
-    width: clamp(300px, 50vw, 800px);
-    @media (max-width: 768px) {
-      height: fit-content;
-    }
+    width: clamp(300px, 60vw, 800px);
   }
+
 .home-navigation {
   display: flex;
   flex-direction: row;

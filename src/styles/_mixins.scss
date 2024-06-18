@@ -32,7 +32,7 @@
   font-family: 'Lato', sans-serif;
   color: variables.$font-text;
   letter-spacing: 2px;
-  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
 }
 
 @mixin text-hover {
@@ -85,7 +85,7 @@
   text-decoration: none;
     transition: all 0.3s ease-in-out;
 
-  &:hover, &:active, &:focus {
+  &:hover, &:active, &:focus-visible {
     opacity: 0.75;
     background: variables.$accent-color;
     color : variables.$font-text-hover;
