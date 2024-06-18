@@ -47,6 +47,14 @@ const [isVisible, setIsVisible] = useState(true);
                         </li>
                         <li>
                             <button
+                                className={"button-project-page"}
+                                onClick={() => window.open("https://www.linkedin.com/in/remylafaye/", "_blank", "noopener noreferrer")}
+                                tabIndex={0}>
+                                Linkedin
+                            </button>
+                        </li>
+                        <li>
+                            <button
                                 className="button-contact-modal"
                                 onClick={openContactModal} tabIndex={0}>
                                 Contact
@@ -58,7 +66,7 @@ const [isVisible, setIsVisible] = useState(true);
                                                    setIsVisible={setIsVisible}/>}
             </div>
             <div className="header-bottom-block">
-            <p>GPL-3.0 License 2024 - Rémy LAFAYE</p>
+                <p>GPL-3.0 License 2024 - Rémy LAFAYE</p>
             </div>
         </header>
     )
