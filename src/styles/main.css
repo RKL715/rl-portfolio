@@ -29,6 +29,11 @@ header {
   z-index: 1;
   border-top: 20px solid #e2dedb;
 }
+@media (max-width: 1400px) {
+  header {
+    width: 93%;
+  }
+}
 @media (max-width: 768px) {
   header {
     width: calc(100% - 100px);
@@ -205,7 +210,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 15%;
   padding: 5% 1% 0 10%;
   width: 100%;
   border-left: solid 5px #b3aca7;
@@ -239,7 +243,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block .project-block-text {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  width: 90%;
 }
 @media (max-width: 768px) {
   .project-block .project-block-text {
@@ -261,7 +265,22 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-bottom: 5%;
   font-size: clamp(0.75rem, 1.5vw, 1rem);
 }
-.project-block .project-block-text ul {
+.project-block .project-block-text .project-desc-list {
+  font-family: "Lato", sans-serif;
+  color: #b3aca7 bold;
+  letter-spacing: 2px;
+  font-size: clamp(0.5rem, 3vw, 1rem);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  list-style: none;
+  padding-bottom: 5%;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .project-block .project-block-text .project-desc-list {
+    text-align: center;
+  }
+}
+.project-block .project-block-text .project-tech-list {
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
@@ -272,7 +291,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-bottom: 5%;
 }
 @media (max-width: 768px) {
-  .project-block .project-block-text ul {
+  .project-block .project-block-text .project-tech-list {
     text-align: center;
   }
 }
@@ -380,7 +399,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 .home {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -408,6 +428,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   box-sizing: border-box;
   padding: 0 20px;
   width: clamp(300px, 60vw, 800px);
+}
+@media (max-width: 1400px) {
+  .home .home-text {
+    margin-top: 5rem;
+  }
 }
 .home .home-navigation {
   display: flex;
