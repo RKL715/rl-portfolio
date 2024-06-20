@@ -24,3 +24,32 @@
     opacity: 0;
   }
 }
+
+// FLY
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Bullet
+@keyframes clickMe {
+0% {
+  transform: rotate(0deg);
+  border: 5px dotted #647d83;
+}
+50% {
+  transform: rotate(360deg);
+  border: 5px dotted #647d83;
+}
+  25% {
+    transform: rotate(180deg);
+    border: 5px dotted #647d83;
+  }
+}

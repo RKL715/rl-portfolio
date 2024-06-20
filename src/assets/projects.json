@@ -3,7 +3,14 @@
     {
       "id": 1,
       "name": "Kasa",
-      "description": "Projet 8 de formation OpenClassroom. Création d'un site de location de logements. Intégration d'une maquette responsive. Création de composants, React Router pour la navigation. Création d'animations CSS. Ajout de pages dynamiques pour chaque logement depuis JSON.",
+      "description": [
+        "Projet 8 de formation OpenClassroom.",
+        "Création d'un site de location de logements.",
+        "Intégration d'une maquette responsive.",
+        "React Router pour la navigation.",
+        "Création d'animations CSS.",
+        "Ajout de pages dynamiques pour chaque logement depuis JSON."
+      ],
       "technologies": [
         "React",
         "React Router",
@@ -33,7 +40,13 @@
     {
   "id": 2,
   "name": "Argent Bank",
-  "description": "Projet 11 de formation OpenClassroom. Intégration de Redux Toolkit pour la gestion de l'état de l'application. Création de composants et de routes pour la navigation. Utilisation de l'API REST pour la récupération des données et de Swagger. Écriture de nouvelles routes API pour la gestion des transactions.",
+  "description": [
+    "Projet 11 de formation OpenClassroom.",
+    "Intégration de Redux Toolkit pour la gestion de l'état de l'application.",
+    "Création de composants et de routes pour la navigation.",
+    "Utilisation de l'API REST pour la récupération des données et de Swagger.",
+    "Écriture de nouvelles routes API pour la gestion des transactions."
+  ],
   "technologies": [
     "React",
     "React Router",
@@ -63,7 +76,11 @@
     {
   "id": 3,
   "name": "Sophie Bluel",
-  "description": "Projet 6 de formation OpenClassroom. Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus. Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API.",
+  "description": [
+    "Projet 6 de formation OpenClassroom.",
+    "Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus.",
+    "Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API."
+  ],
   "technologies": [
     "JavaScript",
     "API REST",

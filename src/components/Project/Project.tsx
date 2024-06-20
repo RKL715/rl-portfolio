@@ -4,7 +4,7 @@ import {useState} from "react";
 export interface  ProjectType {
     id : number;
     name : string;
-    description : string;
+    description : string[];
     technologies : string[];
     link : string;
     img : ImageType[];
@@ -31,8 +31,12 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
         <div className="project-block">
             <span className="project-block-text">
             <h2>{name}</h2>
-            <p>{description}</p>
-            <ul>
+            <ul className="project-desc-list">
+                {description.map((desc, index) => (
+                    <li key={index}>{desc}</li>
+                ))}
+            </ul>
+            <ul className="project-tech-list">
                 {technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>
                 ))}

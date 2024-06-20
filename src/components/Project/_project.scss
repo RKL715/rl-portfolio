@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 15%;
+  //gap: 15%;
   padding: 5% 1% 0 10%;
   width: 100%;
   border-left: solid 5px variables.$secondary-color;
@@ -36,7 +36,7 @@ margin-top: 0;
   .project-block-text {
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    width: 90%;
     @media (max-width: 768px) {
     align-items: center;
     }
@@ -49,7 +49,18 @@ margin-top: 0;
       padding-bottom: 5%;
       font-size: clamp(0.75rem, 1.5vw, 1rem);
     }
-    ul {
+    .project-desc-list {
+      @include mixins.text;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      list-style: none;
+      padding-bottom: 5%;
+      line-height: 1.5;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    .project-tech-list {
       @include mixins.text;
       font-size: clamp(0.75rem, 1.5vw, 1rem);
       font-weight: bold;
