@@ -1,4 +1,4 @@
-function PrivacyPolicy () {
+function LegalTerms () {
     return (
         <div className="privacy-container">
             <h2>Politique de Confidentialité</h2>
@@ -15,4 +15,4 @@ function PrivacyPolicy () {
     )
 }
 
-export default PrivacyPolicy
+export default LegalTerms

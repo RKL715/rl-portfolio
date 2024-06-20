@@ -96,7 +96,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   opacity: 0.75;
   background: #647d83;
   color: #f7f7f7;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .header-bottom-block {
@@ -462,7 +462,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   opacity: 0.75;
   background: #647d83;
   color: #f7f7f7;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .home .home-navigation .home-button:hover .home .home-navigation .home-button:active .home .home-navigation .home-button:focus {
   background: none;
@@ -488,6 +488,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .home .home-navigation .bullet span.active {
   background-color: #647d83;
+}
+.home .home-navigation .bullet span:hover, .home .home-navigation .bullet span:focus-visible {
+  background-color: #647d83;
+  transform: scale(1.1);
 }
 
 .not-found-container {

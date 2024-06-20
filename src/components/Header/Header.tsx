@@ -68,8 +68,8 @@ const [isVisible, setIsVisible] = useState(true);
             <div className="header-bottom-block">
                 <button
                         className="button-privacy-policy"
-                        onClick={() => navigate("/privacypolicy")} tabIndex={0}>
-                        Politique de confidentialité
+                        onClick={() => navigate("/legalterms")} tabIndex={0}>
+                        Mentions Légales
                     </button>
             </div>
         </header>

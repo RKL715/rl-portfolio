@@ -71,6 +71,10 @@
       &.active {
         background-color: #647d83;
       }
+      &:hover,  &:focus-visible{
+        background-color: #647d83;
+        transform : scale(1.1);
+      }
     }
   }
 }
