@@ -1,5 +1,6 @@
 @use "../../styles/variables";
 @use "../../styles/mixins";
+@use "../../styles/animation";
 
 .contact-form {
   @include mixins.modal;
@@ -57,17 +58,6 @@
   }
   .sending {
     animation : fly 1s ease-in-out infinite;
-  }
-  @keyframes fly {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
 }
 

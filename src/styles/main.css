@@ -22,6 +22,31 @@
     opacity: 0;
   }
 }
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes clickMe {
+  0% {
+    transform: rotate(0deg);
+    border: 5px dotted #647d83;
+  }
+  50% {
+    transform: rotate(360deg);
+    border: 5px dotted #647d83;
+  }
+  25% {
+    transform: rotate(180deg);
+    border: 5px dotted #647d83;
+  }
+}
 header {
   position: fixed;
   display: flex;
@@ -193,17 +218,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .sending {
   animation: fly 1s ease-in-out infinite;
-}
-@keyframes fly {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .project-block {
@@ -490,8 +504,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   background-color: #647d83;
 }
 .home .home-navigation .bullet span:hover, .home .home-navigation .bullet span:focus-visible {
-  background-color: #647d83;
   transform: scale(1.1);
+  animation: clickMe infinite ease-in 1s;
 }
 
 .not-found-container {
