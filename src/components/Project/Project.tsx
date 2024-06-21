@@ -36,7 +36,13 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
     return (
         <div className="project-block">
             <span className="project-block-text">
-            <h2>{name}</h2>
+            <span className="title-link">
+                <h2>{name}</h2>
+                <a href={link} className="github-link" target="_blank" rel="noreferrer">
+                    <img src="/icons/github-mark.png" width={40} alt="Link to github project"/>
+                </a>
+            </span>
+
             <ul className="project-desc-list">
                 {description.map((desc, index) => (
                     <li key={index}>{desc}</li>
@@ -50,9 +56,9 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                     </li>
                 ))}
             </ul>
-            <a href={link} target="_blank" rel="noreferrer"><img src="/icons/github-mark.png" width={20} alt="Link to github project"/></a>
                 </span>
-            <span className="project-block-carousel"><ProjectCarousel images={img[current]} nextSlide={nextSlide} prevSlide={prevSlide}/>
+            <span className="project-block-carousel"><ProjectCarousel images={img[current]} nextSlide={nextSlide}
+                                                                      prevSlide={prevSlide}/>
             </span>
         </div>
     )
