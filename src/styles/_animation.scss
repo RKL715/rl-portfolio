@@ -53,3 +53,13 @@
     border: 5px dotted #647d83;
   }
 }
+
+// Augment
+@keyframes augment {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

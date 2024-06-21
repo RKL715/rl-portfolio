@@ -5,9 +5,15 @@ export interface  ProjectType {
     id : number;
     name : string;
     description : string[];
-    technologies : string[];
+    technologies : TechType[];
     link : string;
     img : ImageType[];
+}
+
+export interface TechType {
+    id : number;
+    name : string;
+    src : string;
 }
 
 export interface ImageType {
@@ -36,9 +42,12 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                     <li key={index}>{desc}</li>
                 ))}
             </ul>
-            <ul className="project-tech-list">
+            <ul className="project-skills-list no-transition">
                 {technologies.map((tech, index) => (
-                    <li key={index}>{tech}</li>
+                    <li key={index} className="skills-item">
+                        <img src={tech.src} alt={tech.name} width={50} className="skills-icon"/>
+                        <span className="skills-name">{tech.name}</span>
+                    </li>
                 ))}
             </ul>
             <a href={link} target="_blank" rel="noreferrer"><img src="/icons/github-mark.png" width={20} alt="Link to github project"/></a>
