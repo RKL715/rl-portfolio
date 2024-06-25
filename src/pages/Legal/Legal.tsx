@@ -9,6 +9,10 @@ function LegalTerms () {
                 Le formulaire de contact utilise le service tiers Web3forms (https://web3forms.com/) pour acheminer les données vers notre adresse e-mail sécurisée.
             </p>
 
+            <p>Les icônes proviennent de <a href="https://icons8.com/license" target="_blank" rel="noreferrer">Icon8</a>.
+            </p>
+
+
             <div className="licence"><p>GPL-3.0 License</p></div>
 
         </div>

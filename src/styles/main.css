@@ -47,6 +47,14 @@
     border: 5px dotted #647d83;
   }
 }
+@keyframes augment {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
 header {
   position: fixed;
   display: flex;
@@ -264,12 +272,24 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
     align-items: center;
   }
 }
-.project-block .project-block-text h2 {
+.project-block .project-block-text .title-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  gap: 3%;
+}
+.project-block .project-block-text .title-link h2 {
   font-family: "Martel Sans", sans-serif;
   color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
-  padding-bottom: 5%;
+  width: fit-content;
+  white-space: nowrap;
+}
+.project-block .project-block-text .title-link .github-link:hover, .project-block .project-block-text .title-link:focus-visible {
+  transform: scale(1.1);
 }
 .project-block .project-block-text p {
   font-family: "Lato", sans-serif;
@@ -289,25 +309,40 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-bottom: 5%;
   line-height: 1.5;
 }
-@media (max-width: 768px) {
-  .project-block .project-block-text .project-desc-list {
-    text-align: center;
-  }
+.project-block .project-block-text .project-skills-list {
+  list-style: none;
+  padding-bottom: 5%;
+  display: flex;
+  gap: 4%;
+  flex-direction: row;
+  justify-content: center;
 }
-.project-block .project-block-text .project-tech-list {
+.project-block .project-block-text .project-skills-list .skills-item {
+  position: relative;
+  cursor: pointer;
+}
+.project-block .project-block-text .project-skills-list .skills-item:hover .skills-icon {
+  opacity: 0.3;
+}
+.project-block .project-block-text .project-skills-list .skills-name {
+  display: none;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #b3aca7;
+  white-space: wrap;
+  width: fit-content;
+  text-align: center;
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.5rem, 3vw, 1rem);
-  font-size: clamp(0.75rem, 1.5vw, 1rem);
-  font-weight: bold;
-  list-style: none;
-  padding-bottom: 5%;
 }
-@media (max-width: 768px) {
-  .project-block .project-block-text .project-tech-list {
-    text-align: center;
-  }
+.project-block .project-block-text .project-skills-list .skills-item:hover .skills-name {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .carousel {

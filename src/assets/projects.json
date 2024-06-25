@@ -12,11 +12,31 @@
         "Ajout de pages dynamiques pour chaque logement depuis JSON."
       ],
       "technologies": [
-        "React",
-        "React Router",
-        "SCSS",
-        "Animation CSS",
-        "Responsive Design"
+        {
+          "id": 1,
+          "name": "React React Router",
+          "src": "/skills/react.webp"
+        },
+        {
+          "id": 2,
+          "name": "SCSS",
+          "src": "/skills/sass.webp"
+        },
+        {
+          "id": 3,
+          "name": "Responsive Design",
+          "src": "/skills/responsive.webp"
+          },
+        {
+          "id": 4,
+          "name": "JSON",
+          "src": "/skills/json.webp"
+        },
+        {
+          "id": 5,
+          "name": "CSS Animation",
+          "src": "/skills/css.webp"
+        }
       ],
       "link": "https://github.com/RKL715/P8---Kasa",
       "img": [
@@ -48,11 +68,26 @@
     "Écriture de nouvelles routes API pour la gestion des transactions."
   ],
   "technologies": [
-    "React",
-    "React Router",
-    "Redux Toolkit",
-    "API REST",
-    "Swagger"
+    {
+      "id": 1,
+      "name": "React React Router",
+      "src": "/skills/react.webp"
+    },
+    {
+      "id": 2,
+      "name": "REDUX Toolkit",
+      "src": "/skills/redux.webp"
+    },
+    {
+      "id": 3,
+      "name": "API REST",
+      "src": "/skills/api.webp"
+    },
+    {
+      "id": 4,
+      "name": "SWAGGER",
+      "src": "/skills/swagger.webp"
+    }
   ],
   "link": "https://github.com/RKL715/P11-ArgentBank",
   "img": [
@@ -82,10 +117,26 @@
     "Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API."
   ],
   "technologies": [
-    "JavaScript",
-    "API REST",
-    "SCSS",
-    "Responsive Design"
+    {
+      "id": 1,
+      "name": "JavaScript",
+      "src": "/skills/javascript.webp"
+    },
+    {
+      "id": 2,
+      "name": "SCSS",
+      "src": "/skills/sass.webp"
+    },
+    {
+      "id": 3,
+      "name": "API REST",
+      "src": "/skills/api.webp"
+    },
+    {
+      "id": 4,
+      "name": "Responsive Design",
+      "src": "/skills/responsive.webp"
+    }
   ],
   "link": "https://github.com/RKL715/P6-Sophiebluel",
   "img": [
