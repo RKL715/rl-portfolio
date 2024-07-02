@@ -10,7 +10,6 @@ interface ContactModalProps {
 
 function ContactModal ( {closeContactModal} : ContactModalProps) {
 
-
     const modalRef = useRef<HTMLDivElement>(null); // TO Create a reference to the modal
     const [isVisible, setIsVisible] = useState(true); // TO Create a state to manage the visibility of the modal
     const [result, setResult] = useState(''); // TO Create a state to manage the result of the form submission
