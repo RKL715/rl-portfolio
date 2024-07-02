@@ -62,6 +62,7 @@
   "name": "Argent Bank",
   "description": [
     "Projet 11 de formation OpenClassroom.",
+    "Connexion et Compte client pour un site bancaire",
     "Intégration de Redux Toolkit pour la gestion de l'état de l'application.",
     "Création de composants et de routes pour la navigation.",
     "Utilisation de l'API REST pour la récupération des données et de Swagger.",
@@ -113,6 +114,7 @@
   "name": "Sophie Bluel",
   "description": [
     "Projet 6 de formation OpenClassroom.",
+    "Portfolio d'une designer d'espace.",
     "Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus.",
     "Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API."
   ],

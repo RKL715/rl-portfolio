@@ -1,6 +1,7 @@
 import type { ImageType } from "./Project.tsx";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import ReactDOM from "react-dom";
+import {ArrowIcons} from "../ArrowIcons/ArrowIcons.tsx";
 
 // TS interfaces
 interface CarouselType {
@@ -13,23 +14,63 @@ interface ModalType {
     src : string;
     alt : string;
     close : () => void;
-
+    nextSlide : () => void;
+    prevSlide : () => void;
 }
 
-function Modal({src, alt, close} : ModalType) {
+function Modal({src, alt, close, prevSlide, nextSlide} : ModalType) {
     const [modalContainer] = useState(document.createElement("div"));
+    const modalRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         modalContainer.className = "modal-container";
         document.body.appendChild(modalContainer);
+
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                close();
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                close();
+            }
+            if (event.key === 'ArrowRight') {
+                nextSlide();
+            }
+            if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
         return () => {
             document.body.removeChild(modalContainer);
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    close();
+                }
+                if (event.key === 'ArrowRight') {
+                    nextSlide();
+                }
+                if (event.key === 'ArrowLeft') {
+                    prevSlide();
+                }
+            });
         }
-    }, [modalContainer]);
+    }, [modalContainer, close]);
 
     return ReactDOM.createPortal (
-        <div className="modal" onClick={close}>
+        <div className="modal" ref={modalRef}>
             <img src={src} alt={alt}/>
+            <button className="slideNav prev" onClick={prevSlide} tabIndex={0} aria-label="Previous slide">
+                <ArrowIcons direction="prev"/>
+            </button>
+            <button className="slideNav next" onClick={nextSlide} tabIndex={0} aria-label="Next slide">
+                <ArrowIcons direction="next"/>
+            </button>
+            <button className="close-button" onClick={close}>X</button>
         </div>
         , modalContainer
     );
@@ -42,19 +83,13 @@ function ProjectCarousel({images, nextSlide, prevSlide} : CarouselType) {
 
   return (
       <div className="carousel" aria-label="Carousel">
-            {isOpen && <Modal src={images.src} alt={images.title} close={closeModal}/>}
+            {isOpen && <Modal src={images.src} alt={images.title} close={closeModal} prevSlide={prevSlide} nextSlide={nextSlide}/>}
           <img src={images.src} alt={images.title} onClick={openModal} />
           <button className="prev" onClick={prevSlide} tabIndex={0} aria-label="Previous slide">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                   stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
-              </svg>
+              <ArrowIcons direction="prev"/>
           </button>
           <button className="next" onClick={nextSlide} tabIndex={0} aria-label="Next slide">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
-                   stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-              </svg>
+              <ArrowIcons direction="next"/>
           </button>
       </div>
   );
