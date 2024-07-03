@@ -324,6 +324,9 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .project-block .project-block-text .project-skills-list .skills-item:hover .skills-icon {
   opacity: 0.3;
 }
+.project-block .project-block-text .project-skills-list .skills-item img {
+  width: clamp(30px, 5vw, 50px);
+}
 .project-block .project-block-text .project-skills-list .skills-name {
   display: none;
   font-size: 0.8rem;
@@ -425,10 +428,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   align-items: center;
   z-index: 102;
 }
-.modal-container .modal img {
-  max-width: 90%;
-  max-height: 90%;
-}
 .modal-container .modal .slideNav {
   border: none;
   cursor: pointer;
@@ -456,7 +455,16 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .modal-container .modal .next {
   right: 0;
 }
-.modal-container .modal .close-button {
+.modal-container .image {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+.modal-container .image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.modal-container .image .close-button {
   border: none;
   cursor: pointer;
   outline: none;
@@ -473,13 +481,13 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 82em;
-  right: 47%;
+  top: 0;
+  right: 43%;
 }
-.modal-container .modal .close-button:hover, .modal-container .modal .close-button:active, .modal-container .modal .close-button:focus-visible {
+.modal-container .image .close-button:hover, .modal-container .image .close-button:active, .modal-container .image .close-button:focus-visible {
   transform: scale(1.5);
 }
-.modal-container .modal .close-button svg {
+.modal-container .image .close-button svg {
   background: none;
 }
 

@@ -63,10 +63,6 @@
       justify-content: center;
       align-items: center;
       z-index: 102;
-      img {
-        max-width: 90%;
-        max-height: 90%;
-      }
       .slideNav {
         @include mixins.slideNav;
       }
@@ -76,14 +72,25 @@
       .next {
         right: 0;
       }
-.close-button {
-  @include mixins.slideNav;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 82em;
-  right: 47%;
-}
     }
+
+ .image {
+   max-width: 90%;
+    max-height: 90%;
+   position: relative;
+   img {
+     max-width: 100%;
+     max-height: 100%;
+   }
+   .close-button {
+     @include mixins.slideNav;
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     top : 0;
+     right: 43%;
+   }
+ }
+
 }
 
