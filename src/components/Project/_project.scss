@@ -86,6 +86,9 @@
         &:hover .skills-icon {
           opacity: 0.3;
         }
+        img {
+          width: clamp(30px, 5vw, 50px);
+        }
       }
 
       .skills-name {
