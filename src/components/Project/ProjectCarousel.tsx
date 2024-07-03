@@ -63,14 +63,17 @@ function Modal({src, alt, close, prevSlide, nextSlide} : ModalType) {
 
     return ReactDOM.createPortal (
         <div className="modal" ref={modalRef}>
-            <img src={src} alt={alt}/>
+            <div className="image">
+                <img src={src} alt={alt}/>
+                <button className="close-button" onClick={close}>X</button>
+            </div>
             <button className="slideNav prev" onClick={prevSlide} tabIndex={0} aria-label="Previous slide">
                 <ArrowIcons direction="prev"/>
             </button>
             <button className="slideNav next" onClick={nextSlide} tabIndex={0} aria-label="Next slide">
                 <ArrowIcons direction="next"/>
             </button>
-            <button className="close-button" onClick={close}>X</button>
+
         </div>
         , modalContainer
     );
