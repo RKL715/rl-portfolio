@@ -1,15 +1,19 @@
 import {useState} from "react";
+import SwipeEvents from "../../components/MobileControl/SwipeEvents.tsx";
 
 function Home () {
 
     const [currentPage, setCurrentPage] = useState(1);
+    const swipeHandlers = SwipeEvents({
+        onSwipedLeft: () => setCurrentPage((currentPage % 3) + 1),
+        onSwipedRight: () => setCurrentPage((currentPage === 1 ? 3 : currentPage - 1)) });
 
     const handleButtonClick = () => {
         setCurrentPage(currentPage % 3 + 1)
     };
 
     return (
-        <div className="home">
+        <div className="home" {...swipeHandlers}>
             {currentPage === 1 && (
                 <p className="home-text" aria-label="Compétences">
                     Bonjour, je suis <strong>Rémy</strong>, <strong>développeur web front-end</strong>.
