@@ -114,3 +114,8 @@
     background: none;
   }
 }
+
+@mixin main-background {
+  background: variables.$main-color;
+  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+}

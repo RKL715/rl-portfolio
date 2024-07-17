@@ -61,7 +61,8 @@ header {
   flex-direction: column;
   z-index: 0;
   padding-top: 15px;
-  background-color: #e2dedb;
+  background: #e2dedb;
+  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
@@ -513,20 +514,20 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   .home {
     margin-top: 10rem;
     height: 75%;
+    align-items: center;
   }
 }
 .home .home-content {
   margin-top: 5px;
   display: flex;
   justify-self: center;
-  align-self: center;
 }
 .home .home-text {
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.7rem, 2.5vw, 1rem);
-  background: none;
+  background: #e2dedb;
   border-left: #647d83 2px solid;
   border-bottom: #647d83 2px solid;
   box-shadow: #b3aca7 0 0 10px;
@@ -662,6 +663,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 body {
   background: #e2dedb;
+  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
 }
 
 .frame {

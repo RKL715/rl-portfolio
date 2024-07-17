@@ -12,18 +12,18 @@
   @media (max-width: 768px) {
     margin-top: 10rem;
     height: 75%;
+    align-items: center;
   }
 
   .home-content {
     margin-top: 5px;
     display: flex;
     justify-self: center;
-    align-self: center;
   }
 
   .home-text {
     @include mixins.text-bio;
-    background: none;
+    background: variables.$main-color;
     border-left: #647d83 2px solid ;
     border-bottom: #647d83 2px solid ;
     box-shadow: #b3aca7 0 0 10px;
