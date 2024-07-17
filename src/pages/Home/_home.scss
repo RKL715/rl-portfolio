@@ -4,11 +4,10 @@
 
 .home {
   width: 100%;
-  height: 80%;
-  margin-top: 10rem;
+ height: 100%;
   display: flex;
-  justify-content: center;
   align-items: flex-end;
+  justify-content: center;
   flex-direction: column;
   @media (max-width: 768px) {
     margin-top: 10rem;
@@ -16,12 +15,18 @@
     align-items: unset;
   }
 
+  .home-content {
+    display: flex;
+    justify-self: center;
+  }
+
   .home-text {
     @include mixins.text-bio;
     background: none;
     border-left: #647d83 2px solid ;
     border-bottom: #647d83 2px solid ;
-    border-bottom-left-radius: 10px;
+    box-shadow: #b3aca7 0 0 10px;
+    border-radius: 10px;
     margin-right: 1vw;
     letter-spacing: 2px;
     line-height: 35px;

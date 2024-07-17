@@ -36,11 +36,11 @@
   }
 
   .submit {
+    background: transparent;
     border: none;
     cursor: pointer;
     &:hover {
-      background: #b3aca7;
-      color: #e2dedb;
+     scale: 1.1;
     }
     }
 
