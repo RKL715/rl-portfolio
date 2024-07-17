@@ -5,15 +5,9 @@ header {
   position: fixed;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 0;
   padding-top: 15px;
   background-color: variables.$main-color;
-  @media (max-width : 1400px) {
-    width: 93%;
-  }
-  @media (max-width: 768px) {
-  width: calc(100% - 100px);
-  }
 
   .header-top-block {
     h1 {

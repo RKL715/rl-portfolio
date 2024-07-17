@@ -12,12 +12,13 @@
   @media (max-width: 768px) {
     margin-top: 10rem;
     height: 75%;
-    align-items: unset;
   }
 
   .home-content {
+    margin-top: 5px;
     display: flex;
     justify-self: center;
+    align-self: center;
   }
 
   .home-text {
@@ -33,9 +34,7 @@
     box-sizing: border-box;
     padding: 0 20px;
     width: clamp(300px, 60vw, 800px);
-    @media (max-width: 1400px) {
-      margin-top : 5rem;
-    }
+    z-index: 2;
   }
 
 .home-navigation {

@@ -59,19 +59,9 @@ header {
   position: fixed;
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 0;
   padding-top: 15px;
   background-color: #e2dedb;
-}
-@media (max-width: 1400px) {
-  header {
-    width: 93%;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    width: calc(100% - 100px);
-  }
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
@@ -363,15 +353,17 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: 100%;
   object-fit: contain;
 }
-.carousel img:hover {
+.carousel:hover {
   cursor: pointer;
 }
-.carousel img:hover::after {
-  content: "Click to enlarge";
+.carousel:hover::after {
+  pointer-events: none;
+  content: "Zoom";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: #f7f7f7;
   font-size: 1.5rem;
   font-weight: bold;
@@ -521,12 +513,13 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   .home {
     margin-top: 10rem;
     height: 75%;
-    align-items: unset;
   }
 }
 .home .home-content {
+  margin-top: 5px;
   display: flex;
   justify-self: center;
+  align-self: center;
 }
 .home .home-text {
   font-family: "Lato", sans-serif;
@@ -544,11 +537,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   box-sizing: border-box;
   padding: 0 20px;
   width: clamp(300px, 60vw, 800px);
-}
-@media (max-width: 1400px) {
-  .home .home-text {
-    margin-top: 5rem;
-  }
+  z-index: 2;
 }
 .home .home-navigation {
   display: flex;
@@ -688,7 +677,7 @@ body {
   width: calc(100vw - 40px);
   overflow: auto;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   box-shadow: #131515 0 0 10px;
 }
 
