@@ -14,6 +14,7 @@ function Home () {
 
     return (
         <div className="home" {...swipeHandlers}>
+            <div className="home-content">
             {currentPage === 1 && (
                 <p className="home-text" aria-label="Compétences">
                     Bonjour, je suis <strong>Rémy</strong>, <strong>développeur web front-end</strong>.
@@ -42,6 +43,7 @@ function Home () {
                     J'ai donc suivi une formation <strong>Développeur Intégrateur Web</strong> (RNCP-5) auprès d'<strong>OpenClassrooms</strong>.
                 </p>
             )}
+            </div>
             <div className="home-navigation">
             <button className="home-button" onClick={handleButtonClick}>
                 {currentPage === 1 || currentPage ===2 ?

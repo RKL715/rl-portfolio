@@ -103,8 +103,8 @@
   opacity: 1;
   height: 30px;
   width: 30px;
-  background : #f7f7f7;
-  color: variables.$accent-color;
+  background-color : variables.$accent-color;
+  color: variables.$main-color;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   &:hover, &:active, &:focus-visible {

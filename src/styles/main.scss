@@ -6,7 +6,7 @@
 @use "../components/Contact/contact";
 @use "../pages/ProjectsPage/projectsPages";
 @use "../pages/Home/home";
-@use "../pages/NotFound/notFound";
+@use "../pages/NotFound/notfound";
 @use "../pages/Legal/legal";
 
 
@@ -14,11 +14,14 @@
   box-sizing: border-box;
   padding : 0;
   margin: 0;
-  background-color: variables.$main-color;
+}
+
+body {
+  background : variables.$main-color;
 }
 
 .frame {
-  border : groove variables.$main-color;
+  border : solid variables.$secondary-color;
   border-width: 10px 5px;
   border-radius: 10px;
   padding-left : 20px;
@@ -30,5 +33,6 @@
   width: calc(100vw - 40px);
   overflow: auto;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
+  box-shadow: #131515 0 0 10px ;
 }

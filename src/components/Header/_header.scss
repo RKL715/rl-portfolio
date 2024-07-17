@@ -6,7 +6,8 @@ header {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  border-top : 20px solid variables.$main-color;
+  padding-top: 15px;
+  background-color: variables.$main-color;
   @media (max-width : 1400px) {
     width: 93%;
   }
@@ -57,7 +58,7 @@ header {
 // Outside of the header because it is fixed on bottom of the page, not really part of the header
 .header-bottom-block {
   position: fixed;
-  bottom : 2px;
+  bottom: -5px;
   left: 25px;
   background: none;
 
