@@ -62,8 +62,12 @@ header {
   z-index: 1;
   padding-top: 15px;
   width: calc(100% - 80px);
-  background: #e2dedb;
-  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+}
+@media (max-width: 1401px) {
+  header {
+    background: #e2dedb;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  }
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
@@ -163,6 +167,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   position: fixed;
   left: 4vw;
   width: clamp(90%, 2vw, 100%);
+  z-index: 6;
 }
 .contact-form .contact-form-fields, .contact-form form {
   max-width: 80%;
@@ -531,7 +536,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   background: #e2dedb;
   border-left: #647d83 2px solid;
   border-bottom: #647d83 2px solid;
-  box-shadow: #b3aca7 0 0 10px;
+  box-shadow: 5px 5px 5px #647d83, -5px -5px 5px #b3aca7 inset;
   border-radius: 10px;
   margin-right: 1vw;
   letter-spacing: 2px;
@@ -539,7 +544,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   box-sizing: border-box;
   padding: 0 20px;
   width: clamp(300px, 60vw, 800px);
-  z-index: 2;
 }
 .home .home-navigation {
   display: flex;
@@ -665,6 +669,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 body {
   background: #e2dedb;
   background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  margin: 0.9px;
 }
 
 .frame {

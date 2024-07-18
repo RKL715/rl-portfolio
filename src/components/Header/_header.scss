@@ -8,8 +8,9 @@ header {
   z-index: 1;
   padding-top: 15px;
   width: calc(100% - 80px);
-
-  @include mixins.main-background;
+  @media (max-width: 1401px) {
+    @include mixins.main-background;
+  }
 
   .header-top-block {
     h1 {

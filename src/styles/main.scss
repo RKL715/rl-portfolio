@@ -18,6 +18,7 @@
 
 body {
   @include mixins.main-background;
+  margin: 0.9px;
 }
 
 .frame {
