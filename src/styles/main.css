@@ -347,18 +347,23 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .carousel {
+  background: #e2dedb;
   position: relative;
   width: min(max(50vw, 200px), 60rem);
-  max-width: 500px;
+  max-width: 300px;
   height: min(max(50vh, 200px), 60rem);
-  max-height: 400px;
+  max-height: 350px;
   z-index: 0;
+  border-radius: 25% 25% 5% 5%;
+  overflow: hidden;
+  border: #e2dedb 2px inset;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .carousel img {
   pointer-events: auto;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .carousel:hover {
   cursor: pointer;
