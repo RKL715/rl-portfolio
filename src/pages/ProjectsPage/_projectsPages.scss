@@ -5,9 +5,10 @@
 @use "../../components/Project/projectCarousel";
 
 .projects-pages {
-    display : flex;
-    flex-direction: column;
-    align-items: center;
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
     justify-content: flex-end;
     padding-left: 5%;
     padding-right: 5%;

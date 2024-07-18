@@ -238,7 +238,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 @media (max-width: 1400px) {
   .project-block {
     flex-direction: column-reverse;
-    margin-top: 40%;
+    margin-top: 20%;
   }
 }
 @media (max-width: 768px) {
@@ -500,9 +500,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .projects-pages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
   justify-content: flex-end;
   padding-left: 5%;
   padding-right: 5%;
