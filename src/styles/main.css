@@ -227,9 +227,9 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .project-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   padding: 5% 1% 0 10%;
   width: 100%;
   border-left: solid 5px #b3aca7;
@@ -237,8 +237,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 @media (max-width: 1400px) {
   .project-block {
-    flex-direction: column-reverse;
-    margin-top: 20%;
+    grid-template-columns: 1fr;
+    margin-top: 30%;
   }
 }
 @media (max-width: 768px) {
@@ -259,8 +259,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-right: 3%;
   justify-content: space-between;
   align-items: center;
+  order: 1;
 }
 .project-block .project-block-text {
+  order: 2;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -349,12 +351,12 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 .carousel {
   background: #e2dedb;
   position: relative;
-  width: min(max(50vw, 200px), 60rem);
-  max-width: 300px;
-  height: min(max(50vh, 200px), 60rem);
+  width: 40vw;
+  max-width: 350px;
+  height: 40vh;
   max-height: 350px;
   z-index: 0;
-  border-radius: 25% 25% 5% 5%;
+  border-radius: 5% 5% 5% 5%;
   overflow: hidden;
   border: #e2dedb 2px inset;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -500,11 +502,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .projects-pages {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 10px;
-  justify-content: flex-end;
   padding-left: 5%;
   padding-right: 5%;
   float: right;
