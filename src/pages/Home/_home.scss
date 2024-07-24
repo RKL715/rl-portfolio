@@ -12,20 +12,21 @@
   @media (max-width: 768px) {
     margin-top: 10rem;
     height: 75%;
-    align-items: unset;
+    align-items: center;
   }
 
   .home-content {
+    margin-top: 5px;
     display: flex;
     justify-self: center;
   }
 
   .home-text {
     @include mixins.text-bio;
-    background: none;
+    background: variables.$main-color;
     border-left: #647d83 2px solid ;
     border-bottom: #647d83 2px solid ;
-    box-shadow: #b3aca7 0 0 10px;
+    box-shadow: 5px 5px 5px variables.$accent-color, -5px -5px 5px variables.$secondary-color inset;
     border-radius: 10px;
     margin-right: 1vw;
     letter-spacing: 2px;
@@ -33,9 +34,6 @@
     box-sizing: border-box;
     padding: 0 20px;
     width: clamp(300px, 60vw, 800px);
-    @media (max-width: 1400px) {
-      margin-top : 5rem;
-    }
   }
 
 .home-navigation {

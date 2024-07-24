@@ -7,6 +7,7 @@
   position: fixed;
   left: 4vw;
   width: clamp(90%, 2vw, 100%);
+  z-index: 6;
 
   .contact-form-fields, form{
     @include mixins.max-min-contact;

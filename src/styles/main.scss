@@ -17,7 +17,8 @@
 }
 
 body {
-  background : variables.$main-color;
+  @include mixins.main-background;
+  margin: 0.9px;
 }
 
 .frame {
@@ -33,6 +34,6 @@ body {
   width: calc(100vw - 40px);
   overflow: auto;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   box-shadow: #131515 0 0 10px ;
 }

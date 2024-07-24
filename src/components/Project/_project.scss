@@ -3,17 +3,19 @@
 @use "../../styles/animation";
 
 .project-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  //gap: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   padding: 5% 1% 0 10%;
   width: 100%;
   border-left: solid 5px variables.$secondary-color;
   border-right: solid 5px variables.$secondary-color;
   @media (max-width: 1400px) {
-    flex-direction: column-reverse;
-    margin-top: 40%;
+    grid-template-columns: 1fr;
+    margin-top: 30%;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px variables.$secondary-color;
   }
   @media (max-width: 768px) {
     gap: 5%;
@@ -30,9 +32,11 @@
     padding-right: 3%;
     justify-content: space-between;
     align-items: center;
+    order : 1;
   }
 
   .project-block-text {
+    order : 2;
     display: flex;
     flex-direction: column;
     width: 90%;

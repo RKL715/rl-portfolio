@@ -61,21 +61,17 @@ header {
   flex-direction: column;
   z-index: 1;
   padding-top: 15px;
-  background-color: #e2dedb;
+  width: calc(100% - 80px);
 }
-@media (max-width: 1400px) {
+@media (max-width: 1401px) {
   header {
-    width: 93%;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    width: calc(100% - 100px);
+    background: #e2dedb;
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
   }
 }
 header .header-top-block h1 {
   font-family: "Trirong", sans-serif;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   letter-spacing: 4px;
   font-size: clamp(1.5rem, 3vw, 3rem);
 }
@@ -118,7 +114,7 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
   width: auto;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   opacity: 1;
   font-weight: bold;
   font-family: "Lato", sans-serif;
@@ -128,7 +124,7 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
 }
 header .header-middle-block ul li a:hover, header .header-middle-block ul li a:active, header .header-middle-block ul li a:focus-visible, header .header-middle-block ul li button:hover, header .header-middle-block ul li button:active, header .header-middle-block ul li button:focus-visible {
   opacity: 0.75;
-  background: #647d83;
+  background: rgb(100, 125, 131);
   color: #f7f7f7;
   transform: scale(1.2);
 }
@@ -171,6 +167,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   position: fixed;
   left: 4vw;
   width: clamp(90%, 2vw, 100%);
+  z-index: 6;
 }
 .contact-form .contact-form-fields, .contact-form form {
   max-width: 80%;
@@ -219,7 +216,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .contact-form-top .contact-form-title {
   font-family: "Martel Sans", sans-serif;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   max-width: 80%;
@@ -230,9 +227,9 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .project-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   padding: 5% 1% 0 10%;
   width: 100%;
   border-left: solid 5px #b3aca7;
@@ -240,8 +237,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 @media (max-width: 1400px) {
   .project-block {
-    flex-direction: column-reverse;
-    margin-top: 40%;
+    grid-template-columns: 1fr;
+    margin-top: 30%;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px #b3aca7;
   }
 }
 @media (max-width: 768px) {
@@ -262,8 +262,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding-right: 3%;
   justify-content: space-between;
   align-items: center;
+  order: 1;
 }
 .project-block .project-block-text {
+  order: 2;
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -283,7 +285,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .project-block .project-block-text .title-link h2 {
   font-family: "Martel Sans", sans-serif;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   width: fit-content;
@@ -350,28 +352,35 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .carousel {
+  background: #e2dedb;
   position: relative;
-  width: min(max(50vw, 200px), 60rem);
-  max-width: 500px;
-  height: min(max(50vh, 200px), 60rem);
-  max-height: 400px;
+  width: 40vw;
+  max-width: 350px;
+  height: 40vh;
+  max-height: 350px;
   z-index: 0;
+  border-radius: 5% 5% 5% 5%;
+  overflow: hidden;
+  border: #e2dedb 2px inset;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .carousel img {
   pointer-events: auto;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
-.carousel img:hover {
+.carousel:hover {
   cursor: pointer;
 }
-.carousel img:hover::after {
-  content: "Click to enlarge";
+.carousel:hover::after {
+  pointer-events: none;
+  content: "Zoom";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: #f7f7f7;
   font-size: 1.5rem;
   font-weight: bold;
@@ -380,7 +389,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   border-radius: 10px;
 }
 .carousel button {
-  border: none;
   cursor: pointer;
   outline: none;
   display: block;
@@ -389,9 +397,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   opacity: 1;
   height: 30px;
   width: 30px;
-  background-color: #647d83;
-  color: #e2dedb;
-  border-radius: 50%;
+  background-color: #e2dedb;
+  color: rgb(100, 125, 131);
+  border-radius: 20%;
+  border: rgba(100, 125, 131, 0.55) 2px inset;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all 0.3s ease-in-out;
 }
 .carousel button:hover, .carousel button:active, .carousel button:focus-visible {
@@ -430,7 +440,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   z-index: 102;
 }
 .modal-container .modal .slideNav {
-  border: none;
   cursor: pointer;
   outline: none;
   display: block;
@@ -439,9 +448,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   opacity: 1;
   height: 30px;
   width: 30px;
-  background-color: #647d83;
-  color: #e2dedb;
-  border-radius: 50%;
+  background-color: #e2dedb;
+  color: rgb(100, 125, 131);
+  border-radius: 20%;
+  border: rgba(100, 125, 131, 0.55) 2px inset;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all 0.3s ease-in-out;
 }
 .modal-container .modal .slideNav:hover, .modal-container .modal .slideNav:active, .modal-container .modal .slideNav:focus-visible {
@@ -466,7 +477,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   max-height: 100%;
 }
 .modal-container .image .close-button {
-  border: none;
   cursor: pointer;
   outline: none;
   display: block;
@@ -475,9 +485,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   opacity: 1;
   height: 30px;
   width: 30px;
-  background-color: #647d83;
-  color: #e2dedb;
-  border-radius: 50%;
+  background-color: #e2dedb;
+  color: rgb(100, 125, 131);
+  border-radius: 20%;
+  border: rgba(100, 125, 131, 0.55) 2px inset;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   transition: all 0.3s ease-in-out;
   width: 50px;
   height: 50px;
@@ -493,10 +505,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .projects-pages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  gap: 10px;
   padding-left: 5%;
   padding-right: 5%;
   float: right;
@@ -506,6 +515,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 @media (max-width: 1400px) {
   .projects-pages {
     width: 100%;
+    margin-top: 60%;
   }
 }
 
@@ -521,10 +531,11 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   .home {
     margin-top: 10rem;
     height: 75%;
-    align-items: unset;
+    align-items: center;
   }
 }
 .home .home-content {
+  margin-top: 5px;
   display: flex;
   justify-self: center;
 }
@@ -533,10 +544,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.7rem, 2.5vw, 1rem);
-  background: none;
+  background: #e2dedb;
   border-left: #647d83 2px solid;
   border-bottom: #647d83 2px solid;
-  box-shadow: #b3aca7 0 0 10px;
+  box-shadow: 5px 5px 5px rgb(100, 125, 131), -5px -5px 5px #b3aca7 inset;
   border-radius: 10px;
   margin-right: 1vw;
   letter-spacing: 2px;
@@ -544,11 +555,6 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   box-sizing: border-box;
   padding: 0 20px;
   width: clamp(300px, 60vw, 800px);
-}
-@media (max-width: 1400px) {
-  .home .home-text {
-    margin-top: 5rem;
-  }
 }
 .home .home-navigation {
   display: flex;
@@ -567,7 +573,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   width: auto;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  background: #647d83;
+  background: rgb(100, 125, 131);
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -577,7 +583,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .home .home-navigation .home-button:hover, .home .home-navigation .home-button:active, .home .home-navigation .home-button:focus-visible {
   opacity: 0.75;
-  background: #647d83;
+  background: rgb(100, 125, 131);
   color: #f7f7f7;
   transform: scale(1.2);
 }
@@ -621,7 +627,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .not-found-container h2 {
   font-family: "Martel Sans", sans-serif;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
 }
@@ -650,7 +656,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .privacy-container h2 {
   font-family: "Martel Sans", sans-serif;
-  color: #647d83;
+  color: rgb(100, 125, 131);
   letter-spacing: 3px;
   font-size: clamp(1rem, 3vw, 2rem);
 }
@@ -673,6 +679,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 body {
   background: #e2dedb;
+  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  margin: 0.9px;
 }
 
 .frame {
@@ -688,7 +696,7 @@ body {
   width: calc(100vw - 40px);
   overflow: auto;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   box-shadow: #131515 0 0 10px;
 }
 
