@@ -239,6 +239,9 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   .project-block {
     grid-template-columns: 1fr;
     margin-top: 30%;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px #b3aca7;
   }
 }
 @media (max-width: 768px) {
@@ -512,6 +515,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 @media (max-width: 1400px) {
   .projects-pages {
     width: 100%;
+    margin-top: 60%;
   }
 }
 

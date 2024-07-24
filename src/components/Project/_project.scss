@@ -13,6 +13,9 @@
   @media (max-width: 1400px) {
     grid-template-columns: 1fr;
     margin-top: 30%;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px variables.$secondary-color;
   }
   @media (max-width: 768px) {
     gap: 5%;
