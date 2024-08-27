@@ -1,21 +1,22 @@
-import Project, {ProjectType} from "../../components/Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
+import {useNavigate} from "react-router-dom";
 
 function ProjectsPage () {
 
+    const navigate = useNavigate();
+
+    const handleProjectClick = (id: number) => {
+        navigate(`/projects/${id}`);
+    };
+
     return (
-        <div className={"projects-pages"}>
-            {projectsData.projects.map((project: ProjectType) => (
-                <Project
-                    key={project.id}
-                    id={project.id}
-                    name={project.name}
-                    description={project.description}
-                    technologies={project.technologies}
-                    link={project.link}
-                    img={project.img}
-                />
-            ))}
+        <div className={"projects-list"}>
+            {projectsData.projects.map((project) => (
+                <div key={project.id} className="project-card" onClick={() => handleProjectClick(project.id)}>
+                    <img src={project.img[0].src} alt={project.img[0].title} className="project-img"/>
+                    <h2>{project.name}</h2>
+        </div>
+    ))}
         </div>
     )
 }

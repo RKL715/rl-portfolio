@@ -519,6 +519,43 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   }
 }
 
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: 30% auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  cursor: pointer;
+  display: grid;
+  grid-auto-flow: row;
+  max-width: clamp(300px, 70%, 500px);
+  max-height: clamp(300px, 60%, 500px);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10% auto;
+  transition: all 0.3s ease-in-out;
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 1400px) {
+  .project-card {
+    width: 100%;
+  }
+}
+.project-card .project-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
 .home {
   width: 100%;
   height: 100%;
