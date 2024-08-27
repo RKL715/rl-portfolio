@@ -544,10 +544,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.7rem, 2.5vw, 1rem);
-  background: #e2dedb;
-  border-left: #647d83 2px solid;
-  border-bottom: #647d83 2px solid;
-  box-shadow: 5px 5px 5px rgb(100, 125, 131), -5px -5px 5px #b3aca7 inset;
+  background-color: #e2dedb;
+  border-left: #b3aca7 2px solid;
+  border-bottom: #b3aca7 2px solid;
+  box-shadow: 5px 5px 5px #b3aca7, -5px -5px 5px #b3aca7 inset;
   border-radius: 10px;
   margin-right: 1vw;
   letter-spacing: 2px;
@@ -558,7 +558,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .home .home-navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
   margin-top: 2%;
 }
@@ -574,9 +575,10 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   background: rgb(100, 125, 131);
+  rotate: 90deg;
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   opacity: 1 !important;
   color: #647d83 !important;
   background: none !important;
@@ -592,6 +594,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .home .home-navigation .bullet {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
 }
 .home .home-navigation .bullet button {
