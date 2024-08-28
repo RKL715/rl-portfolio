@@ -10,13 +10,15 @@ function ProjectsPage () {
     };
 
     return (
-        <div className={"projects-list"}>
+        <div className="projects-list-page">
+        <div className={"projects-list-content"}>
             {projectsData.projects.map((project) => (
-                <div key={project.id} className="project-card" onClick={() => handleProjectClick(project.id)}>
+                <div key={project.id} className="projects-list-cards" onClick={() => handleProjectClick(project.id)}>
                     <img src={project.img[0].src} alt={project.img[0].title} className="project-img"/>
                     <h2>{project.name}</h2>
         </div>
     ))}
+        </div>
         </div>
     )
 }

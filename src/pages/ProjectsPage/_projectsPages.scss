@@ -5,31 +5,38 @@
 @use "../../components/Project/projectCarousel";
 @use "../../pages/ProjectsPage/projectsDetails";
 
-.projects-list {
+.project-list-page {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.projects-list-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
-    margin: 30% auto;
-    justify-content: center;
-    align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.project-card {
+.projects-list-cards {
+  place-self: center;
   cursor: pointer;
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: clamp(300px, 70%, 500px);
   max-height: clamp(300px, 60%, 500px);
   border-radius: 10px;
   padding: 20px;
-  margin: 10% auto;
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05);
-  }
-  @media (max-width: 1400px) {
-    width: 100%;
   }
     .project-img {
         width: 100%;
