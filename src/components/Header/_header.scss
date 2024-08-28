@@ -2,11 +2,9 @@
 @use "../../styles/mixins";
 
 header {
-  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 1;
-  padding-top: 15px;
   width: calc(100% - 80px);
   @media (max-width: 1401px) {
     @include mixins.main-background;
