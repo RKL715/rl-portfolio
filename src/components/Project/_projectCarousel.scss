@@ -5,14 +5,10 @@
 .carousel {
   background: variables.$main-color;
   position: relative;
-  width: min(max(20vw, 40vw), 50vw);
-  max-width: 350px;
-  height: min(max(20vh, 40vh), 50vh);
-  max-height: 350px;
+  width: clamp(200px, 60vw, 350px);
+  height: clamp(250px, 60vh, 400px);
   z-index: 0;
-  border-radius: 5% 5% 5% 5% ;
   overflow: hidden;
-  border: variables.$main-color 2px inset;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
    img {
      pointer-events: auto;

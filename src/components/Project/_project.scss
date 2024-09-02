@@ -2,57 +2,48 @@
 @use "../../styles/mixins";
 @use "../../styles/animation";
 
+.project-details-page {
+  display: flex;
+  align-items: center;
+}
+
 .project-block {
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+  background-color: variables.$main-color;
+  border: #131515 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 5% 1% 0 10%;
-  width: 100%;
-  border-left: solid 5px variables.$secondary-color;
-  border-right: solid 5px variables.$secondary-color;
+  grid-template-columns: 1fr;
   @media (max-width: 1400px) {
     grid-template-columns: 1fr;
-    margin-top: 30%;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid 5px variables.$secondary-color;
-  }
-  @media (max-width: 768px) {
-    gap: 5%;
-    padding: 5% 1% 10% 1%;
-  }
-  @media (max-width: 600px) {
-    margin-top: 0;
   }
 
   .project-block-carousel {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     justify-content: space-between;
     align-items: center;
-    order : 1;
+    order : 2;
+    height: clamp(60%, 80%, 100%);
   }
 
-  .project-block-text {
-    order : 2;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    @media (max-width: 768px) {
-      align-items: center;
-    }
-
+  .project-block-header {
+    order : 1;
+    background-color: variables.$accent-color;
+    border-bottom: #131515 4px solid;
     .title-link {
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding-bottom: 2%;
-      padding-top: 2%;
+      padding : 2% 0 2% 2%;
       gap: 3%;
       h2 {
         @include mixins.title-h2;
+        color: variables.$title-color-main;
         width: fit-content;
         white-space: nowrap;
       }
@@ -60,8 +51,17 @@
         transform: scale(1.1);
       }
     }
+  }
 
-
+  .project-block-text {
+    order : 3;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    @media (max-width: 768px) {
+      align-items: center;
+    }
     p {
       @include mixins.text;
       padding-bottom: 5%;
