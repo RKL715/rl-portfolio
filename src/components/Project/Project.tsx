@@ -35,14 +35,15 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
 
     return (
         <div className="project-block">
-            <span className="project-block-text">
-            <span className="title-link">
+            <div className="project-block-header">
+                <span className="title-link">
                 <h2>{name}</h2>
                 <a href={link} className="github-link" target="_blank" rel="noreferrer">
                     <img src="/icons/github-mark.png" width={40} alt="Link to github project"/>
                 </a>
-            </span>
-
+                </span>
+            </div>
+                <span className="project-block-text">
             <ul className="project-desc-list">
                 {description.map((desc, index) => (
                     <li key={index}>{desc}</li>
@@ -57,11 +58,11 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                 ))}
             </ul>
                 </span>
-            <span className="project-block-carousel"><ProjectCarousel images={img[current]} nextSlide={nextSlide}
-                                                                      prevSlide={prevSlide}/>
+                <span className="project-block-carousel"><ProjectCarousel images={img[current]} nextSlide={nextSlide}
+                                                                          prevSlide={prevSlide}/>
             </span>
-        </div>
-    )
-}
+            </div>
+            )
+            }
 
-export default Project
+            export default Project

@@ -12,7 +12,7 @@ export default function ProjectDetails() {
     }
 
     return (
-        <div>
+        <div className="project-details-page">
                 <Project
                     id={project.id}
                     name={project.name}
