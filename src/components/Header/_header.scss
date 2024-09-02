@@ -2,22 +2,35 @@
 @use "../../styles/mixins";
 
 header {
+  grid-column: 1 / 2;
   display: flex;
   flex-direction: column;
   z-index: 1;
-  width: calc(100% - 80px);
-  @media (max-width: 1401px) {
-    @include mixins.main-background;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: clamp(10vw, 15vw, 20vw);
+  height: calc(100vh - 70px);
+  background-color: variables.$accent-color;
+  border: #131515 4px solid;
+  border-radius: 3px;
+  padding: 2%;
+  @media (max-width: 768px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: fit-content;
+    width: clamp(40vw, 75vw, 80vw);
+    margin: 1% auto;
   }
 
   .header-top-block {
     h1 {
+      padding: 5px;
       @include mixins.title-h1;
       .header-link {
         text-decoration: none;
-        color: inherit;
+        color: variables.$title-color-main;
         &:hover {
-         font-weight: bolder;
+          @include mixins.title-hover-effect;
         }
       }
     }
@@ -40,7 +53,7 @@ header {
           padding : 5px 0;
           a, button {
             @include mixins.button;
-            color : variables.$accent-color;
+            color : variables.$title-color-main;
             opacity: 1;
             font-weight : bold;
             @include mixins.text;

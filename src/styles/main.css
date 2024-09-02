@@ -56,29 +56,44 @@
   }
 }
 header {
+  grid-column: 1/2;
   display: flex;
   flex-direction: column;
   z-index: 1;
-  width: calc(100% - 80px);
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 15vw;
+  height: calc(100vh - 70px);
+  background-color: #647d83;
+  border: #131515 4px solid;
+  border-radius: 3px;
+  padding: 2%;
 }
-@media (max-width: 1401px) {
+@media (max-width: 768px) {
   header {
-    background: #e2dedb;
-    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: fit-content;
+    width: 75vw;
+    margin: 1% auto;
   }
 }
 header .header-top-block h1 {
-  font-family: "Trirong", sans-serif;
-  color: rgb(100, 125, 131);
+  padding: 5px;
+  font-family: "Ubuntu Mono", monospace;
+  color: #FFFFFF;
   letter-spacing: 4px;
   font-size: clamp(1.5rem, 3vw, 3rem);
 }
 header .header-top-block h1 .header-link {
   text-decoration: none;
-  color: inherit;
+  color: #FFFFFF;
 }
 header .header-top-block h1 .header-link:hover {
-  font-weight: bolder;
+  background: linear-gradient(90deg, #e2dedb, #b3aca7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.8s ease-in-out;
 }
 header .header-top-block p {
   font-family: "Lato", sans-serif;
@@ -112,7 +127,7 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
   width: auto;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  color: rgb(100, 125, 131);
+  color: #FFFFFF;
   opacity: 1;
   font-weight: bold;
   font-family: "Lato", sans-serif;
@@ -121,10 +136,9 @@ header .header-middle-block ul li a, header .header-middle-block ul li button {
   font-size: clamp(0.5rem, 3vw, 1rem);
 }
 header .header-middle-block ul li a:hover, header .header-middle-block ul li a:active, header .header-middle-block ul li a:focus-visible, header .header-middle-block ul li button:hover, header .header-middle-block ul li button:active, header .header-middle-block ul li button:focus-visible {
-  opacity: 0.75;
-  background: rgb(100, 125, 131);
+  opacity: 0.85;
   color: #f7f7f7;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .header-bottom-block {
@@ -214,7 +228,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .contact-form .contact-form-top .contact-form-title {
   font-family: "Martel Sans", sans-serif;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   max-width: 80%;
@@ -283,7 +297,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .project-block .project-block-text .title-link h2 {
   font-family: "Martel Sans", sans-serif;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
   width: fit-content;
@@ -396,7 +410,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: 30px;
   width: 30px;
   background-color: #e2dedb;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   border-radius: 20%;
   border: rgba(100, 125, 131, 0.55) 2px inset;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -447,7 +461,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: 30px;
   width: 30px;
   background-color: #e2dedb;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   border-radius: 20%;
   border: rgba(100, 125, 131, 0.55) 2px inset;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -484,7 +498,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   height: 30px;
   width: 30px;
   background-color: #e2dedb;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   border-radius: 20%;
   border: rgba(100, 125, 131, 0.55) 2px inset;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -517,23 +531,22 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   }
 }
 
-.project-list-page {
+.projects-list-page {
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: end;
+  overflow: scroll;
 }
 
 .projects-list-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .projects-list-cards {
@@ -560,35 +573,49 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 
 .home {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: end;
+  align-items: end;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
+  height: 100vh;
 }
 @media (max-width: 768px) {
   .home {
-    margin-top: 10rem;
-    height: 75%;
-    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 5%;
   }
 }
 .home .home-content {
-  margin-top: 5px;
-  display: flex;
-  justify-self: center;
+  margin: 0 auto;
+  display: inline-flex;
+  height: fit-content;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .home .home-content {
+    width: 80vw;
+  }
+}
+.home .home-content-title {
+  font-family: "Martel Sans", sans-serif;
+  color: #647d83;
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 35px;
 }
 .home .home-text {
+  box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
   font-family: "Lato", sans-serif;
   color: #b3aca7 bold;
   letter-spacing: 2px;
   font-size: clamp(0.7rem, 2.5vw, 1rem);
   background-color: #e2dedb;
-  border-left: #b3aca7 2px solid;
-  border-bottom: #b3aca7 2px solid;
-  box-shadow: 5px 5px 5px #b3aca7, -5px -5px 5px #b3aca7 inset;
-  border-radius: 10px;
+  border: #131515 2px solid;
   margin-right: 1vw;
   letter-spacing: 2px;
   line-height: 35px;
@@ -596,45 +623,28 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   padding: 0 20px;
   width: clamp(300px, 60vw, 800px);
 }
+.home .home-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: clamp(300px, 60vw, 800px);
+  background-color: #647d83;
+  border: #131515 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
+}
 .home .home-navigation {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 2%;
-}
-.home .home-navigation .home-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  opacity: 0.5;
-  outline: 0;
-  height: 30px;
-  width: auto;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  background: rgb(100, 125, 131);
-  rotate: 90deg;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  opacity: 1 !important;
-  color: #647d83 !important;
-  background: none !important;
-}
-.home .home-navigation .home-button:hover, .home .home-navigation .home-button:active, .home .home-navigation .home-button:focus-visible {
-  opacity: 0.75;
-  background: rgb(100, 125, 131);
-  color: #f7f7f7;
-  transform: scale(1.2);
-}
-.home .home-navigation .home-button:hover .home .home-navigation .home-button:active .home .home-navigation .home-button:focus {
-  background: none;
+  z-index: 5;
 }
 .home .home-navigation .bullet {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-end;
 }
 .home .home-navigation .bullet button {
@@ -653,7 +663,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   background-color: #ccc;
 }
 .home .home-navigation .bullet span.active {
-  background-color: #647d83;
+  background-color: #12263A;
 }
 .home .home-navigation .bullet span:hover, .home .home-navigation .bullet span:focus-visible {
   transform: scale(1.1);
@@ -670,7 +680,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .not-found-container h2 {
   font-family: "Martel Sans", sans-serif;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   letter-spacing: 7px;
   font-size: clamp(1rem, 3vw, 2rem);
 }
@@ -699,7 +709,7 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 }
 .privacy-container h2 {
   font-family: "Martel Sans", sans-serif;
-  color: rgb(100, 125, 131);
+  color: #647d83;
   letter-spacing: 3px;
   font-size: clamp(1rem, 3vw, 2rem);
 }
@@ -722,7 +732,8 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
 
 body {
   background: #e2dedb;
-  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 2px);
+  background-size: 15px 15px;
   margin: 0.9px;
 }
 
@@ -737,12 +748,18 @@ body {
   box-sizing: border-box;
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
-  overflow: auto;
+  overflow: hidden;
   position: fixed;
   z-index: 4;
   box-shadow: #131515 0 0 10px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+@media (max-width: 768px) {
+  .frame {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

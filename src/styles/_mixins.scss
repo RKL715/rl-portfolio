@@ -1,10 +1,17 @@
 @use "variables";
 
 @mixin title-h1 {
-  font-family: 'Trirong', sans-serif;
-  color : variables.$title-color;
+  font-family: "Ubuntu Mono", monospace;
+  color: variables.$title-color-main;
   letter-spacing: 4px;
   font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+@mixin title-hover-effect {
+    background: variables.$title-color-main-hover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.8s ease-in-out;
 }
 
 @mixin title-h2 {
@@ -86,10 +93,9 @@
     transition: all 0.3s ease-in-out;
 
   &:hover, &:active, &:focus-visible {
-    opacity: 0.75;
-    background: variables.$accent-color;
+    opacity: 0.85;
     color : variables.$font-text-hover;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -119,5 +125,8 @@
 
 @mixin main-background {
   background: variables.$main-color;
-  background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+  background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 2px);
+  background-size: 15px 15px;
+  //background-color: rgba(0, 0, 0, 0);
 }
+
