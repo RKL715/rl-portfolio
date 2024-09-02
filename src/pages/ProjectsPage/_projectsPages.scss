@@ -5,23 +5,23 @@
 @use "../../components/Project/projectCarousel";
 @use "../../pages/ProjectsPage/projectsDetails";
 
-.project-list-page {
+.projects-list-page {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: end;
+    overflow: scroll;
 }
 
 .projects-list-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+
 }
 
 .projects-list-cards {
