@@ -1,8 +1,16 @@
 import projectsData from "../../assets/projects.json";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function ProjectsPage () {
+type Project = {
+    id: number;
+    name: string;
+    description: string[];
+    technologies: { id: number; name: string; src: string; }[];
+    link: string;
+    img: { id: number; title: string; src: string; }[];
+};
 
+function ProjectsPage() {
     const navigate = useNavigate();
 
     const handleProjectClick = (id: number) => {
@@ -11,16 +19,18 @@ function ProjectsPage () {
 
     return (
         <div className="projects-list-page">
-        <div className={"projects-list-content"}>
-            {projectsData.projects.map((project) => (
-                <div key={project.id} className="projects-list-cards" onClick={() => handleProjectClick(project.id)}>
-                    <img src={project.img[0].src} alt={project.img[0].title} className="project-img"/>
-                    <h2>{project.name}</h2>
+            <div className={"projects-list-content"}>
+                {projectsData.projects.en.map((project: Project) => (
+                    <div key={project.id} className="projects-list-cards" onClick={() => handleProjectClick(project.id)}>
+                        <img src={project.img[0].src} alt={project.img[0].title} className="project-img" />
+                        <h2>{project.name}</h2>
+                    </div>
+                ))}
+            </div>
         </div>
-    ))}
-        </div>
-        </div>
-    )
+    );
 }
 
-export default ProjectsPage
+console.log("Name:", projectsData.projects.en);
+
+export default ProjectsPage;

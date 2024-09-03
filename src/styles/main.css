@@ -238,6 +238,37 @@ header .header-middle-block ul li a:hover, header .header-middle-block ul li a:a
   animation: fly 1s ease-in-out infinite;
 }
 
+.lng-buttons-container {
+  display: flex;
+  justify-content: right;
+  position: sticky;
+}
+
+.lng-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+  outline: 0;
+  height: 30px;
+  width: auto;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: #12263A 2px solid;
+  background-color: #12263A;
+  color: #F7F7F7;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 5;
+}
+.lng-button:hover, .lng-button:active, .lng-button:focus-visible {
+  opacity: 0.85;
+  color: #f7f7f7;
+  transform: scale(1.1);
+}
+
 .project-details-page {
   display: flex;
   align-items: center;

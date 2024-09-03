@@ -1,0 +1,21 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+@use "../../styles/animation";
+
+
+.lng-buttons-container {
+    display: flex;
+    justify-content: right;
+    position: sticky;
+}
+
+.lng-button {
+    @include mixins.button;
+    border: #12263A 2px solid;
+    background-color: #12263A;
+    color: #F7F7F7;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 5;
+}

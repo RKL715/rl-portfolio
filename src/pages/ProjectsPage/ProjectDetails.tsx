@@ -1,11 +1,31 @@
 import Project from "../../components/Project/Project.tsx";
 import projectsData from "../../assets/projects.json";
 import {useParams} from "react-router-dom";
+import {useTranslation} from "react-i18next";
+
+type ProjectType = {
+    id: number;
+    name: string;
+    description: string[];
+    technologies: { id: number; name: string; src: string }[];
+    link: string;
+    img: { id: number; title: string; src: string }[];
+};
+
+type ProjectsDataType = {
+    projects: {
+        [key: string]: ProjectType[];
+    };
+};
+
+const typedProjectsData: ProjectsDataType = projectsData;
 
 export default function ProjectDetails() {
-
     const { id } = useParams<{ id: string }>();
-    const project = projectsData.projects.find((project) => project.id === parseInt(id!));
+    const { i18n } = useTranslation();
+    const currentLanguage = i18n.language;
+
+    const project = typedProjectsData.projects[currentLanguage].find((project: ProjectType) => project.id === parseInt(id!));
 
     if (!project) {
         return <div>Project not found</div>;

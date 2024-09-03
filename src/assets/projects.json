@@ -1,163 +1,326 @@
 {
-  "projects" : [
-    {
-      "id": 1,
-      "name": "Kasa",
-      "description": [
-        "Projet 8 de formation OpenClassroom.",
-        "Création d'un site de location de logements.",
-        "Intégration d'une maquette responsive.",
-        "React Router pour la navigation.",
-        "Création d'animations CSS.",
-        "Ajout de pages dynamiques pour chaque logement depuis JSON."
+  "projects": {
+    "fr": [
+      {
+        "id": 1,
+        "name": "Kasa",
+        "description": [
+          "Projet 8 de formation OpenClassroom.",
+          "Création d'un site de location de logements.",
+          "Intégration d'une maquette responsive.",
+          "React Router pour la navigation.",
+          "Création d'animations CSS.",
+          "Ajout de pages dynamiques pour chaque logement depuis JSON."
+        ],
+        "technologies": [
+          {
+            "id": 1,
+            "name": "React React Router",
+            "src": "/skills/react.webp"
+          },
+          {
+            "id": 2,
+            "name": "SCSS",
+            "src": "/skills/sass.webp"
+          },
+          {
+            "id": 3,
+            "name": "Responsive Design",
+            "src": "/skills/responsive.webp"
+          },
+          {
+            "id": 4,
+            "name": "JSON",
+            "src": "/skills/json.webp"
+          },
+          {
+            "id": 5,
+            "name": "CSS Animation",
+            "src": "/skills/css.webp"
+          }
+        ],
+        "link": "https://github.com/RKL715/P8---Kasa",
+        "img": [
+          {
+            "id": 1,
+            "title": "image1",
+            "src": "/projects/kasa1.webp"
+          },
+          {
+            "id": 2,
+            "title": "image2",
+            "src": "/projects/kasa2.webp"
+          },
+          {
+            "id": 3,
+            "title": "image3",
+            "src": "/projects/kasa3.webp"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Argent Bank",
+        "description": [
+          "Projet 11 de formation OpenClassroom.",
+          "Connexion et Compte client pour un site bancaire",
+          "Intégration de Redux Toolkit pour la gestion de l'état de l'application.",
+          "Création de composants et de routes pour la navigation.",
+          "Utilisation de l'API REST pour la récupération des données et de Swagger.",
+          "Écriture de nouvelles routes API pour la gestion des transactions."
+        ],
+        "technologies": [
+          {
+            "id": 1,
+            "name": "React React Router",
+            "src": "/skills/react.webp"
+          },
+          {
+            "id": 2,
+            "name": "REDUX Toolkit",
+            "src": "/skills/redux.webp"
+          },
+          {
+            "id": 3,
+            "name": "API REST",
+            "src": "/skills/api.webp"
+          },
+          {
+            "id": 4,
+            "name": "SWAGGER",
+            "src": "/skills/swagger.webp"
+          }
+        ],
+        "link": "https://github.com/RKL715/P11-ArgentBank",
+        "img": [
+          {
+            "id": 1,
+            "title": "Formulaire de connexion, format desktop",
+            "src": "/projects/argentbank1.webp"
+          },
+          {
+            "id": 2,
+            "title": "Formulaire de changement d'username, format tablette",
+            "src": "/projects/argentbank2.webp"
+          },
+          {
+            "id": 3,
+            "title": "Home page, format mobile",
+            "src": "/projects/argentbank3.webp"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Sophie Bluel",
+        "description": [
+          "Projet 6 de formation OpenClassroom.",
+          "Portfolio d'une designer d'espace.",
+          "Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus.",
+          "Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API."
+        ],
+        "technologies": [
+          {
+            "id": 1,
+            "name": "JavaScript",
+            "src": "/skills/javascript.webp"
+          },
+          {
+            "id": 2,
+            "name": "SCSS",
+            "src": "/skills/sass.webp"
+          },
+          {
+            "id": 3,
+            "name": "API REST",
+            "src": "/skills/api.webp"
+          },
+          {
+            "id": 4,
+            "name": "Responsive Design",
+            "src": "/skills/responsive.webp"
+          }
+        ],
+        "link": "https://github.com/RKL715/P6-Sophiebluel",
+        "img": [
+          {
+            "id": 1,
+            "title": "image1",
+            "src": "/projects/bluel1.webp"
+          },
+          {
+            "id": 2,
+            "title": "image2",
+            "src": "/projects/bluel2.webp"
+          },
+          {
+            "id": 3,
+            "title": "image3",
+            "src": "/projects/bluel3.webp"
+          }
+        ]
+      }
       ],
-      "technologies": [
-        {
-          "id": 1,
-          "name": "React React Router",
-          "src": "/skills/react.webp"
-        },
-        {
-          "id": 2,
-          "name": "SCSS",
-          "src": "/skills/sass.webp"
-        },
+    "en": [
+      {
+        "id": 1,
+        "name": "Kasa",
+        "description": [
+          "Project 8 from OpenClassroom training.",
+          "Creation of a housing rental website.",
+          "Integration of responsive mockup.",
+          "React Router for navigation.",
+          "Creation of CSS animations.",
+          "Adding dynamic pages for each housing unit from JSON."
+        ],
+        "technologies": [
+          {
+            "id": 1,
+            "name": "React React Router",
+            "src": "/skills/react.webp"
+          },
+          {
+            "id": 2,
+            "name": "SCSS",
+            "src": "/skills/sass.webp"
+          },
+          {
+            "id": 3,
+            "name": "Responsive Design",
+            "src": "/skills/responsive.webp"
+          },
+          {
+            "id": 4,
+            "name": "JSON",
+            "src": "/skills/json.webp"
+          },
+          {
+            "id": 5,
+            "name": "CSS Animation",
+            "src": "/skills/css.webp"
+          }
+        ],
+        "link": "https://github.com/RKL715/P8---Kasa",
+        "img": [
+          {
+            "id": 1,
+            "title": "image1",
+            "src": "/projects/kasa1.webp"
+          },
+          {
+            "id": 2,
+            "title": "image2",
+            "src": "/projects/kasa2.webp"
+          },
+          {
+            "id": 3,
+            "title": "image3",
+            "src": "/projects/kasa3.webp"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Argent Bank",
+        "description": [
+          "Project 11 from OpenClassroom training.",
+          "Login and customer account for a banking website.",
+          "Integration of Redux Toolkit for state management in the application.",
+          "Creation of components and routes for navigation.",
+          "Use of the REST API for data retrieval and Swagger.",
+          "Writing new API routes for transaction management."
+        ],
+        "technologies": [
+          {
+            "id": 1,
+            "name": "React React Router",
+            "src": "/skills/react.webp"
+          },
+          {
+            "id": 2,
+            "name": "REDUX Toolkit",
+            "src": "/skills/redux.webp"
+          },
+          {
+            "id": 3,
+            "name": "API REST",
+            "src": "/skills/api.webp"
+          },
+          {
+            "id": 4,
+            "name": "SWAGGER",
+            "src": "/skills/swagger.webp"
+          }
+        ],
+        "link": "https://github.com/RKL715/P11-ArgentBank",
+        "img": [
+          {
+            "id": 1,
+            "title": "Formulaire de connexion, format desktop",
+            "src": "/projects/argentbank1.webp"
+          },
+          {
+            "id": 2,
+            "title": "Formulaire de changement d'username, format tablette",
+            "src": "/projects/argentbank2.webp"
+          },
+          {
+            "id": 3,
+            "title": "Home page, format mobile",
+            "src": "/projects/argentbank3.webp"
+          }
+        ]
+      },
         {
           "id": 3,
-          "name": "Responsive Design",
-          "src": "/skills/responsive.webp"
-          },
-        {
-          "id": 4,
-          "name": "JSON",
-          "src": "/skills/json.webp"
-        },
-        {
-          "id": 5,
-          "name": "CSS Animation",
-          "src": "/skills/css.webp"
-        }
-      ],
-      "link": "https://github.com/RKL715/P8---Kasa",
-      "img": [
-        {
-          "id" : 1,
-          "title": "image1",
-          "src": "/projects/kasa1.webp"
-        },
-        {
-          "id" : 2,
-          "title": "image2",
-          "src": "/projects/kasa2.webp"
-        },
-        {
-          "id" : 3,
-          "title": "image3",
-          "src": "/projects/kasa3.webp"
+          "name": "Sophie Bluel",
+          "description": [
+            "Project 6 from OpenClassroom training.",
+            "Portfolio for a space designer.",
+            "Creation of a login page and a modal to add new content.",
+            "Adding filtering functionalities and retrieving/deleting works from the API."
+          ],
+          "technologies": [
+            {
+              "id": 1,
+              "name": "JavaScript",
+              "src": "/skills/javascript.webp"
+            },
+            {
+              "id": 2,
+              "name": "SCSS",
+              "src": "/skills/sass.webp"
+            },
+            {
+              "id": 3,
+              "name": "API REST",
+              "src": "/skills/api.webp"
+            },
+            {
+              "id": 4,
+              "name": "Responsive Design",
+              "src": "/skills/responsive.webp"
+            }
+          ],
+          "link": "https://github.com/RKL715/P6-Sophiebluel",
+          "img": [
+            {
+              "id": 1,
+              "title": "image1",
+              "src": "/projects/bluel1.webp"
+            },
+            {
+              "id": 2,
+              "title": "image2",
+              "src": "/projects/bluel2.webp"
+            },
+            {
+              "id": 3,
+              "title": "image3",
+              "src": "/projects/bluel3.webp"
+            }
+          ]
         }
       ]
-    },
-    {
-  "id": 2,
-  "name": "Argent Bank",
-  "description": [
-    "Projet 11 de formation OpenClassroom.",
-    "Connexion et Compte client pour un site bancaire",
-    "Intégration de Redux Toolkit pour la gestion de l'état de l'application.",
-    "Création de composants et de routes pour la navigation.",
-    "Utilisation de l'API REST pour la récupération des données et de Swagger.",
-    "Écriture de nouvelles routes API pour la gestion des transactions."
-  ],
-  "technologies": [
-    {
-      "id": 1,
-      "name": "React React Router",
-      "src": "/skills/react.webp"
-    },
-    {
-      "id": 2,
-      "name": "REDUX Toolkit",
-      "src": "/skills/redux.webp"
-    },
-    {
-      "id": 3,
-      "name": "API REST",
-      "src": "/skills/api.webp"
-    },
-    {
-      "id": 4,
-      "name": "SWAGGER",
-      "src": "/skills/swagger.webp"
-    }
-  ],
-  "link": "https://github.com/RKL715/P11-ArgentBank",
-  "img": [
-    {
-      "id" : 1,
-      "title": "Formulaire de connexion, format desktop",
-      "src": "/projects/argentbank1.webp"
-    },
-    {
-      "id" : 2,
-      "title": "Formulaire de changement d'username, format tablette",
-      "src": "/projects/argentbank2.webp"
-    },
-    {
-      "id" : 3,
-      "title": "Home page, format mobile",
-      "src": "/projects/argentbank3.webp"
-    }
-  ]
-},
-    {
-  "id": 3,
-  "name": "Sophie Bluel",
-  "description": [
-    "Projet 6 de formation OpenClassroom.",
-    "Portfolio d'une designer d'espace.",
-    "Création d'une page de connexion et d'une modal afin d'ajouter de nouveaux contenus.",
-    "Ajout de fonctionnalités de filtrages et de récupérations/suppression de travaux depuis l'API."
-  ],
-  "technologies": [
-    {
-      "id": 1,
-      "name": "JavaScript",
-      "src": "/skills/javascript.webp"
-    },
-    {
-      "id": 2,
-      "name": "SCSS",
-      "src": "/skills/sass.webp"
-    },
-    {
-      "id": 3,
-      "name": "API REST",
-      "src": "/skills/api.webp"
-    },
-    {
-      "id": 4,
-      "name": "Responsive Design",
-      "src": "/skills/responsive.webp"
-    }
-  ],
-  "link": "https://github.com/RKL715/P6-Sophiebluel",
-  "img": [
-    {
-      "id" : 1,
-      "title": "image1",
-      "src": "/projects/bluel1.webp"
-    },
-    {
-      "id" : 2,
-      "title": "image2",
-      "src": "/projects/bluel2.webp"
-    },
-    {
-      "id" : 3,
-      "title": "image3",
-      "src": "/projects/bluel3.webp"
-    }
-  ]
-}
-  ]
+  }
 }

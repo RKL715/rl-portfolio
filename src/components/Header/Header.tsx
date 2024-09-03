@@ -17,6 +17,7 @@ const [isVisible, setIsVisible] = useState(true);
         setShowContactModal(false);
     }
 
+
     return (
         <header>
             <div className="header-top-block">
@@ -25,6 +26,9 @@ const [isVisible, setIsVisible] = useState(true);
                     RÉMY LAFAYE
                     </Link></h1>
                 <p>Développeur intégrateur web</p>
+                <span className="lng-switcher">
+
+                </span>
             </div>
 
             <div className="header-middle-block">
