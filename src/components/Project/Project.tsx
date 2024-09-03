@@ -1,5 +1,7 @@
 import ProjectCarousel  from "./ProjectCarousel.tsx";
 import {useState} from "react";
+import { useTranslation} from "react-i18next";
+
 
 export interface  ProjectType {
     id : number;
@@ -24,6 +26,7 @@ export interface ImageType {
 
 
 function Project ({name, description, technologies, link, img} : ProjectType) {
+    const {t} = useTranslation();
     const [current, setCurrent] = useState(0);
 
     const nextSlide = () => {
@@ -46,7 +49,7 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
                 <span className="project-block-text">
             <ul className="project-desc-list">
                 {description.map((desc, index) => (
-                    <li key={index}>{desc}</li>
+                    <li key={index}>{t(desc)}</li>
                 ))}
             </ul>
             <ul className="project-skills-list no-transition">

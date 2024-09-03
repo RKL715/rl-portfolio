@@ -4,11 +4,11 @@
 
 @use "../components/Header/header";
 @use "../components/Contact/contact";
+@use "../components/Buttons/lngButtons";
 @use "../pages/ProjectsPage/projectsPages";
 @use "../pages/Home/home";
 @use "../pages/NotFound/notfound";
 @use "../pages/Legal/legal";
-
 
 * {
   box-sizing: border-box;
