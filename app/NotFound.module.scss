@@ -1,0 +1,20 @@
+@use "styles/variables";
+@use "styles/mixins";
+
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  h2 {
+    @include mixins.title-h2;
+  }
+    p {
+        @include mixins.text;
+    }
+  a {
+    @include mixins.link;
+  }
+}
