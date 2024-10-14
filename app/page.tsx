@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './Home.module.scss';
+import styles from './home/Home.module.scss';
 import {useState} from "react";
 import { useSwipeable} from "react-swipeable";
 // import SwipeEvents from "../components/MobileControl/SwipeEvents.tsx";

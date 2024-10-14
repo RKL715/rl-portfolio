@@ -2,13 +2,23 @@
 
 import ProjectCarousel  from "./ProjectCarousel.tsx";
 import {useState} from "react";
-import { useTranslation} from "react-i18next";
 import Image from 'next/image';
 
 import styles from './Project.module.scss';
 
 import github from '../../public/icons/github-mark.png';
 
+// TYPES
+export interface TechType {
+    id : number;
+    name : string;
+    src : string;
+}
+export interface ImageType {
+    id: number;
+    title : string
+    src : string;
+}
 export interface  ProjectType {
     id : number;
     name : string;
@@ -17,22 +27,9 @@ export interface  ProjectType {
     link : string;
     img : ImageType[];
 }
+//--------------------------------
 
-export interface TechType {
-    id : number;
-    name : string;
-    src : string;
-}
-
-export interface ImageType {
-    id: number;
-    title : string
-    src : string;
-}
-
-
-function Project ({name, description, technologies, link, img} : ProjectType) {
-    const {t} = useTranslation();
+export default function Project ({name, description, technologies, link, img} : ProjectType) {
     const [current, setCurrent] = useState(0);
 
     const nextSlide = () => {
@@ -47,15 +44,15 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
             <div className={styles.projectBlockHeader}>
                 <span className={styles.titleLink}>
                 <h2>{name}</h2>
-                <a href={link} className={styles.githubLink} target="_blank" rel="noreferrer">
-                    <img src={github} alt="Link to github project"/>
+                <a href={link} target="_blank" rel="noreferrer">
+                    <Image src={github} className={styles.githubLink} alt="Link to github project"/>
                 </a>
                 </span>
             </div>
             <span className={styles.projectBlockText}>
             <ul className={styles.projectDescList}>
                 {description.map((desc, index) => (
-                    <li key={index}>{t(desc)}</li>
+                    <li key={index}>{desc}</li>
                 ))}
             </ul>
             <ul className={styles.projectSkillsList}>
@@ -74,4 +71,5 @@ function Project ({name, description, technologies, link, img} : ProjectType) {
     )
 }
 
-export default Project
+// This file is the Project component.
+// It gives the structure of the project details.

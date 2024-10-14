@@ -5,7 +5,7 @@ function NotFound () {
         <div className={styles.notFoundContainer}>
             <h2>Oups</h2>
             <p>Cette page n'existe pas.</p> <br/>
-            <p>Pour revenir à l'accueil, <a href="/home">cliquez ici</a></p>
+            <p>Pour revenir à l'accueil, <a href="/">cliquez ici</a></p>
         </div>
     )
 }

@@ -1,0 +1,53 @@
+@use "../styles/variables";
+@use "../styles/mixins";
+@use "../styles/animation";
+@use "../../components/Project/Project.module";
+@use "../../components/Project/ProjectCarousel.module";
+
+
+.projectsListPage {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.projectsListContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.projectsListCards {
+  place-self: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: clamp(300px, 70%, 500px);
+  max-height: clamp(300px, 60%, 500px);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .projectImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  .projectsListTitle {
+    @include mixins.title-h3;
+    text-decoration: none;
+
+  }
+}
+

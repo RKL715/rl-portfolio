@@ -30,7 +30,7 @@ const [isVisible, setIsVisible] = useState(true);
         <header className={styles.header}>
             <div className={styles.headerTopBlock}>
                 <h1>
-                    <Link href="/home" className={styles.headerTitle}>
+                    <Link href="/" className={styles.headerTitle}>
                     RÉMY LAFAYE
                     </Link></h1>
                 <p>Développeur intégrateur web</p>
@@ -43,7 +43,7 @@ const [isVisible, setIsVisible] = useState(true);
                 <nav>
                     <ul>
                         <li>
-                            <Link href={"/projects-list"}
+                            <Link href={"/projects"}
                                 className={styles.headerLink}>
                                 Projets
                             </Link>

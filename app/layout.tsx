@@ -5,7 +5,7 @@ import {Ubuntu_Mono} from 'next/font/google'
 import './styles/global.scss';
 
 
-import Header from './components/Header/Header';
+import Header from '../components/Header/Header';
 
 const ubuntu_mono = Ubuntu_Mono({
     subsets: ['latin'],

@@ -1,6 +1,6 @@
-@use "../../styles/variables";
-@use "../../styles/mixins";
-@use "../../styles/animation";
+@use "../../app/styles/variables";
+@use "../../app/styles/mixins";
+@use "../../app/styles/animation";
 
 .carousel {
   background: variables.$main-color;

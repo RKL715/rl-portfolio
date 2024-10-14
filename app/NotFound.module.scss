@@ -16,5 +16,7 @@
     }
   a {
     @include mixins.link;
+    color: variables.$accent-color;
+    font-weight: bolder;
   }
 }

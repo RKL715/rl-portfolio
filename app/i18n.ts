@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import projects from "./public/assets/projects.json";
+import projects from "../public/assets/projects.json";
 
 const resources = {
     fr : {

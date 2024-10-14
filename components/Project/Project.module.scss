@@ -1,6 +1,6 @@
-@use "../../styles/variables";
-@use "../../styles/mixins";
-@use "../../styles/animation";
+@use "../../app/styles/variables";
+@use "../../app/styles/mixins";
+@use "../../app/styles/animation";
 
 .projectDetailsPage {
   display: flex;
@@ -47,8 +47,12 @@
         width: fit-content;
         white-space: nowrap;
       }
-      .githubLink:hover, &:focus-visible{
-        transform: scale(1.1);
+      .githubLink {
+        width: 30px;
+        height: 30px;
+        &:hover, &:focus-visible {
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -90,7 +94,7 @@
         &:hover .skills-icon {
           opacity: 0.3;
         }
-        img {
+        Img {
           width: clamp(30px, 5vw, 50px);
         }
       }
