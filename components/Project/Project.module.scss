@@ -2,11 +2,6 @@
 @use "../../app/styles/mixins";
 @use "../../app/styles/animation";
 
-.projectDetailsPage {
-  display: flex;
-  align-items: center;
-}
-
 .projectBlock {
   width: fit-content;
   margin: 0 auto;
@@ -23,12 +18,11 @@
   .projectBlockCarousel {
     display: flex;
     flex-direction: column;
-    padding-top: 3%;
-    padding-bottom: 3%;
     justify-content: space-between;
     align-items: center;
     order : 2;
-    height: clamp(60%, 80%, 100%);
+    height: clamp(30%, 85%, 100%);
+    width: clamp(30%, 100%, 100%);
   }
 
   .projectBlockHeader {
