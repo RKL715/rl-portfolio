@@ -1,0 +1,65 @@
+@use "../../app/styles/variables";
+@use "../../app/styles/mixins";
+@use "../../app/styles/animation";
+
+.contactForm {
+  @include mixins.modal;
+  position: fixed;
+  left: 4vw;
+  width: clamp(90%, 2vw, 100%);
+  z-index: 6;
+
+  .contactFormFields, form{
+    @include mixins.max-min-contact;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input, textarea {
+    @include mixins.max-min-contact;
+    @include mixins.text;
+    margin : 0 0 10% 0;
+    height: 50px;
+    width: 500px;
+    padding: 0 15px 0 15px;
+    outline: none;
+    background: transparent;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
+    line-height: 3em;
+
+    &:hover {
+      background: #b3aca7;
+      color : #f7f7f7;
+    }
+  }
+
+  .submit {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover {
+     scale: 1.1;
+    }
+    }
+
+  .contactFormTop {
+    display : flex;
+    justify-content: center;
+    padding: 10px;
+    align-content: center;
+    @include mixins.max-min-contact;
+
+    .contactFormTitle {
+      @include mixins.title-h2;
+      @include mixins.max-min-contact;
+    }
+  }
+  .sending {
+    animation : fly 1s ease-in-out infinite;
+  }
+}
+
+

@@ -1,0 +1,116 @@
+@use "../../app/styles/variables";
+@use "../../app/styles/mixins";
+@use "../../app/styles/animation";
+
+.projectBlock {
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+  background-color: variables.$main-color;
+  border: #131515 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr;
+  }
+
+  .projectBlockCarousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    order : 2;
+    height: clamp(30%, 85%, 100%);
+    width: clamp(30%, 100%, 100%);
+  }
+
+  .projectBlockHeader {
+    order : 1;
+    background-color: variables.$accent-color;
+    border-bottom: #131515 4px solid;
+    .titleLink {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding : 2% 0 2% 2%;
+      gap: 3%;
+      h2 {
+        @include mixins.title-h2;
+        color: variables.$title-color-main;
+        width: fit-content;
+        white-space: nowrap;
+      }
+      .githubLink {
+        width: 30px;
+        height: 30px;
+        &:hover, &:focus-visible {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .projectBlockText {
+    order : 3;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    @media (max-width: 768px) {
+      align-items: center;
+    }
+    p {
+      @include mixins.text;
+      padding-bottom: 5%;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+    }
+
+    .projectDescList {
+      @include mixins.text;
+      font-size: clamp(0.75rem, 1.5vw, 1rem);
+      list-style: none;
+      padding-bottom: 5%;
+      line-height: 1.5;
+    }
+
+    .projectSkillsList {
+      list-style: none;
+      padding-bottom: 5%;
+      display: flex;
+      gap: 4%;
+      flex-direction: row;
+      justify-content: center;
+
+      .skillsItem {
+        position: relative;
+        cursor: pointer;
+        &:hover .skills-icon {
+          opacity: 0.3;
+        }
+        Img {
+          width: clamp(30px, 5vw, 50px);
+        }
+      }
+
+      .skillsName {
+        display: none;
+        font-size: 0.8rem;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #b3aca7;
+        white-space: wrap;
+        width: fit-content;
+        text-align: center;
+        @include mixins.text;
+      }
+
+     .skillsItem:hover .skillsName {
+        display: block;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+    }
+  }
+}

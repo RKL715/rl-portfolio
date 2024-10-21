@@ -35,3 +35,7 @@ react-dom_client.js
 react-dom_client.js.map
 react_jsx-dev-runtime.js
 react_jsx-dev-runtime.js.map
+
+.next
+next-env.d.ts
+dist
