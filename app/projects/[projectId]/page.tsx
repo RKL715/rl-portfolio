@@ -7,6 +7,7 @@ import projectsData from "../../../public/assets/projects.json";
 import styles from './ProjectDetails.module.scss'
 
 type ProjectType = {
+    key: number;
     id: number;
     name: string;
     description: string[];
@@ -27,6 +28,7 @@ export default function ProjectDetails() {
     return (
         <div className={styles.projectDetailsPages}>
                 <Project
+                    key={project.id}
                     id={project.id}
                     name={project.name}
                     description={project.description}
