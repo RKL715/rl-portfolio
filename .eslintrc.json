@@ -6,14 +6,17 @@
   },
   "extends": [
     "eslint:recommended",
-    "next",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
     "plugin:@next/next/recommended"
   ],
   "ignorePatterns": ["dist", ".eslintrc.json"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-  }
+  },
+    "settings": {
+        "react": {
+        "version": "detect"
+        }
+    }
 }
