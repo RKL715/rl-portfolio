@@ -2,20 +2,14 @@
 
 import styles from './home/Home.module.scss';
 import {useState} from "react";
-import { useSwipeable} from "react-swipeable";
-// import SwipeEvents from "../components/MobileControl/SwipeEvents.tsx";
-
 
 
 function Page () {
 
     const [currentPage, setCurrentPage] = useState(1);
-    const handlers = useSwipeable({
-        onSwipedLeft: () => setCurrentPage((currentPage % 3) + 1),
-        onSwipedRight: () => setCurrentPage((currentPage === 1 ? 3 : currentPage - 1)) });
 
     return (
-        <div className={styles.home} {...handlers}>
+        <div className={styles.home} >
             <div className={styles.homeContent} id="draggable">
                 <div className={styles.homeContentHeader}>
                 <h3 className={styles.homeContentTitle}>A propos</h3>

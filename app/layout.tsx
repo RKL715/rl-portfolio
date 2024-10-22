@@ -6,6 +6,7 @@ import './styles/global.scss';
 
 
 import Header from '../components/Header/Header';
+import React from "react";
 
 const ubuntu_mono = Ubuntu_Mono({
     subsets: ['latin'],

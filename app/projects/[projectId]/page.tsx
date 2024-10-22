@@ -7,6 +7,7 @@ import projectsData from "../../../public/assets/projects.json";
 import styles from './ProjectDetails.module.scss'
 
 type ProjectType = {
+    key: number;
     id: number;
     name: string;
     description: string[];
@@ -17,16 +18,19 @@ type ProjectType = {
 
 export default function ProjectDetails() {
     const { projectId } = useParams();
-    const project : ProjectType | undefined = projectsData.projects.en.find((proj) => proj.id.toString() === projectId );
+    const projectData = projectsData.projects.en.find((proj) => proj.id.toString() === projectId );
 
-    if (!project) {
+    if (!projectData) {
         notFound()
         return null;
     }
 
+    const project: ProjectType = { ...projectData, key: projectData.id };
+
     return (
         <div className={styles.projectDetailsPages}>
                 <Project
+                    key={project.id}
                     id={project.id}
                     name={project.name}
                     description={project.description}

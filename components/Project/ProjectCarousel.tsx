@@ -2,7 +2,6 @@ import type { ImageType } from "./Project.tsx";
 import {useEffect, useRef, useState} from "react";
 import ReactDOM from "react-dom";
 import {ArrowIcons} from "../ArrowIcons/ArrowIcons.tsx";
-import SwipeEvents from "../MobileControl/SwipeEvents.tsx";
 
 import styles from "./ProjectCarousel.module.scss";
 
@@ -24,7 +23,6 @@ interface ModalType {
 function Modal({src, alt, close, prevSlide, nextSlide} : ModalType) {
     const [modalContainer] = useState(document.createElement("div"));
     const modalRef = useRef<HTMLDivElement>(null);
-    const swipeHandlers = SwipeEvents({ onSwipedLeft: () => nextSlide(), onSwipedRight: () => prevSlide() });
 
     useEffect(() => {
         modalContainer.className = "modal-container";
@@ -66,7 +64,7 @@ function Modal({src, alt, close, prevSlide, nextSlide} : ModalType) {
     }, [modalContainer, close]);
 
     return ReactDOM.createPortal (
-        <div className={styles.modalContainer} ref={modalRef}  {...swipeHandlers} >
+        <div className={styles.modalContainer} ref={modalRef}   >
             <div className={styles.image}>
                 <img src={src} alt={alt}/>
                 <button className={styles.closeButton} onClick={close}>X</button>
@@ -93,10 +91,9 @@ function ProjectCarousel({images, nextSlide, prevSlide}: CarouselType) {
         setIsOpen(false)
     };
 
-    const swipeHandlers = SwipeEvents({onSwipedLeft: () => nextSlide(), onSwipedRight: () => prevSlide()});
 
     return (
-      <div className={styles.carousel} aria-label="Carousel" {...swipeHandlers}>
+      <div className={styles.carousel} aria-label="Carousel" >
             {isOpen && <Modal src={images.src} alt={images.title} close={closeModal} prevSlide={prevSlide} nextSlide={nextSlide}/>}
           <img src={images.src} alt={images.title} onClick={openModal}/>
           <button className={styles.prev} onClick={prevSlide} tabIndex={0} aria-label="Previous slide">
