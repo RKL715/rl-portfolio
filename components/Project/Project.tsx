@@ -64,8 +64,10 @@ export default function Project ({name, description, technologies, link, img} : 
                 ))}
             </ul>
                 </span>
-            <span className={styles.projectBlockCarousel}><ProjectCarousel images={img[current]} nextSlide={nextSlide}
-                                                                      prevSlide={prevSlide}/>
+            <span className={styles.projectBlockCarousel}>
+                <ProjectCarousel images={img[current]}
+                                 nextSlide={nextSlide}
+                                 prevSlide={prevSlide}/>
             </span>
         </div>
     )
