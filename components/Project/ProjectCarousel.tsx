@@ -2,7 +2,7 @@ import type { ImageType } from "./Project.tsx";
 import {useEffect, useRef, useState} from "react";
 import ReactDOM from "react-dom";
 import {ArrowIcons} from "../ArrowIcons/ArrowIcons.tsx";
-
+import Image from 'next/image';
 import styles from "./ProjectCarousel.module.scss";
 
 // TS interfaces
@@ -15,6 +15,8 @@ interface CarouselType {
 interface ModalType {
     src : string;
     alt : string;
+    width : number;
+    height : number;
     close : () => void;
     nextSlide : () => void;
     prevSlide : () => void;
@@ -66,7 +68,14 @@ function Modal({src, alt, close, prevSlide, nextSlide} : ModalType) {
     return ReactDOM.createPortal (
         <div className={styles.modalContainer} ref={modalRef}   >
             <div className={styles.image}>
-                <img src={src} alt={alt}/>
+                <Image
+                    src={src}
+                    alt={alt}
+                    width={50}
+                    height={50}
+                    layout="responsive"
+                    objectFit="contain"
+                />
                 <button className={styles.closeButton} onClick={close}>X</button>
                 <button className={`${styles.slideNav} ${styles.prev}`} onClick={prevSlide} tabIndex={0}
                         aria-label="Previous slide">
@@ -94,8 +103,25 @@ function ProjectCarousel({images, nextSlide, prevSlide}: CarouselType) {
 
     return (
       <div className={styles.carousel} aria-label="Carousel" >
-            {isOpen && <Modal src={images.src} alt={images.title} close={closeModal} prevSlide={prevSlide} nextSlide={nextSlide}/>}
-          <img src={images.src} alt={images.title} onClick={openModal}/>
+            {isOpen && (
+                <Modal
+                    src={images.src}
+                    alt={images.title}
+                    width={600}
+                    height={400}
+                    close={closeModal}
+                    prevSlide={prevSlide}
+                    nextSlide={nextSlide}/>
+            )}
+          <div onClick={openModal}>
+               <Image
+                     src={images.src}
+                     alt={images.title}
+                     width={50}
+                     height={50}
+                     layout="responsive"
+          />
+            </div>
           <button className={styles.prev} onClick={prevSlide} tabIndex={0} aria-label="Previous slide">
               <ArrowIcons direction="prev"/>
           </button>
