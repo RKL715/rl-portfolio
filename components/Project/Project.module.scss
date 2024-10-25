@@ -3,7 +3,7 @@
 @use "../../app/styles/animation";
 
 .projectBlock {
-  width: fit-content;
+  width: clamp(200px, 60vw, 35em);
   margin: 0 auto;
   align-items: center;
   background-color: variables.$main-color;
@@ -21,8 +21,9 @@
     justify-content: space-between;
     align-items: center;
     order : 2;
-    height: clamp(30%, 85%, 100%);
-    width: clamp(30%, 100%, 100%);
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 5%;
   }
 
   .projectBlockHeader {

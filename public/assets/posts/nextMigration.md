@@ -29,3 +29,15 @@ But, nonetheless, I managed to do it !! Hurray :)
 
 On my home page, I had made a swipe system for touch device with some useState hook to handle currentPage position. But, since it was using `useState`, it was broken. Because `useState` doesn't work with SSR. I mean, `useState` is a client-side hook, and it can't be used on the server. So I had to find a way to make it work. Either by adding client-side rendering to this specific page, or by using another hook that works on the server like `useRef`. But enabling CSR was a quicker solution. 
 I could just encapsulate the interactive part too, but I needed to be done with this migration.
+Finally, I simply completely removed the swipe system. I will add it later, when I will have more time to work on it.
+
+### Image/Next
+
+I was using the classic img tag to display images. But, with Next.JS, I could use the `Image` component from `next/image`. It's a component that optimizes images for better performance. It's a good practice to use it. So I switched to it.
+The hardest part was for images from projects, since it's dynamically imported. 
+
+### Translation/Draggable/Blog
+
+I resorted to remove the translation part, and the useless draggable that was on the home page just for fun.
+I'll add Translation later. 
+My main focus is to enable swipe control again. And I found Swiper.js, who could also help me rework my actual carousel since it come with a lot of options on carousel. Plus mobile control of course.
