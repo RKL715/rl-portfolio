@@ -11,6 +11,8 @@
 body {
   @include mixins.main-background;
   margin: 0.9px;
+  --swiper-pagination-color: #647D83FF;
+  --swiper-navigation-color: #647D83FF;
 }
 
 .frame {
@@ -40,3 +42,4 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
