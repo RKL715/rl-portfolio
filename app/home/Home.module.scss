@@ -26,6 +26,30 @@
     }
   }
 
+  .homeContentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: clamp(300px, 60vw, 800px);
+    background-color: variables.$main-color;
+    border: #131515 2px solid;
+    box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
+  }
+
+  .homeContentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    width: clamp(300px, 60vw, 800px);
+    background-color: variables.$accent-color;
+    border: #131515 2px solid;
+    box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
+  }
+
   .homeContentTitle {
     @include mixins.title-h3;
     color : variables.$title-color-main;
@@ -34,69 +58,16 @@
   }
 
   .homeText {
-    box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
     @include mixins.text-bio;
-    background-color: variables.$main-color;
-    border: #131515 2px solid;
-    margin-right: 1vw;
+    flex-direction: row;
     letter-spacing: 2px;
     line-height: 35px;
     box-sizing: border-box;
-    padding: 0 20px;
     width: clamp(300px, 60vw, 800px);
-  }
-
-.homeContentHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  box-sizing: border-box;
-  padding: 5px 20px;
-  width: clamp(300px, 60vw, 800px);
-  background-color: variables.$accent-color;
-  border: #131515 2px solid;
-  box-shadow: rgba(0, 0, 0, 0.78) 10px 10px;
-
-}
-
-.homeNavigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:  center;
-  z-index: 5;
-
-  .bullet {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    button {
-      border: none;
-      background: none;
-      outline: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    span {
-      display: inline-block;
-      width: 2vmin;
-      height: 2vmin;
-      margin: 0 5px;
-      border-radius: 50%;
-      background-color: #ccc;
-      transition: 0.5s ease-in;
-      &.active {
-        background-color: #12263A;
-      }
-      &:hover,  &:focus-visible{
-        transform : scale(1.2);
-        transition: transform 0.5s ease-in-out;
-      }
-    }
+    height: fit-content;
+    padding: 1% 10%;
   }
 }
-  }
 
 
 
