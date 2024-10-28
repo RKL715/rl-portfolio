@@ -1,10 +1,10 @@
 'use client'
 
 import { useParams } from 'next/navigation'
-import notFound from "../../not-found";
+import NotFound from "../../not-found";
 import Project from "../../../components/Project/Project.tsx";
 import projectsData from "../../../public/assets/projects.json";
-import styles from './ProjectDetails.module.scss'
+import styles from './ProjectDetails.module.scss';
 
 type ProjectType = {
     key: number;
@@ -21,17 +21,17 @@ export default function ProjectDetails() {
     const projectData = projectsData.projects.en.find((proj) => proj.id.toString() === projectId );
 
     if (!projectData) {
-        notFound()
-        return null;
+        return (
+            <NotFound />
+        );
     }
 
-    const project: ProjectType = { ...projectData, key: projectData.id };
+    const project: ProjectType = {...projectData, key: projectData.id};
 
     return (
         <div className={styles.projectDetailsPages}>
-                <Project
-                    key={project.id}
-                    id={project.id}
+            <Project
+                id={project.id}
                     name={project.name}
                     description={project.description}
                     technologies={project.technologies}
