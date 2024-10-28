@@ -1,7 +1,6 @@
 'use client';
 
 import styles from './home/Home.module.scss';
-// import {useState} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Keyboard, Navigation, Pagination} from "swiper/modules";
 import 'swiper/css';
