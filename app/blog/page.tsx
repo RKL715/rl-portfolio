@@ -20,8 +20,8 @@ export default async function Blogs() {
                 {blogs.map((blog) => {
                 return (
                     <li key={blog.id}>
-                        <Link href={`/blog/${blog.id}`}>
-                                <h3 className={styles.blogTitle}>{blog.title}</h3>
+                        <Link href={`/blog/${blog.id}`} tabIndex={-1}>
+                                <h3 className={styles.blogTitle} tabIndex={1}>{blog.title}</h3>
                                 <p className= {styles.blogDate}>{blog.date.toDateString()}</p>
                         </Link>
                     </li>

@@ -41,8 +41,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
             <article>
                 <BlogPost/>
             </article>
-            <Link href="/blog">
-            <p className={styles.return}>←</p>
+            <Link href="/blog" className={styles.returnLink}>
+            <p className={styles.returnIcon}>←</p>
             </Link>
         </div>
     );
