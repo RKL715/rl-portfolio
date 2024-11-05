@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  article {
+    margin: 1rem;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 75vw;
+    overflow: scroll;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+
+
+
+.return {
+  font-size : 5.5rem;
+}
