@@ -14,6 +14,8 @@ export function getPostNames (): string[] {
             });
         }
 
-    } catch (error) {}
+    } catch (error) {
+        console.error("Error reading files from the blog directory", error);
+    }
         return [];
 }
