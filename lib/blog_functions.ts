@@ -21,8 +21,12 @@ export async function getPostData(blogId: string): Promise <{
         else {
             throw new Error ("No metadata found in " + blogId + ".mdx");
         }
-    } catch (error: any) {
-        console.error(error?.message);
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error(error?.message);
+    } else {
+        console.error("Error reading file", blogId, error);
+    }
     return {
         id: "",
         title: "",
