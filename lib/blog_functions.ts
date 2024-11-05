@@ -56,6 +56,8 @@ export async function getAllPostsData(): Promise<
 
             return Promise.all(result);
         }
-    } catch (error) {}
+    } catch (error) {
+        console.error("Error reading files from the blog directory", error);
+    }
     return [];
 }
