@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/blog/*": ["app/blog/*"]
+    },
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": [

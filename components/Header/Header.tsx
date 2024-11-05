@@ -44,8 +44,14 @@ const [isVisible, setIsVisible] = useState(true);
                     <ul>
                         <li>
                             <Link href={"/projects"}
-                                className={styles.headerLink}>
+                                  className={styles.headerLink}>
                                 Projets
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={"/blog"}
+                                  className={styles.headerLink}>
+                                Blog
                             </Link>
                         </li>
                         <li>

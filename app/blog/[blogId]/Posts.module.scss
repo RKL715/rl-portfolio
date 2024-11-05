@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+
+  article {
+    padding: 1rem;
+    width: 75vw;
+    overflow: scroll;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+
+.returnLink {
+  &:hover, &:active, &:focus-visible {
+    scale: 1.3;
+  }
+}
+
+.returnIcon {
+  font-size : 5.5rem;
+  color: variables.$accent-color;
+}
