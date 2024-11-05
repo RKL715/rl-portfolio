@@ -14,7 +14,7 @@ export async function generateStaticParams () {
 }
 
 type BlogPageProps = {
-    params: { blogId: string};
+    params: Promise<{ blogId: string}>;
 };
 
 export async function generateMetadata({
