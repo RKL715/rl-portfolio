@@ -9,7 +9,7 @@
   margin-top: 1%;
   margin-bottom: 1%;
   width: clamp(10vw, 18vw, 500px);
-  height: calc(100vh - 70px);
+  height: auto;
   background-color: variables.$accent-color;
   border: #131515 4px solid;
   border-radius: 3px;
